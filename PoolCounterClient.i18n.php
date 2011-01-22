@@ -40,7 +40,7 @@ $messages['ar'] = array(
 	'poolcounter-remote-error' => 'خطأ خادم مشرف المجموعة: $1',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  */
 $messages['be-tarask'] = array(
