@@ -4,6 +4,7 @@ CFLAGS=-Wall $(DEFINES)
 OBJS=main.o client_data.o locks.o hash.o
 LINK=-levent
 HEADERS=prototypes.h client_data.h
+DESTDIR ?=
 
 poolcounterd: $(OBJS)
 	$(CC) $(LINK) $^ -o $@
@@ -16,3 +17,7 @@ prototypes.h: main.c
 
 clean:
 	rm -f *.o prototypes.h
+
+install:
+	install -d $(DESTDIR)/usr/bin/
+	install poolcounterd $(DESTDIR)/usr/bin/

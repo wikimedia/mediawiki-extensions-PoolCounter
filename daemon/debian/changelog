@@ -1,0 +1,5 @@
+poolcounter (1.0.0) unstable; urgency=low
+
+  * Initial debianization.
+
+ -- Tim Starling <tstarling@wikimedia.org>  Tue, 15 Mar 2011 14:30:52 +1100
