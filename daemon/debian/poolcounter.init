@@ -122,7 +122,7 @@ start_server() {
             errcode=$?
         else
 # if we are using a daemonuser then change the user id
-            start-stop-daemon --start --quiet --pidfile $PIDFILE \
+            start-stop-daemon -b -m --start --quiet --pidfile $PIDFILE \
                         --chuid $DAEMONUSER \
                         --exec $DAEMON -- $DAEMON_OPTS
             errcode=$?
@@ -270,7 +270,7 @@ case "$1" in
              log_end_msg 1
              exit 0
           fi
-                                                                                    #;;
+          ;;
 
   *)
         N=/etc/init.d/$NAME
