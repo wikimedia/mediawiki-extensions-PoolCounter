@@ -29,9 +29,11 @@ class PoolCounter_ConnectionManager {
 			if ( count( $parts ) < 2 ) {
 				$parts[] = 7531;
 			}
+			wfProfileIn( __METHOD__.'-connect' );
 			wfSuppressWarnings();
 			$conn = fsockopen( $parts[0], $parts[1], $errno, $errstr, $this->timeout );
 			wfRestoreWarnings();
+			wfProfileOut( __METHOD__.'-connect' );
 			if ( $conn ) {
 				break;
 			}
@@ -122,20 +124,28 @@ class PoolCounter_Client extends PoolCounter {
 	}
 
 	function acquireForMe() {
-		return $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		wfProfileIn( __METHOD__ );
+		$status = $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		wfProfileOut( __METHOD__ );
+		return $status;
 	}
 
 	function acquireForAnyone() {
-		return $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		wfProfileIn( __METHOD__ );
+		$status = $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		wfProfileOut( __METHOD__ );
+		return $status;
 	}
 
 	function release() {
+		wfProfileIn( __METHOD__ );
 		$status = $this->sendCommand( 'RELEASE', $this->key );
 
 		if ( $this->conn ) {
 			self::$manager->close( $this->conn );
 			$this->conn = null;
 		}
+		wfProfileOut( __METHOD__ );
 		return $status;
 	}
 }
