@@ -50,7 +50,7 @@ DIETIME=10              # Time to wait for the server to die, in seconds
                         # let some servers to die gracefully and
                         # 'restart' will not work
 
-#STARTTIME=2             # Time to wait for the server to start, in seconds
+STARTTIME=1             # Time to wait for the server to start, in seconds
                         # If this value is set each time the server is
                         # started (on start or restart) the script will
                         # stall to try to determine if it is running
@@ -62,6 +62,7 @@ DIETIME=10              # Time to wait for the server to die, in seconds
 LOGFILE=$LOGDIR/$NAME.log  # Server logfile
 DAEMONUSER=poolcounter   # Users to run the daemons as. If this value
                         # is set start-stop-daemon will chuid the server
+MAX_FDS=65535
 
 # Include defaults if available
 if [ -f /etc/default/$NAME ] ; then
@@ -116,6 +117,7 @@ running() {
 }
 
 start_server() {
+        ulimit -n "$MAX_FDS"
 # Start the process using the wrapper
         if [ -z "$DAEMONUSER" ] ; then
             start_daemon -p $PIDFILE $DAEMON $DAEMON_OPTS
