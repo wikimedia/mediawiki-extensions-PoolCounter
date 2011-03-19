@@ -82,6 +82,10 @@ class PoolCounter_Client extends PoolCounter {
 				return $status;
 			}
 			$this->conn = $status->value;
+
+			// Set the read timeout to be 1.5 times the pool timeout. 
+			// This allows the server to time out gracefully before we give up on it.
+			stream_set_timeout( $this->conn, 0, $this->timeout * 1e6 * 1.5 );
 		}
 		return Status::newGood( $this->conn );
 	}
