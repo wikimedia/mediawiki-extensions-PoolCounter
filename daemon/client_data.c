@@ -6,6 +6,7 @@
 #include <malloc.h>
 #include "client_data.h"
 #include "locks.h"
+#include "stats.h"
 
 struct client_data* new_client_data(int fd) {
 	struct client_data* cd;
@@ -98,6 +99,7 @@ void send_client(struct locks* l, const char* msg) {
 	
 	if ( send( cli_data->fd, msg, len, 0) != len ) {
 		perror( "Something failed sending message" );
+		incr_stats( failed_sends );
 	}
 	/* Wait for answer */
 	event_add( &cli_data->ev, NULL );

@@ -39,7 +39,7 @@ struct locks {
 struct client_data;
 void init_lock(struct locks* l);
 void finish_lock(struct locks* l);
-char* process_line(struct client_data* cli_data, char* line, int line_len);
+const char* process_line(struct client_data* cli_data, char* line, int line_len);
 void process_timeout(struct locks* l);
 void remove_client_lock(struct locks* l, int wakeup_anyones);
 void send_client(struct locks* l, const char* msg);

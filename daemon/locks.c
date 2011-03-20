@@ -5,6 +5,7 @@
 #include "locks.h"
 #include "hash.h"
 #include "client_data.h"
+#include "stats.h"
 
 void init_lock(struct locks* l) {
 	l->state = UNLOCKED;
@@ -42,7 +43,7 @@ unsigned atou(char const* astext)  {
 	return num;
 }
 
-char* process_line(struct client_data* cli_data, char* line, int line_len) {
+const char* process_line(struct client_data* cli_data, char* line, int line_len) {
 	struct locks* l = &cli_data->client_locks;
 	if (line_len > 0 && line[line_len-1] == '\r') {
 		line_len--;
@@ -51,6 +52,7 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 	
 	if ( !strncmp( line, "ACQ4ME ", 7 ) || !strncmp( line, "ACQ4ANY ", 8 ) ) {
 		if ( l->state != UNLOCKED ) {
+			incr_stats( lock_mismatch );
 			return "LOCK_HELD\n";
 		}
 		
@@ -71,7 +73,7 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 		if ( !pCounter ) {
 			pCounter = malloc( sizeof( *pCounter ) );
 			if ( !pCounter ) {
-				fprintf(stderr, "Out of memory\n");
+				fprintf( stderr, "Out of memory\n" );
 				return "ERROR OUT_OF_MEMORY\n";
 			}
 			pCounter->htentry.key = strdup( key );
@@ -84,10 +86,13 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 			DOUBLE_LLIST_INIT( pCounter->for_anyone );
 			
 			hashtable_insert( primary_hashtable, (struct hashtable_entry *) pCounter );
+			incr_stats( hashtable_entries );
 		}
 		
-		if ( pCounter->count >= maxqueue )
+		if ( pCounter->count >= maxqueue ) {
+			incr_stats( full_queues );
 			return "QUEUE_FULL\n";
+		}
 		
 		l->parent = pCounter;
 		pCounter->count++;
@@ -95,7 +100,9 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 		if ( pCounter->processing < workers ) {
 			l->state = PROCESSING;
 			pCounter->processing++;
+			incr_stats( processing_workers );
 			DOUBLE_LLIST_ADD( &pCounter->working, &l->siblings );
+			incr_stats( total_acquired );
 			return "LOCKED\n";
 		} else {
 			struct timeval wait_time;
@@ -106,6 +113,7 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 				l->state = WAITING;
 				DOUBLE_LLIST_ADD( &pCounter->for_them, &l->siblings );
 			}
+			incr_stats( waiting_workers );
 			
 			wait_time.tv_sec = timeout;
 			wait_time.tv_usec = 0;
@@ -115,11 +123,15 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 		}
 	} else if ( !strncmp(line, "RELEASE", 7) ) {
 		if ( l->state == UNLOCKED ) {
+			incr_stats( release_mismatch );
 			return "NOT_LOCKED\n";
 		} else {
 			remove_client_lock( l, 1 );
+			incr_stats( total_releases );
 			return "RELEASED\n";
 		}
+	} else if ( !strncmp( line, "STATS ", 6 ) ) {
+		return provide_stats( line + 6 );
 	} else {
 		return "ERROR BAD_COMMAND\n";
 	}
@@ -128,6 +140,7 @@ char* process_line(struct client_data* cli_data, char* line, int line_len) {
 void process_timeout(struct locks* l) {
 	if ( ( l->state == WAIT_ANY ) || ( l->state == WAITING ) ) {
 		send_client( l, "TIMEOUT\n" );
+		decr_stats( waiting_workers );
 		remove_client_lock( l, 0 );
 	}
 }
@@ -139,6 +152,7 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 		while ( l->parent->for_anyone.next != &l->parent->for_anyone ) {
 			send_client( (void*)l->parent->for_anyone.next, "DONE\n" );
 			remove_client_lock( (void*)l->parent->for_anyone.next, 0 );
+			decr_stats( waiting_workers );
 		}
 	}
 	
@@ -162,14 +176,18 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 			DOUBLE_LLIST_ADD( &l->parent->working, &new_owner->siblings );
 			send_client( new_owner, "LOCKED\n" );
 			new_owner->state = PROCESSING;
+			incr_stats( total_acquired );
+			decr_stats( waiting_workers );
 		} else {
-			l->parent->processing--;			
+			l->parent->processing--;
+			decr_stats( processing_workers );
 		}
 	}
 	
 	l->state = UNLOCKED;
 	l->parent->count--;
 	if ( !l->parent->count ) {
+		decr_stats( hashtable_entries );
 		hashtable_remove( l->parent->htentry.parent_hashtable, &l->parent->htentry );
 		free( l->parent->htentry.key );
 		free( l->parent );

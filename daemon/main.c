@@ -12,6 +12,7 @@
 #include "client_data.h"
 #include "prototypes.h"
 #include "locks.h"
+#include "stats.h"
 
 static int open_sockets = 1; /* Program will automatically close when this reaches 0 */
 
@@ -37,6 +38,8 @@ int main(int argc, char** argv) {
 		fprintf( stderr, "Error in libevent initialization\n" );
 		return 1;
 	}
+	
+	stats.start = time( NULL );
 	
 	event_set( &listener_ev, listener, EV_READ | EV_PERSIST, on_connect, NULL );
 	
@@ -91,6 +94,7 @@ void on_connect(int listener, short type, void* arg) /* prototype */
 #endif
 	
 	if ( fd == -1 ) {
+		incr_stats( connect_errors );
 		perror( "Error accepting" );
 		return;
 	}
@@ -104,6 +108,7 @@ void on_connect(int listener, short type, void* arg) /* prototype */
 	
 	cli = new_client_data( fd );
 	if ( !cli ) {
+		incr_stats( connect_errors );
 		perror( "Couldn't allocate the client data! :(" );
 		close( fd );
 		return;
