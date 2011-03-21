@@ -338,6 +338,17 @@ $messages['sk'] = array(
 	'poolcounter-remote-error' => 'Chyba servera počítadla skupiny: $1',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'poolcounter-desc' => 'Odjemalec MediaWiki za prikriti proces založnega pulta',
+	'poolcounter-connection-error' => 'Napaka pri povezovanju s strežnikom založnega pulta: $1',
+	'poolcounter-read-error' => 'Napaka pri branju iz strežnika založnega pulta',
+	'poolcounter-write-error' => 'Napaka pri pisanju v strežnik založnega pulta',
+	'poolcounter-remote-error' => 'Napaka strežnika založnega pulta: $1',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
@@ -347,5 +358,16 @@ $messages['tl'] = array(
 	'poolcounter-read-error' => 'Maling pagbasa mula sa tagapaghain ng pambilang ng lawa',
 	'poolcounter-write-error' => 'Kamalian sa pagsulat sa tagapaghain ng pambilang ng lawa',
 	'poolcounter-remote-error' => 'Kamalian sa tagapaghain ng pambilang ng lawa: $1',
+);
+
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'poolcounter-desc' => 'Trình khách MediaWiki cho trình nền chia việc xử lý (pool counter daemon)',
+	'poolcounter-connection-error' => 'Lỗi kết nối với máy chủ chia việc xử lý (pool counter server): $1',
+	'poolcounter-read-error' => 'Lỗi đọc từ máy chủ chia việc xử lý (pool counter server)',
+	'poolcounter-write-error' => 'Lỗi ghi vào máy chủ chia việc xử lý (pool counter server)',
+	'poolcounter-remote-error' => 'Lỗi máy chủ chia việc xử lý (pool counter server): $1',
 );
 
