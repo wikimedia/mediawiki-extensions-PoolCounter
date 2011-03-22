@@ -127,6 +127,7 @@ void on_client(int fd, short type, void* arg) /* prototype */
 	
 	if ( type == EV_TIMEOUT ) {
 		process_timeout( &cli_data->client_locks );
+		event_add( &cli_data->ev, NULL );
 		return;
 	}
 	
