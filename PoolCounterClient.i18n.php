@@ -20,6 +20,7 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Nedergard
  * @author Purodha
  * @author Siebrand
  */
@@ -27,6 +28,12 @@ $messages['qqq'] = array(
 	'poolcounter-desc' => '{{desc}}
 
 A pool counter keeps track of the running processes on a cluster of processors, and may or may not grant a job access to the processing pool. (Note, the word "counter" relates to the counter in a shop, bank, or hotel, not to the verb "to count")',
+	'poolcounter-connection-error' => 'Used at least in the MediaWiki message view-pool-error:
+"Sorry, the servers are overloaded at the moment.
+Too many users are trying to view this page.
+Please wait a while before you try to access this page again.
+
+$1"',
 );
 
 /** Arabic (العربية)
@@ -117,6 +124,17 @@ $messages['es'] = array(
 	'poolcounter-read-error' => 'Error leyendo del servidor contador de encuestas',
 	'poolcounter-write-error' => 'Error escribiendo al servidor contador de encuestas',
 	'poolcounter-remote-error' => 'Error del servidor contador de encuestas: $1',
+);
+
+/** Finnish (Suomi)
+ * @author Nedergard
+ * @author Nike
+ */
+$messages['fi'] = array(
+	'poolcounter-connection-error' => 'Yhteyden muodostaminen varantolaskuripalvelimeen epäonnistui: $1',
+	'poolcounter-read-error' => 'Varantolaskuripalvelimen lukuvirhe',
+	'poolcounter-write-error' => 'Varantolaskuripalvelimen kirjoitusvirhe',
+	'poolcounter-remote-error' => 'Varantolaskuripalvelimen virhe: $1',
 );
 
 /** French (Français)
