@@ -171,6 +171,17 @@ $messages['gsw'] = array(
 	'poolcounter-remote-error' => 'Poolcounter-Server-Fähler: $1',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'poolcounter-desc' => 'לקוח מדיה ויקי לשרת דלפק מאגר',
+	'poolcounter-connection-error' => 'שגיאת התחברות לשרת דלפק מאגר: $1',
+	'poolcounter-read-error' => 'שגיאת קריאה משרת דלפק מאגר',
+	'poolcounter-write-error' => 'שגיאת כתיבה לשרת דלפק מאגר',
+	'poolcounter-remote-error' => 'שגיאת שרת דלפק מאגר: $1',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
