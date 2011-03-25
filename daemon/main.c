@@ -17,10 +17,16 @@
 static int open_sockets = 1; /* Program will automatically close when this reaches 0 */
 
 static struct event listener_ev;
+static char** global_argv;
+
 int main(int argc, char** argv) {
 	struct event_base *base;
 	struct stat st;
 	int listener;
+
+	if ( argc >= 1 ) {
+		global_argv = argv;
+	}
 
 	if ( fstat( 0, &st ) || ! S_ISSOCK( st.st_mode ) ) {
 		close( 0 ); /* Place the listener socket in fd 0 */
@@ -177,7 +183,11 @@ static void graceful(int signal)
 			end( 0 );
 		}
 	} else {
-		execl( "/proc/self/exe", "poolcounterd", NULL );
+		if ( global_argv ) {
+			execvp( global_argv[0], global_argv );
+		} else {
+			execl( "/proc/self/exe", "poolcounterd", NULL );
+		}
 		exit( 1 );
 	}
 }
