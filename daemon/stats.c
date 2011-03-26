@@ -13,7 +13,7 @@ static char stats_buffer[
 ];
 #undef COMMAND
 
-static size_t strtimeval(char* dst, size_t max, const char* title, const struct timeval* tv);
+static size_t strtimeval(char* dst, size_t max, const char* title, const struct timeval* tv, count_t divisor);
 
 const char* provide_stats(const char* type)
 {
@@ -28,13 +28,14 @@ const char* provide_stats(const char* type)
 	n = sprintf( stats_buffer, "uptime: %u days, %dh %dm %ds\n", days, hours, minutes, seconds );
 	
 	if ( !strcasecmp( type, "FULL" ) ) {
-		n += strtimeval( stats_buffer + n, 100, "total processing time", &stats.processing_time );
-		n += strtimeval( stats_buffer + n, 100, "gained time", &stats.gained_time );
-		n += strtimeval( stats_buffer + n, 100, "waiting time", &stats.waiting_time );
-		n += strtimeval( stats_buffer + n, 100, "waiting time for me", &stats.waiting_time_for_me );
-		n += strtimeval( stats_buffer + n, 100, "waiting time for anyone", &stats.waiting_time_for_anyone );
-		n += strtimeval( stats_buffer + n, 100, "waiting time for good", &stats.waiting_time_for_good );
-		n += strtimeval( stats_buffer + n, 100, "wasted timeout time", &stats.wasted_timeout_time );
+		n += strtimeval( stats_buffer + n, 100, "total processing time", &stats.processing_time, 0 );
+		n += strtimeval( stats_buffer + n, 100, "average processing time", &stats.processing_time, stats.processed_count );
+		n += strtimeval( stats_buffer + n, 100, "gained time", &stats.gained_time, 0 );
+		n += strtimeval( stats_buffer + n, 100, "waiting time", &stats.waiting_time, 0 );
+		n += strtimeval( stats_buffer + n, 100, "waiting time for me", &stats.waiting_time_for_me, 0 );
+		n += strtimeval( stats_buffer + n, 100, "waiting time for anyone", &stats.waiting_time_for_anyone, 0 );
+		n += strtimeval( stats_buffer + n, 100, "waiting time for good", &stats.waiting_time_for_good, 0 );
+		n += strtimeval( stats_buffer + n, 100, "wasted timeout time", &stats.wasted_timeout_time, 0 );
 		
 		#define COMMAND(item) n += sprintf( stats_buffer + n, #item ": %" PRcount "\n", stats.item );
 		#include "stats.list"
@@ -55,12 +56,20 @@ const char* provide_stats(const char* type)
  * It is expected to get inlined.
  * @return amount of bytes written
  */
-static size_t strtimeval(char* dst, size_t max, const char* title, const struct timeval* tv) {
+static size_t strtimeval(char* dst, size_t max, const char* title, const struct timeval* tv, count_t divisor) {
 	int n;
 	n = snprintf( dst, max, "%s: ", title );
 	if ( max < n ) return 0;
 		
 	float seconds = tv->tv_sec + tv->tv_usec * 1.0e-6f;
+	if ( divisor ) {
+		/* We could use 1 as default value and skipt this branch. But 
+		 * counters can be 0, and I don't want to deal with dividing by 
+		 * zero. They are floats, but statistics shouldn't be NaN.
+		 */
+		seconds = seconds / divisor;
+	}
+	
 	if ( seconds >= 60 ) {
 		int minutes = seconds / 60;
 		seconds = fmodf( seconds, 60 );
