@@ -10,4 +10,5 @@ COMMAND(failed_sends) /* Number of send() calls which didn't succeed */
 COMMAND(full_queues) /* Number of times locks were refused because the queue already had so many workers */
 COMMAND(lock_mismatch) /* Number of times a user tried to do a lock without a previous release */
 COMMAND(release_mismatch) /* Number of times a user tried to do a release without a previous lock */
+COMMAND(processed_count) /* Count of processing */
 

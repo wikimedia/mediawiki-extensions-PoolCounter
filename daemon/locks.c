@@ -1,11 +1,12 @@
 #define _XOPEN_SOURCE 500
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "stats.h"
 #include "locks.h"
 #include "hash.h"
 #include "client_data.h"
-#include "stats.h"
+
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void init_lock(struct locks* l) {
 	l->state = UNLOCKED;
@@ -99,6 +100,7 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		
 		if ( pCounter->processing < workers ) {
 			l->state = PROCESSING;
+			gettimeofday( &l->timeval, NULL );
 			pCounter->processing++;
 			incr_stats( processing_workers );
 			DOUBLE_LLIST_ADD( &pCounter->working, &l->siblings );
@@ -114,6 +116,7 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 				DOUBLE_LLIST_ADD( &pCounter->for_them, &l->siblings );
 			}
 			incr_stats( waiting_workers );
+			gettimeofday( &l->timeval, NULL );
 			
 			wait_time.tv_sec = timeout;
 			wait_time.tv_usec = 0;
@@ -139,6 +142,8 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 
 void process_timeout(struct locks* l) {
 	if ( ( l->state == WAIT_ANY ) || ( l->state == WAITING ) ) {
+		struct timeval now = { 0 };
+		time_stats( l, wasted_timeout_time );
 		send_client( l, "TIMEOUT\n" );
 		decr_stats( waiting_workers );
 		remove_client_lock( l, 0 );
@@ -146,18 +151,25 @@ void process_timeout(struct locks* l) {
 }
 
 void remove_client_lock(struct locks* l, int wakeup_anyones) {
+	struct timeval now = { 0 };
+	
 	DOUBLE_LLIST_DEL(&l->siblings);
 	
 	if ( wakeup_anyones ) {
 		while ( l->parent->for_anyone.next != &l->parent->for_anyone ) {
+			time_stats( (struct locks*)l->parent->for_anyone.next, waiting_time_for_good );
 			send_client( (void*)l->parent->for_anyone.next, "DONE\n" );
 			remove_client_lock( (void*)l->parent->for_anyone.next, 0 );
 			decr_stats( waiting_workers );
+			time_stats( l, gained_time );
 		}
 	}
 	
 	if ( l->state == PROCESSING ) {
 		/* One slot freed, wake up another worker */
+
+		time_stats( l, processing_time );
+		incr_stats( processed_count );
 		
 		/* Give priority to those which need to do it themselves, since 
 		 * the anyones will benefit from it, too.
@@ -167,17 +179,21 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 		if ( l->parent->for_them.next != &l->parent->for_them ) {
 			/* The oldest waiting worker will be on next */
 			new_owner = (struct locks*) l->parent->for_them.next;
+			time_stats( new_owner, waiting_time_for_me );
 		} else if ( l->parent->for_anyone.next != &l->parent->for_anyone ) {
 			new_owner = (struct locks*) l->parent->for_anyone.next;
+			time_stats( new_owner, waiting_time_for_anyone );
 		}
 		
 		if ( new_owner ) {
+			time_stats( new_owner, waiting_time );
 			DOUBLE_LLIST_DEL( &new_owner->siblings );
 			DOUBLE_LLIST_ADD( &l->parent->working, &new_owner->siblings );
 			send_client( new_owner, "LOCKED\n" );
 			new_owner->state = PROCESSING;
 			incr_stats( total_acquired );
 			decr_stats( waiting_workers );
+			gettimeofday( &l->timeval, NULL );
 		} else {
 			l->parent->processing--;
 			decr_stats( processing_workers );

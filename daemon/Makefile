@@ -2,7 +2,7 @@ CC=gcc
 DEFINES=-DENDIAN_BIG=0 -DENDIAN_LITTLE=1 -DHAVE_ACCEPT4=1
 CFLAGS=-Wall $(DEFINES)
 OBJS=main.o client_data.o locks.o hash.o stats.o
-LINK=-levent
+LINK=-levent -lm
 HEADERS=prototypes.h client_data.h stats.h stats.list
 DESTDIR ?=
 

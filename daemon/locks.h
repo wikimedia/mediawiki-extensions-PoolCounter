@@ -2,6 +2,7 @@
 #define LOCKS_H
 
 #include <stdint.h>
+#include <sys/time.h>
 
 /* This application uses several double linked lists.
  * They are circular lists, new items are added on the end (ie. on prev)
@@ -34,6 +35,7 @@ struct locks {
 	struct double_linked_list siblings;
 	struct PoolCounter* parent;
 	enum lock_state { UNLOCKED, WAITING, WAIT_ANY, PROCESSING } state;
+	struct timeval timeval; /* Stores the instante where it started waiting/processing */
 };
 
 struct client_data;
