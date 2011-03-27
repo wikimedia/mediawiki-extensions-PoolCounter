@@ -400,3 +400,14 @@ $messages['vi'] = array(
 	'poolcounter-remote-error' => 'Lỗi máy chủ chia việc xử lý (pool counter server): $1',
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Hydra
+ */
+$messages['zh-hans'] = array(
+	'poolcounter-desc' => 'MediaWiki 客户端的池计数器守护进程',
+	'poolcounter-connection-error' => '连接池计数器服务器的错误：$1',
+	'poolcounter-read-error' => '从池计数器服务器读取时出错',
+	'poolcounter-write-error' => '池计数器服务器写入时出现错误',
+	'poolcounter-remote-error' => '池计数器服务器错误：$1',
+);
+
