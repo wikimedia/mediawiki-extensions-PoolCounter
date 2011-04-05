@@ -80,6 +80,7 @@ static size_t strtimeval(char* dst, size_t max, const char* title, const struct 
 			
 			if ( hours >= 24 ) {
 				unsigned int days = hours / 24;
+				hours %= 24;
 				
 				n += snprintf( dst + n, max - n, "%u days ", days );
 				if ( max < n ) return 0;
