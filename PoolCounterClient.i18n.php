@@ -217,13 +217,14 @@ $messages['ia'] = array(
 
 /** Indonesian (Bahasa Indonesia)
  * @author Bennylin
+ * @author IvanLanin
  */
 $messages['id'] = array(
 	'poolcounter-desc' => 'Klien MediaWiki untuk daemon poolcounter.py',
-	'poolcounter-connection-error' => 'Kesalahan pada saat berusaha menghubungi peladen pool counter: $1',
-	'poolcounter-read-error' => 'Kesalahan pada saat berusaha membaca peladen pool counter',
+	'poolcounter-connection-error' => 'Kesalahan pada saat berusaha menghubungi server pool counter: $1',
+	'poolcounter-read-error' => 'Kesalahan pada saat berusaha membaca server pool counter',
 	'poolcounter-write-error' => 'Kesalahan pada saat berusaha menulis peladen pool counter',
-	'poolcounter-remote-error' => 'Kesalahan peladen pool server: $1',
+	'poolcounter-remote-error' => 'Kesalahan server pool server: $1',
 );
 
 /** Japanese (日本語)
