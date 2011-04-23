@@ -114,6 +114,17 @@ $messages['el'] = array(
 	'poolcounter-remote-error' => 'Σφάλμα του εξυπηρετητή του καταμετρητή ομαδοποίησης: $1',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'poolcounter-desc' => 'MediaWiki-kliento por la demono de grupokontilo',
+	'poolcounter-connection-error' => 'Eraro konektante al grupokontila servilo: $1',
+	'poolcounter-read-error' => 'Eraro legante de la grupokontila servilo',
+	'poolcounter-write-error' => 'Eraro skribante al la grupokontila servilo',
+	'poolcounter-remote-error' => 'Eraro de la grupokontila servilo: $1',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  * @author Translationista
