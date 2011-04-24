@@ -137,6 +137,17 @@ $messages['es'] = array(
 	'poolcounter-remote-error' => 'Error del servidor contador de encuestas: $1',
 );
 
+/** Persian (فارسی)
+ * @author Wayiran
+ */
+$messages['fa'] = array(
+	'poolcounter-desc' => 'کارخواه مدیاویکی برای دیو باجهٔ مخزن',
+	'poolcounter-connection-error' => 'خطا در اتصال به کارساز باجهٔ مخزن: $1',
+	'poolcounter-read-error' => 'خطا در خواندن از کارساز باجهٔ مخزن',
+	'poolcounter-write-error' => 'خطا در نوشتن در کارساز باجهٔ مخزن',
+	'poolcounter-remote-error' => 'خطای کارساز باجهٔ مخزن: $1',
+);
+
 /** Finnish (Suomi)
  * @author Nedergard
  * @author Nike
