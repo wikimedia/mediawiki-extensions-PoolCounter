@@ -434,3 +434,14 @@ $messages['zh-hans'] = array(
 	'poolcounter-remote-error' => '池计数器服务器错误：$1',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Waihorace
+ */
+$messages['zh-hant'] = array(
+	'poolcounter-desc' => '頁面的客戶端守護進程池計數器',
+	'poolcounter-connection-error' => '連接至連接池計數器服務器發生錯誤$1',
+	'poolcounter-read-error' => '從服務器池計數器中錯誤讀取',
+	'poolcounter-write-error' => '錯誤寫入至服務器池計數器',
+	'poolcounter-remote-error' => '服務器池計數器錯誤：$1',
+);
+
