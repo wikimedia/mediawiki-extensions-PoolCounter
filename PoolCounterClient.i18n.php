@@ -401,6 +401,17 @@ $messages['sl'] = array(
 	'poolcounter-remote-error' => 'Napaka strežnika založnega pulta: $1',
 );
 
+/** Swedish (Svenska)
+ * @author Ainali
+ */
+$messages['sv'] = array(
+	'poolcounter-desc' => 'MediaWiki klient för pool counter daemon',
+	'poolcounter-connection-error' => 'Fel vid anslutning till pool counter server: $1',
+	'poolcounter-read-error' => 'Fel vid läsning från pool counter server',
+	'poolcounter-write-error' => 'Fel vid skrivning till pool counter server',
+	'poolcounter-remote-error' => 'Pool counter server fel: $1',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
