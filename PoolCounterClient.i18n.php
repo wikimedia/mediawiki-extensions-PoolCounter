@@ -290,6 +290,17 @@ $messages['mk'] = array(
 	'poolcounter-remote-error' => 'Грешка во опслужувачот на фондовскиот шалтер: $1',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'poolcounter-desc' => 'പൂൾ കൗണ്ടർ ഡീമണുള്ള മീഡിയവിക്കി ക്ലയന്റ്',
+	'poolcounter-connection-error' => 'പൂൾ കൗണ്ടർ സെർവറുമായി ബന്ധപ്പെടുന്നതിൽ പിഴവുണ്ടായി: $1',
+	'poolcounter-read-error' => 'പൂൾ കൗണ്ടർ സെർവറിൽ നിന്ന് വിവരങ്ങൾ ലഭ്യമാക്കുന്നതിൽ പിഴവുണ്ടായി',
+	'poolcounter-write-error' => 'പൂൾ കൗണ്ടർ ഡീമണിൽ വിവരങ്ങൾ ചേർക്കുന്നതിൽ പിഴവുണ്ടായി',
+	'poolcounter-remote-error' => 'പൂൾ കൗണ്ടർ സെർവർ പിഴവ്: $1',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
