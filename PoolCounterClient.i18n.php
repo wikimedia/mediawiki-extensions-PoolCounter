@@ -412,6 +412,17 @@ $messages['sl'] = array(
 	'poolcounter-remote-error' => 'Napaka strežnika založnega pulta: $1',
 );
 
+/** Albanian (Shqip)
+ * @author Vinie007
+ */
+$messages['sq'] = array(
+	'poolcounter-desc' => 'MediaWiki klient për dreq lloto counter',
+	'poolcounter-connection-error' => 'Gabim gjatë lidhjes me server pishinë counter: $1',
+	'poolcounter-read-error' => 'Gabim leximi nga pishinë server counter',
+	'poolcounter-write-error' => 'Gabim gjatë shkrimit në server pishinë counter',
+	'poolcounter-remote-error' => 'server error counter Pool: $1',
+);
+
 /** Swedish (Svenska)
  * @author Ainali
  */
