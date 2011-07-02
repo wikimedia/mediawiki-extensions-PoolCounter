@@ -314,13 +314,14 @@ $messages['nl'] = array(
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
+ * @author Stigmj
  */
 $messages['no'] = array(
-	'poolcounter-desc' => 'MediaWiki-klient for sammenslutningsskrankenissen poolcounter.py',
-	'poolcounter-connection-error' => 'Feil ved tilkobling til sammenslutningsskranketjener: $1',
-	'poolcounter-read-error' => 'Feil ved lesing fra sammenslutningsskranketjener',
-	'poolcounter-write-error' => 'Feil ved skriving til sammenslutningsskranketjeneren',
-	'poolcounter-remote-error' => 'Sammenslutningsskranketjenerfeil: $1',
+	'poolcounter-desc' => 'MediaWiki-klient for pool counter tjeneren',
+	'poolcounter-connection-error' => 'Feil ved tilkobling til pool counter tjener: $1',
+	'poolcounter-read-error' => 'Feil ved lesing fra pool counter tjener',
+	'poolcounter-write-error' => 'Feil ved skriving til pool counter tjeneren',
+	'poolcounter-remote-error' => 'Feil på pool counter tjener: $1',
 );
 
 /** Occitan (Occitan)
