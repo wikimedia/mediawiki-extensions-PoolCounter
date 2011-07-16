@@ -301,6 +301,17 @@ $messages['ml'] = array(
 	'poolcounter-remote-error' => 'പൂൾ കൗണ്ടർ സെർവർ പിഴവ്: $1',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'poolcounter-desc' => 'Klien MediaWiki untuk demon kaunter tabung',
+	'poolcounter-connection-error' => 'Ralat ketika bersambung dengan pelayan kaunter tabung: $1',
+	'poolcounter-read-error' => 'Ralat ketika membaca dari pelayan kaunter tabung',
+	'poolcounter-write-error' => 'Ralat ketika menulis ke pelayan kaunter tabung',
+	'poolcounter-remote-error' => 'Ralat pelayan kaunter tabung: $1',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
