@@ -249,6 +249,17 @@ $messages['id'] = array(
 	'poolcounter-remote-error' => 'Kesalahan server pool server: $1',
 );
 
+/** Interlingue (Interlingue)
+ * @author Renan
+ */
+$messages['ie'] = array(
+	'poolcounter-desc' => 'Client MediaWiki por li contator pool daemon',
+	'poolcounter-connection-error' => 'Errore conexent por servitor de contator de funde comun: $1',
+	'poolcounter-read-error' => 'Errore leent de servitor de contator de funde comun',
+	'poolcounter-write-error' => 'Errore scrint por servitor de contator de funde comun',
+	'poolcounter-remote-error' => 'Errore de servitor de contator de funde comun: $1',
+);
+
 /** Japanese (日本語)
  * @author Fryed-peach
  */
