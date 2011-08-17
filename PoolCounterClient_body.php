@@ -128,10 +128,6 @@ class PoolCounter_Client extends PoolCounter {
 		$parts = explode( ' ', $response, 2 );
 		$responseType = $parts[0];
 		switch ( $responseType ) {
-			case 'ERROR':
-				$parts = explode( ' ', $parts[1], 2 );
-				$errorMsg = isset( $parts[1] ) ? $parts[1] : '(no message given)';
-				return Status::newFatal( 'poolcounter-remote-error', $errorMsg );
 			case 'LOCKED':
 			case 'RELEASED':
 			case 'DONE':
@@ -140,6 +136,12 @@ class PoolCounter_Client extends PoolCounter {
 			case 'TIMEOUT':
 			case 'LOCK_HELD':
 				return Status::newGood( constant( "PoolCounter::$responseType" ) );
+
+			case 'ERROR':
+			default:
+				$parts = explode( ' ', $parts[1], 2 );
+				$errorMsg = isset( $parts[1] ) ? $parts[1] : '(no message given)';
+				return Status::newFatal( 'poolcounter-remote-error', $errorMsg );
 		}
 	}
 
