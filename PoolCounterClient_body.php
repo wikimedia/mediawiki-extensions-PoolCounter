@@ -13,6 +13,10 @@ class PoolCounter_ConnectionManager {
 		}
 	}
 
+	/**
+	 * @param $key
+	 * @return Status
+	 */
 	function get( $key ) {
 		$hashes = array();
 		foreach ( $this->hostNames as $hostName ) {
@@ -47,6 +51,9 @@ class PoolCounter_ConnectionManager {
 		return Status::newGood( $conn );
 	}
 
+	/**
+	 * @param $conn
+	 */
 	function close( $conn ) {
 		foreach ( $this->conns as $hostName => $otherConn ) {
 			if ( $conn === $otherConn ) {
@@ -65,6 +72,9 @@ class PoolCounter_ConnectionManager {
 class PoolCounter_Client extends PoolCounter {
 	private $conn;
 
+	/**
+	 * @var PoolCounter_ConnectionManager
+	 */
 	static private $manager;
 
 	function __construct( $conf, $type, $key ) {
@@ -75,6 +85,9 @@ class PoolCounter_Client extends PoolCounter {
 		}
 	}
 
+	/**
+	 * @return Status
+	 */
 	function getConn() {
 		if ( !isset( $this->conn ) ) {
 			$status = self::$manager->get( $this->key );
@@ -83,13 +96,16 @@ class PoolCounter_Client extends PoolCounter {
 			}
 			$this->conn = $status->value;
 
-			// Set the read timeout to be 1.5 times the pool timeout. 
+			// Set the read timeout to be 1.5 times the pool timeout.
 			// This allows the server to time out gracefully before we give up on it.
 			stream_set_timeout( $this->conn, 0, $this->timeout * 1e6 * 1.5 );
 		}
 		return Status::newGood( $this->conn );
 	}
 
+	/**
+	 * @return Status
+	 */
 	function sendCommand( /*, ...*/ ) {
 		$args = func_get_args();
 		$args = str_replace( ' ', '%20', $args );
@@ -127,6 +143,9 @@ class PoolCounter_Client extends PoolCounter {
 		}
 	}
 
+	/**
+	 * @return Status
+	 */
 	function acquireForMe() {
 		wfProfileIn( __METHOD__ );
 		$status = $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
@@ -134,6 +153,9 @@ class PoolCounter_Client extends PoolCounter {
 		return $status;
 	}
 
+	/**
+	 * @return Status
+	 */
 	function acquireForAnyone() {
 		wfProfileIn( __METHOD__ );
 		$status = $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
@@ -141,6 +163,9 @@ class PoolCounter_Client extends PoolCounter {
 		return $status;
 	}
 
+	/**
+	 * @return Status
+	 */
 	function release() {
 		wfProfileIn( __METHOD__ );
 		$status = $this->sendCommand( 'RELEASE', $this->key );
