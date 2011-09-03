@@ -171,6 +171,13 @@ $messages['fr'] = array(
 	'poolcounter-remote-error' => 'Erreur du serveur du compteur de groupement : $1',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'poolcounter-remote-error' => 'Èrror du sèrvor du comptor de ressôrses comenes : $1',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
