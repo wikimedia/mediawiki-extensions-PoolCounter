@@ -153,6 +153,7 @@ $messages['fa'] = array(
  * @author Nike
  */
 $messages['fi'] = array(
+	'poolcounter-desc' => 'MediaWiki-asiakasohjelma varantolaskuritaustapalvelun käyttöön',
 	'poolcounter-connection-error' => 'Yhteyden muodostaminen varantolaskuripalvelimeen epäonnistui: $1',
 	'poolcounter-read-error' => 'Varantolaskuripalvelimen lukuvirhe',
 	'poolcounter-write-error' => 'Varantolaskuripalvelimen kirjoitusvirhe',
@@ -175,6 +176,10 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
+	'poolcounter-desc' => 'Cliant por MediaWiki du dèmon du comptor de ressôrses comenes',
+	'poolcounter-connection-error' => 'Èrror pendent lo branchement u sèrvor du comptor de ressôrses comenes : $1',
+	'poolcounter-read-error' => 'Èrror pendent la lèctura du sèrvor du comptor de ressôrses comenes',
+	'poolcounter-write-error' => 'Èrror pendent l’ècritura sur lo sèrvor du comptor de ressôrses comenes',
 	'poolcounter-remote-error' => 'Èrror du sèrvor du comptor de ressôrses comenes : $1',
 );
 
