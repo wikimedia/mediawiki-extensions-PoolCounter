@@ -425,6 +425,17 @@ $messages['ru'] = array(
 	'poolcounter-remote-error' => 'Ошибка сервера-счётчика пула: $1',
 );
 
+/** Rusyn (Русиньскый)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'poolcounter-desc' => 'MediaWiki кліент про службу засобне раховадло',
+	'poolcounter-connection-error' => 'Хыба при споїню на засобный рахуючій сервер: $1',
+	'poolcounter-read-error' => 'Хыба чітаня з засобного рахуючого сервера',
+	'poolcounter-write-error' => 'Хыба записованя до засобного рахуючого сервера',
+	'poolcounter-remote-error' => 'Хыба засобного сервера рахованя: $1',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
@@ -478,6 +489,17 @@ $messages['tl'] = array(
 	'poolcounter-read-error' => 'Maling pagbasa mula sa tagapaghain ng pambilang ng lawa',
 	'poolcounter-write-error' => 'Kamalian sa pagsulat sa tagapaghain ng pambilang ng lawa',
 	'poolcounter-remote-error' => 'Kamalian sa tagapaghain ng pambilang ng lawa: $1',
+);
+
+/** Ukrainian (Українська)
+ * @author Dim Grits
+ */
+$messages['uk'] = array(
+	'poolcounter-desc' => 'Клієнт MediaWiki для демона лічильника пулу',
+	'poolcounter-connection-error' => "Помилка з'єднання з сервером лічильника пулу: $1",
+	'poolcounter-read-error' => 'Помилка зчитування з сервера лічильника пулу',
+	'poolcounter-write-error' => 'Помилка запису до сервера лічильника пулу',
+	'poolcounter-remote-error' => 'Помилка сервера лічильника пулу: $1',
 );
 
 /** Vietnamese (Tiếng Việt)
