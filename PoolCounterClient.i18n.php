@@ -369,6 +369,17 @@ $messages['oc'] = array(
 	'poolcounter-remote-error' => 'Error del servidor de comptador de gropament : $1',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
+$messages['or'] = array(
+	'poolcounter-desc' => 'ପୁଲ କାଉଣ୍ଟର ଡେମନ ନିମନ୍ତେ ମିଡ଼ିଆଉଇକି କ୍ଲାଏଣ୍ଟ',
+	'poolcounter-connection-error' => 'ପୁଲ କାଉଣ୍ଟର ସର୍ଭର ସହ ଯୋଡ଼ିବାରେ ଭୁଲ: $1',
+	'poolcounter-read-error' => 'ପୁଲ କାଉଣ୍ଟର ସର୍ଭର ପଢ଼ିବାରେ ଅସୁବିଧା',
+	'poolcounter-write-error' => 'ପୁଲ କାଉଣ୍ଟର ସର୍ଭର ଲେଖିବାରେ ଅସୁବିଧା',
+	'poolcounter-remote-error' => 'ପୁଲ କାଉଣ୍ଟର ସର୍ଭର ଅସୁବିଧା: $1',
+);
+
 /** Polish (Polski)
  * @author Sp5uhe
  */
