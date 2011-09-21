@@ -403,6 +403,17 @@ $messages['pms'] = array(
 	'poolcounter-remote-error' => 'Eror dël server ëd pool counter: $1',
 );
 
+/** Western Punjabi (پنجابی)
+ * @author Khalid Mahmood
+ */
+$messages['pnb'] = array(
+	'poolcounter-desc' => 'میڈیاوکی کلائینٹ پول کاؤنٹر ڈیمن لئی',
+	'poolcounter-connection-error' => 'غلطی پول کاؤنٹر سرور نال جڑن توں:$1',
+	'poolcounter-read-error' => 'پول کاؤنٹر سورس نوں پڑھن چ غلطی',
+	'poolcounter-write-error' => 'پول کاؤنٹر سرور نوں لکھن چ غلطی',
+	'poolcounter-remote-error' => 'پول کاؤنٹر سرور غلطی: $1',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  */
