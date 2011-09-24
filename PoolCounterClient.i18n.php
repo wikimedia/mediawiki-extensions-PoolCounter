@@ -302,6 +302,17 @@ $messages['lb'] = array(
 	'poolcounter-connection-error' => 'Feeler beim Verbanne mam Pool-Counter-Server: $1',
 );
 
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'poolcounter-desc' => 'MediaWiki-client veure poolcounter daemon',
+	'poolcounter-connection-error' => "Fout bie 't verbinje mitte poolcounterserver: $1",
+	'poolcounter-read-error' => "Fout bie 't laeze vanne poolcounterserver",
+	'poolcounter-write-error' => "Fout bie 't sjriever nao de poolcounterserver",
+	'poolcounter-remote-error' => 'Poolcounterserverfout: $1',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
