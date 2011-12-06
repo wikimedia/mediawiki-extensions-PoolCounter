@@ -81,10 +81,11 @@ $messages['bs'] = array(
 );
 
 /** Catalan (Català)
+ * @author Aleator
  * @author Gemmaa
  */
 $messages['ca'] = array(
-	'poolcounter-desc' => 'MediaWiki client per al dimoni de taulell de piscina',
+	'poolcounter-desc' => "Client MediaWiki per al dimoni del ''pool counter''",
 	'poolcounter-connection-error' => "S'està connectant al servidor de taulell de piscina d'error:$1",
 	'poolcounter-read-error' => 'Error en llegir del servidor de taulell de piscina',
 	'poolcounter-write-error' => 'Error en escriure al servidor de taulell de piscina',
