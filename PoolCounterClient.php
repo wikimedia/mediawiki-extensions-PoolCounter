@@ -9,7 +9,7 @@ $wgExtensionCredits['other'][] = array(
 	'name'           => 'Pool Counter Client',
 	'author'         => 'Tim Starling',
 	'descriptionmsg' => 'poolcounter-desc',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:PoolCounter',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:PoolCounter',
 );
 
 
