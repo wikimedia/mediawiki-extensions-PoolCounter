@@ -525,6 +525,26 @@ $messages['sq'] = array(
 	'poolcounter-remote-error' => 'server error counter Pool: $1',
 );
 
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+ * @author Rancher
+ */
+$messages['sr-ec'] = array(
+	'poolcounter-desc' => 'Медијавики клијент за демона фондовског шалтера poolcounter.py',
+	'poolcounter-connection-error' => 'Грешка при повезивању са сервером фондовског шалтера: $1',
+	'poolcounter-read-error' => 'Грешка при читању са сервера фондовског шалтера',
+	'poolcounter-write-error' => 'Грешка при писању на сервер фондовског шалтера',
+	'poolcounter-remote-error' => 'Грешка у серверу фондовског шалтера: $1',
+);
+
+/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+$messages['sr-el'] = array(
+	'poolcounter-desc' => 'Medijaviki klijent za demona fondovskog šaltera poolcounter.py',
+	'poolcounter-connection-error' => 'Greška pri povezivanju sa serverom fondovskog šaltera: $1',
+	'poolcounter-read-error' => 'Greška pri čitanju sa servera fondovskog šaltera',
+	'poolcounter-write-error' => 'Greška pri pisanju na server fondovskog šaltera',
+	'poolcounter-remote-error' => 'Greška u serveru fondovskog šaltera: $1',
+);
+
 /** Swedish (Svenska)
  * @author Ainali
  */
