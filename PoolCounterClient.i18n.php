@@ -369,17 +369,6 @@ $messages['ms'] = array(
 	'poolcounter-remote-error' => 'Ralat pelayan kaunter tabung: $1',
 );
 
-/** Dutch (Nederlands)
- * @author Siebrand
- */
-$messages['nl'] = array(
-	'poolcounter-desc' => 'MediaWiki-client voor de poolcounter daemon',
-	'poolcounter-connection-error' => 'Fout bij het verbinden met de poolcounter server: $1',
-	'poolcounter-read-error' => 'Fout bij het lezen van de poolcounter server',
-	'poolcounter-write-error' => 'Fout bij het schrijven naar de poolcounter server',
-	'poolcounter-remote-error' => 'Poolcounter serverfout: $1',
-);
-
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  * @author Stigmj
@@ -390,6 +379,17 @@ $messages['nb'] = array(
 	'poolcounter-read-error' => 'Feil ved lesing fra pool counter tjener',
 	'poolcounter-write-error' => 'Feil ved skriving til pool counter tjeneren',
 	'poolcounter-remote-error' => 'Feil på pool counter tjener: $1',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'poolcounter-desc' => 'MediaWiki-client voor de poolcounter daemon',
+	'poolcounter-connection-error' => 'Fout bij het verbinden met de poolcounter server: $1',
+	'poolcounter-read-error' => 'Fout bij het lezen van de poolcounter server',
+	'poolcounter-write-error' => 'Fout bij het schrijven naar de poolcounter server',
+	'poolcounter-remote-error' => 'Poolcounter serverfout: $1',
 );
 
 /** Occitan (Occitan)
