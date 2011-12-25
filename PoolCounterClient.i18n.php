@@ -384,7 +384,7 @@ $messages['nl'] = array(
  * @author Nghtwlkr
  * @author Stigmj
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'poolcounter-desc' => 'MediaWiki-klient for pool counter tjeneren',
 	'poolcounter-connection-error' => 'Feil ved tilkobling til pool counter tjener: $1',
 	'poolcounter-read-error' => 'Feil ved lesing fra pool counter tjener',
