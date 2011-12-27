@@ -284,6 +284,17 @@ $messages['ie'] = array(
 	'poolcounter-remote-error' => 'Errore de servitor de contator de funde comun: $1',
 );
 
+/** Italian (Italiano)
+ * @author F. Cosoleto
+ */
+$messages['it'] = array(
+	'poolcounter-desc' => 'Client di MediaWiki per il demone contatore dei pool',
+	'poolcounter-connection-error' => 'Errore di connessione al server contatore dei pool: $1',
+	'poolcounter-read-error' => 'Errore di lettura dal server contatore dei pool',
+	'poolcounter-write-error' => 'Errore di scrittura al server contatore dei pool',
+	'poolcounter-remote-error' => 'Errore del server contatore dei pool: $1',
+);
+
 /** Japanese (日本語)
  * @author Fryed-peach
  */
