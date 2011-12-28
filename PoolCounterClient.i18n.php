@@ -284,6 +284,17 @@ $messages['ie'] = array(
 	'poolcounter-remote-error' => 'Errore de servitor de contator de funde comun: $1',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'poolcounter-desc' => 'Kliente ti mediaWiki para iti panag-bliang ti nairaman a daemon',
+	'poolcounter-connection-error' => 'Biddut ti panakaikabit ti nairaman a panagbilang ti server: $1',
+	'poolcounter-read-error' => 'Biddut ti pinagbasa manipud idiay nairaman a panagbilang ti server',
+	'poolcounter-write-error' => 'Biddut ti pinagsurat idiay nairaman a panagbilang ti server',
+	'poolcounter-remote-error' => 'Biddut ti nairaman a panagbilang ti server: $1',
+);
+
 /** Italian (Italiano)
  * @author F. Cosoleto
  */
@@ -501,6 +512,13 @@ $messages['rue'] = array(
 	'poolcounter-read-error' => 'Хыба чітаня з засобного рахуючого сервера',
 	'poolcounter-write-error' => 'Хыба записованя до засобного рахуючого сервера',
 	'poolcounter-remote-error' => 'Хыба засобного сервера рахованя: $1',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'poolcounter-remote-error' => 'සංසද ගණක සර්වරයේ දෝෂය: $1',
 );
 
 /** Slovak (Slovenčina)
