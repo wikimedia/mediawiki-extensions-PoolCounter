@@ -518,6 +518,10 @@ $messages['rue'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'poolcounter-desc' => 'සංසද ගණක විනාශකාරී පුද්ගලයා සඳහා වූ මාධ්‍ය විකි සේවාදායකයා',
+	'poolcounter-connection-error' => 'සංසද ගණක සර්වරය වෙත සම්බන්ධවීමේ දෝෂය: $1',
+	'poolcounter-read-error' => 'සංසද ගණක සර්වරය වෙතින් කියවීමේ දෝෂය',
+	'poolcounter-write-error' => 'සංසද ගණක සර්වරය වෙත ලිවීමේ දෝෂය',
 	'poolcounter-remote-error' => 'සංසද ගණක සර්වරයේ දෝෂය: $1',
 );
 
@@ -583,6 +587,16 @@ $messages['sv'] = array(
 	'poolcounter-read-error' => 'Fel vid läsning från pool counter server',
 	'poolcounter-write-error' => 'Fel vid skrivning till pool counter server',
 	'poolcounter-remote-error' => 'Pool counter server fel: $1',
+);
+
+/** Tamil (தமிழ்)
+ * @author Shanmugamp7
+ */
+$messages['ta'] = array(
+	'poolcounter-connection-error' => 'தொகுப்பு(pool) எதிர் சேவையகத்தில் இணைப்பதில் பிழை:$1',
+	'poolcounter-read-error' => 'குள வருகையாளர் சேவகனில் இருந்து வாசிக்கையில் பிழை',
+	'poolcounter-write-error' => 'குள வருகையாளர் சேவகன் எழுதுகையில் பிழை',
+	'poolcounter-remote-error' => 'குள வருகையாளர் சேவகன் பிழை:$1',
 );
 
 /** Tagalog (Tagalog)
