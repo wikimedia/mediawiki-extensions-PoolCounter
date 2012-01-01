@@ -228,6 +228,13 @@ $messages['he'] = array(
 	'poolcounter-remote-error' => 'שגיאת שרת דלפק מאגר: $1',
 );
 
+/** Hindi (हिन्दी)
+ * @author Ansumang
+ */
+$messages['hi'] = array(
+	'poolcounter-remote-error' => 'पूल काउंटर सर्वर त्रुटि: $1',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
