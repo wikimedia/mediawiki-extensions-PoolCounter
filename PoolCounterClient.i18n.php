@@ -36,6 +36,13 @@ Please wait a while before you try to access this page again.
 $1"',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['af'] = array(
+	'poolcounter-read-error' => 'Fout met lees van die swembad toonbank bediener',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
