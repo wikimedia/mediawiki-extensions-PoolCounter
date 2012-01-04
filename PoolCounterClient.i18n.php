@@ -40,7 +40,9 @@ $1"',
  * @author පසිඳු කාවින්ද
  */
 $messages['af'] = array(
+	'poolcounter-desc' => 'MediaWiki kliënt vir die swembad toonbank daemon',
 	'poolcounter-read-error' => 'Fout met lees van die swembad toonbank bediener',
+	'poolcounter-write-error' => 'Fout met skryf aan die swembad toonbank bediener',
 );
 
 /** Arabic (العربية)
