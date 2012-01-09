@@ -45,6 +45,17 @@ $messages['af'] = array(
 	'poolcounter-write-error' => 'Fout met skryf aan die swembad toonbank bediener',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'poolcounter-desc' => "Client MediaWiki ta demonio d'o contador d'enqüestas poolcounter.py",
+	'poolcounter-connection-error' => "Error connectando a o servidor contador d'enqüestas: $1",
+	'poolcounter-read-error' => "Error leyendo d'o servidor contador d'enqüestas",
+	'poolcounter-write-error' => "Error escribindo a o servidor contador d'enqüestas",
+	'poolcounter-remote-error' => "Error d'o servidor contador d'enqüestas: $1",
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
