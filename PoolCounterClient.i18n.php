@@ -407,6 +407,13 @@ $messages['ml'] = array(
 	'poolcounter-remote-error' => 'പൂൾ കൗണ്ടർ സെർവർ പിഴവ്: $1',
 );
 
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'poolcounter-desc' => 'pool counter daemon करिता मिडियाविकि क्लाएंट',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
