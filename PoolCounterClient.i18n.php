@@ -409,9 +409,14 @@ $messages['ml'] = array(
 
 /** Marathi (मराठी)
  * @author Mahitgar
+ * @author Rahuldeshmukh101
  */
 $messages['mr'] = array(
 	'poolcounter-desc' => 'pool counter daemon करिता मिडियाविकि क्लाएंट',
+	'poolcounter-connection-error' => 'पूल काउंटर दाताशी संपर्क करण्यात त्रूटी आलेली आहे : $1',
+	'poolcounter-read-error' => 'पूल काउंटर दाता कडून माहिती मिळवण्यात त्रूटी आलेली आहे',
+	'poolcounter-write-error' => 'पूल काउंटर दातावर माहिती लिहतांना त्रूटी आलेली आहे',
+	'poolcounter-remote-error' => 'पूल काउंटर दाता त्रूटी : $1',
 );
 
 /** Malay (Bahasa Melayu)
