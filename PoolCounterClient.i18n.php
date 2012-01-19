@@ -67,6 +67,17 @@ $messages['ar'] = array(
 	'poolcounter-remote-error' => 'خطأ خادم مشرف المجموعة: $1',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'poolcounter-desc' => "Cliente MediaWiki pal degorriu del contador d'encuestes",
+	'poolcounter-connection-error' => "Error al coneutar col sirvidor del contador d'encuestes: $1",
+	'poolcounter-read-error' => "Error al lleer del sirvidor del contador d'encuestes",
+	'poolcounter-write-error' => "Error al escribir nel sirvidor del contador d'encuestes",
+	'poolcounter-remote-error' => "Error del sirvidor del contador d'encuestes: $1",
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  */
