@@ -248,6 +248,16 @@ $messages['gsw'] = array(
 	'poolcounter-remote-error' => 'Poolcounter-Server-Fähler: $1',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Sushant savla
+ */
+$messages['gu'] = array(
+	'poolcounter-connection-error' => 'પૂલ ગણક સર્વર સાથે જોડાણમાં ત્રુટી : $1',
+	'poolcounter-read-error' => 'પૂલ ગણક સર્વર પર વાંચવામાં ત્રુટી',
+	'poolcounter-write-error' => 'પૂલ ગણક સર્વર પર લખવામાં ત્રુટી',
+	'poolcounter-remote-error' => 'પૂલ ગણક સર્વર ત્રુટી: $1',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  */
