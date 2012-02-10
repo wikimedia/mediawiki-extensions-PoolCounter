@@ -252,6 +252,7 @@ $messages['gsw'] = array(
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'poolcounter-desc' => 'પૂલ કૌન્ટર ડાઍમન નો મિડિયા વિકિ ગ્રાહક',
 	'poolcounter-connection-error' => 'પૂલ ગણક સર્વર સાથે જોડાણમાં ત્રુટી : $1',
 	'poolcounter-read-error' => 'પૂલ ગણક સર્વર પર વાંચવામાં ત્રુટી',
 	'poolcounter-write-error' => 'પૂલ ગણક સર્વર પર લખવામાં ત્રુટી',
