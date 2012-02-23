@@ -128,7 +128,7 @@ $messages['ca'] = array(
  * @author Purodha
  */
 $messages['de'] = array(
-	'poolcounter-desc' => 'Stellt einen Klienten für MediaWiki für den Hintergrundprozeß „poolcounter.py“ eines Computerclusters bereit',
+	'poolcounter-desc' => "Ermöglicht einen ''Client'' für den ''„PoolCounter“'' eines Computerclusters",
 	'poolcounter-connection-error' => 'Fehler beim Verbinden zum Server $1, auf dem sich das Zählwerk des Computerclusters befindet',
 	'poolcounter-read-error' => 'Fehler beim Lesen vom Server, auf dem sich das Zählwerk des Computerclusters befindet',
 	'poolcounter-write-error' => 'Fehler beim Schreiben auf dem Server, auf dem sich das Zählwerk des Computerclusters befindet',
