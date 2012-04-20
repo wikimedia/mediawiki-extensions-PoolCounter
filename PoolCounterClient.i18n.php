@@ -357,13 +357,14 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['ja'] = array(
-	'poolcounter-desc' => 'プールカウンター・デーモン poolcounter.py の MediaWiki クライアント',
-	'poolcounter-connection-error' => 'プールカウンター・サーバーへの接続中にエラー: $1',
-	'poolcounter-read-error' => 'プールカウンター・サーバーからの読み込み中にエラー',
-	'poolcounter-write-error' => 'プールカウンター・サーバーへの書き込み中にエラー',
-	'poolcounter-remote-error' => 'プールカウンター・サーバーのエラー: $1',
+	'poolcounter-desc' => 'プール カウンター デーモン poolcounter.py の MediaWiki クライアント',
+	'poolcounter-connection-error' => 'プール カウンター サーバーへの接続中にエラー：$1',
+	'poolcounter-read-error' => 'プール カウンター サーバーからの読み込み中のエラー',
+	'poolcounter-write-error' => 'プール カウンター サーバーへの書き込み中のエラー',
+	'poolcounter-remote-error' => 'プール カウンター サーバーのエラー：$1',
 );
 
 /** Georgian (ქართული)
