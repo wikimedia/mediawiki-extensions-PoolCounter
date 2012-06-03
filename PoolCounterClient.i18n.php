@@ -67,6 +67,16 @@ $messages['ar'] = array(
 	'poolcounter-remote-error' => 'خطأ خادم مشرف المجموعة: $1',
 );
 
+/** Assamese (অসমীয়া)
+ * @author Gitartha.bordoloi
+ */
+$messages['as'] = array(
+	'poolcounter-connection-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰলৈ সংযোগ স্থাপনত ত্ৰুটী হৈছে: $1',
+	'poolcounter-read-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰৰ পৰা পঢ়াত ত্ৰুটী হৈছে',
+	'poolcounter-write-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰত লিখাত ত্ৰুটী হৈছে',
+	'poolcounter-remote-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰ ত্ৰুটী: $1',
+);
+
 /** Asturian (Asturianu)
  * @author Xuacu
  */
