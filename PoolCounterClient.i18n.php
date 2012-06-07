@@ -390,9 +390,10 @@ $messages['ka'] = array(
 
 /** Korean (한국어)
  * @author Kwj2772
+ * @author 아라
  */
 $messages['ko'] = array(
-	'poolcounter-desc' => 'pool counter daemon 미디어위키 클라이언트',
+	'poolcounter-desc' => 'pool 카운터 데몬 미디어위키 클라이언트',
 	'poolcounter-connection-error' => '풀 카운터 서버에 접속하는 중 오류: $1',
 	'poolcounter-read-error' => '풀 카운터 서버 읽기 오류',
 	'poolcounter-write-error' => '풀 카운터 서버 쓰기 오류',
