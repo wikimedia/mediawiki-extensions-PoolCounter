@@ -77,7 +77,7 @@ $messages['as'] = array(
 	'poolcounter-remote-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰ ত্ৰুটী: $1',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -99,7 +99,7 @@ $messages['be-tarask'] = array(
 	'poolcounter-remote-error' => 'Памылка сэрвэра лічыльніка: $1',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -110,7 +110,7 @@ $messages['br'] = array(
 	'poolcounter-remote-error' => 'Fazi servijer kanastell ar strollad : $1',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -121,7 +121,7 @@ $messages['bs'] = array(
 	'poolcounter-remote-error' => 'Greška na serveru pool brojača: $1',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Aleator
  * @author Gemmaa
  */
@@ -178,7 +178,7 @@ $messages['eo'] = array(
 	'poolcounter-remote-error' => 'Eraro de la grupokontila servilo: $1',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Translationista
  */
@@ -201,7 +201,7 @@ $messages['fa'] = array(
 	'poolcounter-remote-error' => 'خطای کارساز باجهٔ مخزن: $1',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Nedergard
  * @author Nike
  */
@@ -213,7 +213,7 @@ $messages['fi'] = array(
 	'poolcounter-remote-error' => 'Varantolaskuripalvelimen virhe: $1',
 );
 
-/** French (Français)
+/** French (français)
  * @author IAlex
  * @author Urhixidur
  */
@@ -225,7 +225,7 @@ $messages['fr'] = array(
 	'poolcounter-remote-error' => 'Erreur du serveur du compteur de groupement : $1',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -298,7 +298,7 @@ $messages['hsb'] = array(
 	'poolcounter-remote-error' => 'Zmylk serwera skupinskeho ličaka: $1',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -309,7 +309,7 @@ $messages['hu'] = array(
 	'poolcounter-remote-error' => 'Pool counter szerver hiba: $1',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -354,7 +354,7 @@ $messages['ilo'] = array(
 	'poolcounter-remote-error' => 'Biddut ti nairaman a panagbilang ti server: $1',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author F. Cosoleto
  */
 $messages['it'] = array(
@@ -430,7 +430,7 @@ $messages['li'] = array(
 	'poolcounter-remote-error' => 'Poolcounterserverfout: $1',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -498,7 +498,7 @@ $messages['nl'] = array(
 	'poolcounter-remote-error' => 'Poolcounter serverfout: $1',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -520,7 +520,7 @@ $messages['or'] = array(
 	'poolcounter-remote-error' => 'ପୁଲ କାଉଣ୍ଟର ସର୍ଭର ଅସୁବିଧା: $1',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Sp5uhe
  */
 $messages['pl'] = array(
@@ -554,7 +554,7 @@ $messages['pnb'] = array(
 	'poolcounter-remote-error' => 'پول کاؤنٹر سرور غلطی: $1',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  */
 $messages['pt'] = array(
@@ -565,7 +565,7 @@ $messages['pt'] = array(
 	'poolcounter-remote-error' => "Erro do servidor ''pool counter'': $1",
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -576,7 +576,7 @@ $messages['pt-br'] = array(
 	'poolcounter-remote-error' => 'Erro no servidor do pool counter: $1',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -609,7 +609,7 @@ $messages['si'] = array(
 	'poolcounter-remote-error' => 'සංසද ගණක සර්වරයේ දෝෂය: $1',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -620,7 +620,7 @@ $messages['sk'] = array(
 	'poolcounter-remote-error' => 'Chyba servera počítadla skupiny: $1',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
@@ -631,7 +631,7 @@ $messages['sl'] = array(
 	'poolcounter-remote-error' => 'Napaka strežnika založnega pulta: $1',
 );
 
-/** Albanian (Shqip)
+/** Albanian (shqip)
  * @author Vinie007
  */
 $messages['sq'] = array(
@@ -642,7 +642,7 @@ $messages['sq'] = array(
 	'poolcounter-remote-error' => 'server error counter Pool: $1',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  */
 $messages['sr-ec'] = array(
@@ -653,7 +653,7 @@ $messages['sr-ec'] = array(
 	'poolcounter-remote-error' => 'Грешка у серверу фондовског шалтера: $1',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'poolcounter-desc' => 'Medijaviki klijent za demona fondovskog šaltera poolcounter.py',
 	'poolcounter-connection-error' => 'Greška pri povezivanju sa serverom fondovskog šaltera: $1',
@@ -662,7 +662,7 @@ $messages['sr-el'] = array(
 	'poolcounter-remote-error' => 'Greška u serveru fondovskog šaltera: $1',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Ainali
  */
 $messages['sv'] = array(
@@ -694,7 +694,7 @@ $messages['tl'] = array(
 	'poolcounter-remote-error' => 'Kamalian sa tagapaghain ng pambilang ng lawa: $1',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Dim Grits
  */
 $messages['uk'] = array(
@@ -716,7 +716,7 @@ $messages['vi'] = array(
 	'poolcounter-remote-error' => 'Lỗi máy chủ chia việc xử lý (pool counter server): $1',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Hydra
  */
 $messages['zh-hans'] = array(
@@ -727,7 +727,7 @@ $messages['zh-hans'] = array(
 	'poolcounter-remote-error' => '池计数器服务器错误：$1',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Waihorace
  */
 $messages['zh-hant'] = array(
