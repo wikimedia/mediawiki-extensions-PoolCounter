@@ -71,6 +71,7 @@ $messages['ar'] = array(
  * @author Gitartha.bordoloi
  */
 $messages['as'] = array(
+	'poolcounter-desc' => 'পুল্‌ কাউণ্টাৰ ডিমনৰ বাবে মিডিয়াৱিকি ক্লায়েণ্ট',
 	'poolcounter-connection-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰলৈ সংযোগ স্থাপনত ত্ৰুটী হৈছে: $1',
 	'poolcounter-read-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰৰ পৰা পঢ়াত ত্ৰুটী হৈছে',
 	'poolcounter-write-error' => 'পুল কাউণ্টাৰ চাৰ্ভাৰত লিখাত ত্ৰুটী হৈছে',
