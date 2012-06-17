@@ -146,6 +146,16 @@ $messages['de'] = array(
 	'poolcounter-remote-error' => 'Fehler beim Server $1, auf dem sich das Zählwerk des Computerclusters befindet',
 );
 
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
+$messages['diq'] = array(
+	'poolcounter-desc' => 'Muşteriyan dê MediaWiki re amardeya arey',
+	'poolcounter-connection-error' => 'İrtibat de amargeya areya bırya: $1',
+	'poolcounter-write-error' => 'Wasterê hewız da amari de nusno xırab',
+	'poolcounter-remote-error' => 'Hewız da amariya waster bırya: $1',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
