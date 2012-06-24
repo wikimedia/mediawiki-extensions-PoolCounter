@@ -428,6 +428,9 @@ $messages['ksh'] = array(
 $messages['lb'] = array(
 	'poolcounter-desc' => 'Mediawiki-Client fir de Pool-Counter-Daemon',
 	'poolcounter-connection-error' => 'Feeler beim Verbanne mam Pool-Counter-Server: $1',
+	'poolcounter-read-error' => 'Feeler beim Liese vum Pool-Counter-Server',
+	'poolcounter-write-error' => 'Feeler beim Schreiwen op de Pool-Counter-Server',
+	'poolcounter-remote-error' => 'Pool-counter-Server Feeler: $1',
 );
 
 /** Limburgish (Limburgs)
