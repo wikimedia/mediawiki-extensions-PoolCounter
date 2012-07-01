@@ -45,7 +45,7 @@ $messages['af'] = array(
 	'poolcounter-write-error' => 'Fout met skryf aan die swembad toonbank bediener',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -89,7 +89,7 @@ $messages['ast'] = array(
 	'poolcounter-remote-error' => "Error del sirvidor del contador d'encuestes: $1",
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  */
 $messages['be-tarask'] = array(
@@ -156,7 +156,7 @@ $messages['diq'] = array(
 	'poolcounter-remote-error' => 'Hewız da amariya waster bırya: $1',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -247,7 +247,7 @@ $messages['frp'] = array(
 	'poolcounter-remote-error' => 'Èrror du sèrvor du comptor de ressôrses comenes : $1',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -298,7 +298,7 @@ $messages['hi'] = array(
 	'poolcounter-remote-error' => 'पूल काउंटर सर्वर त्रुटि: $1',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -601,7 +601,7 @@ $messages['ru'] = array(
 	'poolcounter-remote-error' => 'Ошибка сервера-счётчика пула: $1',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
