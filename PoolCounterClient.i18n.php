@@ -20,6 +20,7 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Mormegil
  * @author Nedergard
  * @author Purodha
  * @author Siebrand
@@ -28,12 +29,7 @@ $messages['qqq'] = array(
 	'poolcounter-desc' => '{{desc}}
 
 A pool counter keeps track of the running processes on a cluster of processors, and may or may not grant a job access to the processing pool. (Note, the word "counter" relates to the counter in a shop, bank, or hotel, not to the verb "to count")',
-	'poolcounter-connection-error' => 'Used at least in the MediaWiki message view-pool-error:
-"Sorry, the servers are overloaded at the moment.
-Too many users are trying to view this page.
-Please wait a while before you try to access this page again.
-
-$1"',
+	'poolcounter-connection-error' => 'Used at least in the MediaWiki message {{msg-mw|view-pool-error}}',
 );
 
 /** Afrikaans (Afrikaans)
@@ -132,6 +128,17 @@ $messages['ca'] = array(
 	'poolcounter-read-error' => 'Error en llegir del servidor de taulell de piscina',
 	'poolcounter-write-error' => 'Error en escriure al servidor de taulell de piscina',
 	'poolcounter-remote-error' => 'Error de servidor de taulell de piscina:$1',
+);
+
+/** Czech (česky)
+ * @author Mormegil
+ */
+$messages['cs'] = array(
+	'poolcounter-desc' => 'Klient do MediaWiki k démonovi řídícímu přístup ke clusteru',
+	'poolcounter-connection-error' => 'Chyba připojování k serveru řídícímu přístup ke clusteru: $1',
+	'poolcounter-read-error' => 'Chyba čtení ze serveru řídícího přístup ke clusteru',
+	'poolcounter-write-error' => 'Chyba zápisu na server řídící přístup ke clusteru',
+	'poolcounter-remote-error' => 'Chyba serveru řídícího přístup ke clusteru: $1',
 );
 
 /** German (Deutsch)
