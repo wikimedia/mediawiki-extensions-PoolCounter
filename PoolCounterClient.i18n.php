@@ -496,7 +496,7 @@ $messages['ms'] = array(
 	'poolcounter-remote-error' => 'Ralat pelayan kaunter tabung: $1',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  * @author Stigmj
  */
