@@ -159,6 +159,7 @@ $messages['de'] = array(
 $messages['diq'] = array(
 	'poolcounter-desc' => 'Muşteriyan dê MediaWiki re amardeya arey',
 	'poolcounter-connection-error' => 'İrtibat de amargeya areya bırya: $1',
+	'poolcounter-read-error' => 'Arden dê hewız da amari de nusno xırab',
 	'poolcounter-write-error' => 'Wasterê hewız da amari de nusno xırab',
 	'poolcounter-remote-error' => 'Hewız da amariya waster bırya: $1',
 );
