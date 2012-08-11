@@ -620,6 +620,17 @@ $messages['rue'] = array(
 	'poolcounter-remote-error' => 'Хыба засобного сервера рахованя: $1',
 );
 
+/** Sanskrit (संस्कृतम्)
+ * @author Shubha
+ */
+$messages['sa'] = array(
+	'poolcounter-desc' => 'पूल् कौण्टर् डीमन् कृते मेटावीकी क्लैण्ट्',
+	'poolcounter-connection-error' => 'पूल् कौण्टर् वितरकेण सह सम्बन्धकल्पने दोषः : $1',
+	'poolcounter-read-error' => 'पूल् कौण्टर् वितरकात् पठनावसरे दोषः',
+	'poolcounter-write-error' => 'पूल् कौण्टर् वितरके लेखनावसरे दोषः',
+	'poolcounter-remote-error' => 'पूल् कौण्टर् वितरकदोषः : $1',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
