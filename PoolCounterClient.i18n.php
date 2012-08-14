@@ -96,6 +96,17 @@ $messages['be-tarask'] = array(
 	'poolcounter-remote-error' => 'Памылка сэрвэра лічыльніка: $1',
 );
 
+/** Bengali (বাংলা)
+ * @author Nasir8891
+ */
+$messages['bn'] = array(
+	'poolcounter-desc' => 'পুল কাউন্টার ডেমনের জন্য মিডিয়াউইকি ক্লায়েন্ট',
+	'poolcounter-connection-error' => 'পুল কাউন্টার সার্ভার কানেকশন ত্রুটি: $1',
+	'poolcounter-read-error' => 'পুল কাউন্টার সার্ভার থেকে তথ্য পেতে সমস্যা হচ্ছে',
+	'poolcounter-write-error' => 'পুল কাউন্টার সার্ভার তথ্য সংযোজন ত্রুটি',
+	'poolcounter-remote-error' => 'পুল কাউন্টার সার্ভার ত্রুটি: $1',
+);
+
 /** Breton (brezhoneg)
  * @author Fulup
  */
@@ -394,6 +405,17 @@ $messages['ja'] = array(
 	'poolcounter-read-error' => 'プール カウンター サーバーからの読み込み中のエラー',
 	'poolcounter-write-error' => 'プール カウンター サーバーへの書き込み中のエラー',
 	'poolcounter-remote-error' => 'プール カウンター サーバーのエラー：$1',
+);
+
+/** Javanese (Basa Jawa)
+ * @author NoiX180
+ */
+$messages['jv'] = array(
+	'poolcounter-desc' => "Klièn MediaWiki kanggo daèmon ''pool counter''",
+	'poolcounter-connection-error' => "Kasalahan ngubungaké nèng sasana ''pool counter'': $1",
+	'poolcounter-read-error' => "Kasalahan maca saka sasana ''pool counter''",
+	'poolcounter-write-error' => "Ora bisa nulis nèng sasana ''counter pool''",
+	'poolcounter-remote-error' => "Kasalahan sasana ''counter pool'': $1",
 );
 
 /** Georgian (ქართული)
