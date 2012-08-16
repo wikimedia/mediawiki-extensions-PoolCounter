@@ -760,6 +760,14 @@ $messages['uk'] = array(
 	'poolcounter-remote-error' => 'Помилка сервера лічильника пулу: $1',
 );
 
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'poolcounter-read-error' => 'پول کے انسداد کے سرور سے پڑھنے کی خرابی',
+	'poolcounter-write-error' => 'لکھنے کے پول انسداد سرور کی غلطی',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
