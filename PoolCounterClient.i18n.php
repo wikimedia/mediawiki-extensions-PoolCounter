@@ -85,7 +85,7 @@ $messages['ast'] = array(
 	'poolcounter-remote-error' => "Error del sirvidor del contador d'encuestes: $1",
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  */
 $messages['be-tarask'] = array(
@@ -162,6 +162,13 @@ $messages['de'] = array(
 	'poolcounter-read-error' => 'Fehler beim Lesen vom Server, auf dem sich das Zählwerk des Computerclusters befindet',
 	'poolcounter-write-error' => 'Fehler beim Schreiben auf dem Server, auf dem sich das Zählwerk des Computerclusters befindet',
 	'poolcounter-remote-error' => 'Fehler beim Server $1, auf dem sich das Zählwerk des Computerclusters befindet',
+);
+
+/** Swiss High German (Schweizer Hochdeutsch)
+ * @author Geitost
+ */
+$messages['de-ch'] = array(
+	'poolcounter-desc' => 'stellt einen Klienten für MediaWiki für den Hintergrundprozess „poolcounter.py“ eines Computerclusters bereit',
 );
 
 /** Zazaki (Zazaki)
@@ -519,7 +526,7 @@ $messages['ms'] = array(
 	'poolcounter-remote-error' => 'Ralat pelayan kaunter tabung: $1',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  * @author Stigmj
  */
@@ -697,7 +704,7 @@ $messages['sq'] = array(
 	'poolcounter-remote-error' => 'server error counter Pool: $1',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  */
 $messages['sr-ec'] = array(
@@ -708,7 +715,7 @@ $messages['sr-ec'] = array(
 	'poolcounter-remote-error' => 'Грешка у серверу фондовског шалтера: $1',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $messages['sr-el'] = array(
 	'poolcounter-desc' => 'Medijaviki klijent za demona fondovskog šaltera poolcounter.py',
 	'poolcounter-connection-error' => 'Greška pri povezivanju sa serverom fondovskog šaltera: $1',
@@ -779,7 +786,7 @@ $messages['vi'] = array(
 	'poolcounter-remote-error' => 'Lỗi máy chủ chia việc xử lý (pool counter server): $1',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Hydra
  */
 $messages['zh-hans'] = array(
@@ -790,7 +797,7 @@ $messages['zh-hans'] = array(
 	'poolcounter-remote-error' => '池计数器服务器错误：$1',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Waihorace
  */
 $messages['zh-hant'] = array(
