@@ -715,7 +715,8 @@ $messages['sr-ec'] = array(
 	'poolcounter-remote-error' => 'Грешка у серверу фондовског шалтера: $1',
 );
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)‎)
+ */
 $messages['sr-el'] = array(
 	'poolcounter-desc' => 'Medijaviki klijent za demona fondovskog šaltera poolcounter.py',
 	'poolcounter-connection-error' => 'Greška pri povezivanju sa serverom fondovskog šaltera: $1',
@@ -807,4 +808,3 @@ $messages['zh-hant'] = array(
 	'poolcounter-write-error' => '錯誤寫入至服務器池計數器',
 	'poolcounter-remote-error' => '服務器池計數器錯誤：$1',
 );
-
