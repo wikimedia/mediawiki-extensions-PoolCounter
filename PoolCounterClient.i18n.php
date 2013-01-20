@@ -776,6 +776,17 @@ $messages['ur'] = array(
 	'poolcounter-write-error' => 'لکھنے کے پول انسداد سرور کی غلطی',
 );
 
+/** vèneto (vèneto)
+ * @author GatoSelvadego
+ */
+$messages['vec'] = array(
+	'poolcounter-desc' => "Client de MediaWiki pa'l demone contador de i pool",
+	'poolcounter-connection-error' => 'Eror de conesion al server contador de i pool: $1',
+	'poolcounter-read-error' => 'Eror de letura dal server contador de i pool',
+	'poolcounter-write-error' => 'Eror de scritura al server contador de i pool',
+	'poolcounter-remote-error' => 'Eror del server contador de i pool: $1',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
