@@ -152,6 +152,17 @@ $messages['cs'] = array(
 	'poolcounter-remote-error' => 'Chyba serveru řídícího přístup ke clusteru: $1',
 );
 
+/** Danish (dansk)
+ * @author HenrikKbh
+ */
+$messages['da'] = array(
+	'poolcounter-desc' => 'MediaWiki-klient til pool counter daemon',
+	'poolcounter-connection-error' => 'Fejl ved tilslutning til pool counter server:$1',
+	'poolcounter-read-error' => 'Fejl ved læsning fra pool counter server',
+	'poolcounter-write-error' => 'Fejl under skrivning til pool counter server',
+	'poolcounter-remote-error' => 'Pool counter server fejl: $1',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Purodha
