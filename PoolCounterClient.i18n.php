@@ -430,8 +430,8 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'poolcounter-desc' => 'プール カウンター デーモン poolcounter.py の MediaWiki クライアント',
 	'poolcounter-connection-error' => 'プール カウンター サーバーに接続する際にエラーが発生しました: $1',
-	'poolcounter-read-error' => 'プール カウンター サーバーからの読み込み中のエラー',
-	'poolcounter-write-error' => 'プール カウンター サーバーへの書き込み中のエラー',
+	'poolcounter-read-error' => 'プール カウンター サーバーから読み込む際にエラーが発生しました。',
+	'poolcounter-write-error' => 'プール カウンター サーバーに書き込む際にエラーが発生しました。',
 	'poolcounter-remote-error' => 'プール カウンター サーバーのエラー: $1',
 );
 
