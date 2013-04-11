@@ -648,6 +648,17 @@ $messages['pt-br'] = array(
 	'poolcounter-remote-error' => 'Erro no servidor do pool counter: $1',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'poolcounter-desc' => 'Cliende MediaUicchi pu demone ca conde le pool',
+	'poolcounter-connection-error' => "Errore de connessione a 'u server ca conde le pool: $1",
+	'poolcounter-read-error' => "Errore leggenne da 'u server ca conde le pool.",
+	'poolcounter-write-error' => "Errore scrivenne sus a 'u server ca conde le pool.",
+	'poolcounter-remote-error' => "Errore sus a 'u server ca conde le pool: $1",
+);
+
 /** Russian (русский)
  * @author Александр Сигачёв
  */
