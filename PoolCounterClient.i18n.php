@@ -73,7 +73,7 @@ $messages['ar'] = array(
 	'poolcounter-remote-error' => 'خطأ خادم مشرف المجموعة: $1',
 );
 
-/** Assamese (অসমীয়া)
+/** Assamese (অসমীয়া)
  * @author Gitartha.bordoloi
  */
 $messages['as'] = array(
@@ -547,7 +547,7 @@ $messages['ms'] = array(
 	'poolcounter-remote-error' => 'Ralat pelayan kaunter tabung: $1',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Nghtwlkr
  * @author Stigmj
  */
@@ -581,7 +581,7 @@ $messages['oc'] = array(
 	'poolcounter-remote-error' => 'Error del servidor de comptador de gropament : $1',
 );
 
-/** Oriya (ଓଡ଼ିଆ)
+/** Oriya (ଓଡ଼ିଆ)
  * @author Psubhashish
  */
 $messages['or'] = array(
