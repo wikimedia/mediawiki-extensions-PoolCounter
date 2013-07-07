@@ -95,6 +95,17 @@ $messages['ast'] = array(
 	'poolcounter-remote-error' => "Error del sirvidor del contador d'encuestes: $1",
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'poolcounter-desc' => 'An kliyente kan MediaWiki para sa pangrupong parabilang na daemon',
+	'poolcounter-connection-error' => 'Kasalaan na nagkokonekta sa pangrupong parabilang na serbidor: $1',
+	'poolcounter-read-error' => 'Kasalaan sa pagbabasa gikan sa pangrupong parabilang na serbidor.',
+	'poolcounter-write-error' => 'Kasalaan sa pagsusurat pasiring sa pangrupong parabilang na serbidor.',
+	'poolcounter-remote-error' => 'Kasalaan kan pangrupong parabilang na serbidor: $1',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  */
