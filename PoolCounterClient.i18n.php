@@ -29,7 +29,12 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'poolcounter-desc' => '{{desc|name=Pool Counter|url=http://www.mediawiki.org/wiki/Extension:PoolCounter}}
 A pool counter keeps track of the running processes on a cluster of processors, and may or may not grant a job access to the processing pool. (Note, the word "counter" relates to the counter in a shop, bank, or hotel, not to the verb "to count")',
-	'poolcounter-connection-error' => 'Used at least in the MediaWiki message {{msg-mw|view-pool-error}}',
+	'poolcounter-connection-error' => 'Used at least in the MediaWiki message {{msg-mw|view-pool-error}}.
+
+Used as fatal error message.
+
+Parameters:
+* $1 - error message which is returned by the server',
 	'poolcounter-read-error' => 'Used as error message.
 
 See also:
