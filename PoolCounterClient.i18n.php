@@ -421,10 +421,10 @@ $messages['ie'] = array(
  * @author Lam-ang
  */
 $messages['ilo'] = array(
-	'poolcounter-desc' => 'Kliente ti mediaWiki para iti panag-bliang ti nairaman a daemon',
-	'poolcounter-connection-error' => 'Biddut ti panakaikabit ti nairaman a panagbilang ti server: $1',
-	'poolcounter-read-error' => 'Biddut ti pinagbasa manipud idiay nairaman a panagbilang ti server',
-	'poolcounter-write-error' => 'Biddut ti pinagsurat idiay nairaman a panagbilang ti server',
+	'poolcounter-desc' => 'Kliente ti MediaWiki para iti panag-bliang ti nairaman a daemon',
+	'poolcounter-connection-error' => 'Biddut ti pannakaikabit ti nairaman a panagbilang ti server: $1',
+	'poolcounter-read-error' => 'Biddut ti panagbasa manipud idiay nairaman a panagbilang ti server.',
+	'poolcounter-write-error' => 'Biddut ti panagsurat idiay nairaman a panagbilang ti server.',
 	'poolcounter-remote-error' => 'Biddut ti nairaman a panagbilang ti server: $1',
 );
 
