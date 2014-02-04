@@ -167,6 +167,13 @@ $messages['ca'] = array(
 	'poolcounter-remote-error' => 'Error de servidor de taulell de piscina:$1',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'poolcounter-desc' => 'Клиент MediaWiki poolcounter.py пулан доменан лорург',
+);
+
 /** Czech (česky)
  * @author Mormegil
  */
