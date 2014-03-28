@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Dim Grits"
+        ]
+    },
+    "poolcounter-desc": "Клієнт MediaWiki для демона лічильника пулу",
+    "poolcounter-connection-error": "Помилка з'єднання з сервером лічильника пулу: $1",
+    "poolcounter-read-error": "Помилка зчитування з сервера лічильника пулу",
+    "poolcounter-write-error": "Помилка запису до сервера лічильника пулу",
+    "poolcounter-remote-error": "Помилка сервера лічильника пулу: $1"
+}

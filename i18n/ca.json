@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Aleator",
+            "Gemmaa"
+        ]
+    },
+    "poolcounter-desc": "Client MediaWiki per al dimoni del ''pool counter''",
+    "poolcounter-connection-error": "S'està connectant al servidor de taulell de piscina d'error:$1",
+    "poolcounter-read-error": "Error en llegir del servidor de taulell de piscina",
+    "poolcounter-write-error": "Error en escriure al servidor de taulell de piscina",
+    "poolcounter-remote-error": "Error de servidor de taulell de piscina:$1"
+}

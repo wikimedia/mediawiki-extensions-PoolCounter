@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "ChrisPtDe"
+        ]
+    },
+    "poolcounter-desc": "Cliant por MediaWiki du dèmon du comptor de ressôrses comenes",
+    "poolcounter-connection-error": "Èrror pendent lo branchement u sèrvor du comptor de ressôrses comenes : $1",
+    "poolcounter-read-error": "Èrror pendent la lèctura du sèrvor du comptor de ressôrses comenes",
+    "poolcounter-write-error": "Èrror pendent l’ècritura sur lo sèrvor du comptor de ressôrses comenes",
+    "poolcounter-remote-error": "Èrror du sèrvor du comptor de ressôrses comenes : $1"
+}

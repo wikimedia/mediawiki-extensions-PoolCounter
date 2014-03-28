@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Joetaras"
+        ]
+    },
+    "poolcounter-desc": "Cliende MediaUicchi pu demone ca conde le pool",
+    "poolcounter-connection-error": "Errore de connessione a 'u server ca conde le pool: $1",
+    "poolcounter-read-error": "Errore leggenne da 'u server ca conde le pool.",
+    "poolcounter-write-error": "Errore scrivenne sus a 'u server ca conde le pool.",
+    "poolcounter-remote-error": "Errore sus a 'u server ca conde le pool: $1"
+}

@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Shubha"
+        ]
+    },
+    "poolcounter-desc": "पूल् कौण्टर् डीमन् कृते मेटावीकी क्लैण्ट्",
+    "poolcounter-connection-error": "पूल् कौण्टर् वितरकेण सह सम्बन्धकल्पने दोषः : $1",
+    "poolcounter-read-error": "पूल् कौण्टर् वितरकात् पठनावसरे दोषः",
+    "poolcounter-write-error": "पूल् कौण्टर् वितरके लेखनावसरे दोषः",
+    "poolcounter-remote-error": "पूल् कौण्टर् वितरकदोषः : $1"
+}

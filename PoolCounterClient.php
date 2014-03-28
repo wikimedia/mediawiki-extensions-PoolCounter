@@ -39,8 +39,9 @@ $wgPoolCountClientConf = array(
  *   ) );
  */
 
-$dir = dirname( __FILE__ ) . '/';
+$dir = __DIR__ . '/';
 $wgAutoloadClasses['PoolCounter_ConnectionManager']
 	= $wgAutoloadClasses['PoolCounter_Client']
 	= $dir . 'PoolCounterClient_body.php';
+$wgMessagesDirs['PoolCounterClient'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['PoolCounterClient'] = $dir . 'PoolCounterClient.i18n.php';

@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Ainali"
+        ]
+    },
+    "poolcounter-desc": "MediaWiki klient för pool counter daemon",
+    "poolcounter-connection-error": "Fel vid anslutning till pool counter server: $1",
+    "poolcounter-read-error": "Fel vid läsning från pool counter server",
+    "poolcounter-write-error": "Fel vid skrivning till pool counter server",
+    "poolcounter-remote-error": "Pool counter server fel: $1"
+}

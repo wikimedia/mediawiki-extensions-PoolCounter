@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Glanthor Reviol"
+        ]
+    },
+    "poolcounter-desc": "MediaWiki kliens a poolcounter.py démonhoz",
+    "poolcounter-connection-error": "Hiba a pool counter szerverhez való kapcsolódáskor: $1",
+    "poolcounter-read-error": "Hiba a pool counter szerverről való olvasáskor",
+    "poolcounter-write-error": "Hiba a pool counter szerverre való íráskor",
+    "poolcounter-remote-error": "Pool counter szerver hiba: $1"
+}

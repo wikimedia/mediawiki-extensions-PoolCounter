@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Borichèt",
+            "Dragonòt"
+        ]
+    },
+    "poolcounter-desc": "Client për MediaWiki dël demon ëd conteur d'argropament",
+    "poolcounter-connection-error": "Eror an colegandse al server ëd pool counter: $1",
+    "poolcounter-read-error": "Eror an lesend dal server ëd pool counter",
+    "poolcounter-write-error": "Eror an scrivend al server ëd pool counter",
+    "poolcounter-remote-error": "Eror dël server ëd pool counter: $1"
+}

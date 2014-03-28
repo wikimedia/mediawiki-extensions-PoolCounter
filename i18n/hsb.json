@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Michawiki"
+        ]
+    },
+    "poolcounter-desc": "Klient MediaWiki demona skupinskeho ličaka poolcounter.py",
+    "poolcounter-connection-error": "Zmylk při zwjazowanju ze serwerom skupinskeho ličaka: $1",
+    "poolcounter-read-error": "Zmylk při čitanju ze serwera skupinskeho ličaka",
+    "poolcounter-write-error": "Zmylk při pisanju na serwer skupinskeho ličaka",
+    "poolcounter-remote-error": "Zmylk serwera skupinskeho ličaka: $1"
+}

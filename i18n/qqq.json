@@ -1,0 +1,16 @@
+{
+    "@metadata": {
+        "authors": [
+            "Mormegil",
+            "Nedergard",
+            "Purodha",
+            "Shirayuki",
+            "Siebrand"
+        ]
+    },
+    "poolcounter-desc": "{{desc|name=Pool Counter|url=http://www.mediawiki.org/wiki/Extension:PoolCounter}}\nA pool counter keeps track of the running processes on a cluster of processors, and may or may not grant a job access to the processing pool. (Note, the word \"counter\" relates to the counter in a shop, bank, or hotel, not to the verb \"to count\")",
+    "poolcounter-connection-error": "Used at least in the MediaWiki message {{msg-mw|view-pool-error}}.\n\nUsed as fatal error message.\n\nParameters:\n* $1 - error message which is returned by the server",
+    "poolcounter-read-error": "Used as error message.\n\nSee also:\n* {{msg-mw|Poolcounter-write-error}}",
+    "poolcounter-write-error": "Used as error message.\n\nSee also:\n* {{msg-mw|Poolcounter-read-error}}",
+    "poolcounter-remote-error": "Used as error message. Parameters:\n* $1 - error message which the server returned, or not-localized string \"(no message given)\"."
+}

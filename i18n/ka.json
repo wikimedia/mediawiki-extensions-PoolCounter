@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "David1010"
+        ]
+    },
+    "poolcounter-desc": "MediaWiki-ს კლიენტი პულის მრიცხველის დაემონისთვის",
+    "poolcounter-connection-error": "შეცდომა პულის მრიცხველის სერვერთან დაკავშირებისას: $1",
+    "poolcounter-read-error": "პულის მრიცხველის სერვერის წაკითხვის შეცდომა",
+    "poolcounter-write-error": "ჩანაწერის შეცდომა პულის მრიცხველის სერვერის მიმართვისას",
+    "poolcounter-remote-error": "პულის მთვლელის სერვერის შეცდომა: $1"
+}

@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Cedric31"
+        ]
+    },
+    "poolcounter-desc": "Client per MediaWiki del demon de comptador de gropament poolcounter.py",
+    "poolcounter-connection-error": "Error al moment de la connexion al comptador de gropament : $1",
+    "poolcounter-read-error": "Error al moment de la lectura del servidor de comptador de gropament",
+    "poolcounter-write-error": "Error al moment de l'escritura sul servidor del comptador de gropament",
+    "poolcounter-remote-error": "Error del servidor de comptador de gropament : $1"
+}

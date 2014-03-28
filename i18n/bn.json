@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Nasir8891"
+        ]
+    },
+    "poolcounter-desc": "পুল কাউন্টার ডেমনের জন্য মিডিয়াউইকি ক্লায়েন্ট",
+    "poolcounter-connection-error": "পুল কাউন্টার সার্ভার কানেকশন ত্রুটি: $1",
+    "poolcounter-read-error": "পুল কাউন্টার সার্ভার থেকে তথ্য পেতে সমস্যা হচ্ছে",
+    "poolcounter-write-error": "পুল কাউন্টার সার্ভার তথ্য সংযোজন ত্রুটি",
+    "poolcounter-remote-error": "পুল কাউন্টার সার্ভার ত্রুটি: $1"
+}

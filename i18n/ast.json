@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Xuacu"
+        ]
+    },
+    "poolcounter-desc": "Cliente MediaWiki pal degorriu del contador d'encuestes",
+    "poolcounter-connection-error": "Error al coneutar col sirvidor del contador d'encuestes: $1",
+    "poolcounter-read-error": "Error al lleer del sirvidor del contador d'encuestes",
+    "poolcounter-write-error": "Error al escribir nel sirvidor del contador d'encuestes",
+    "poolcounter-remote-error": "Error del sirvidor del contador d'encuestes: $1"
+}

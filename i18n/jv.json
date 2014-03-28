@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "NoiX180"
+        ]
+    },
+    "poolcounter-desc": "Klièn MediaWiki kanggo daèmon ''pool counter''",
+    "poolcounter-connection-error": "Kasalahan ngubungaké nèng sasana ''pool counter'': $1",
+    "poolcounter-read-error": "Kasalahan maca saka sasana ''pool counter''",
+    "poolcounter-write-error": "Ora bisa nulis nèng sasana ''counter pool''",
+    "poolcounter-remote-error": "Kasalahan sasana ''counter pool'': $1"
+}
