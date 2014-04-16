@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Vinie007"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki klient për dreq lloto counter",
-    "poolcounter-connection-error": "Gabim gjatë lidhjes me server pishinë counter: $1",
-    "poolcounter-read-error": "Gabim leximi nga pishinë server counter",
-    "poolcounter-write-error": "Gabim gjatë shkrimit në server pishinë counter",
-    "poolcounter-remote-error": "server error counter Pool: $1"
+	"@metadata": {
+		"authors": [
+			"Vinie007"
+		]
+	},
+	"poolcounter-desc": "MediaWiki klient për dreq lloto counter",
+	"poolcounter-connection-error": "Gabim gjatë lidhjes me server pishinë counter: $1",
+	"poolcounter-read-error": "Gabim leximi nga pishinë server counter",
+	"poolcounter-write-error": "Gabim gjatë shkrimit në server pishinë counter",
+	"poolcounter-remote-error": "server error counter Pool: $1"
 }

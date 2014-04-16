@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "පසිඳු කාවින්ද"
-        ]
-    },
-    "poolcounter-desc": "සංසද ගණක විනාශකාරී පුද්ගලයා සඳහා වූ මාධ්‍ය විකි සේවාදායකයා",
-    "poolcounter-connection-error": "සංසද ගණක සර්වරය වෙත සම්බන්ධවීමේ දෝෂය: $1",
-    "poolcounter-read-error": "සංසද ගණක සර්වරය වෙතින් කියවීමේ දෝෂය",
-    "poolcounter-write-error": "සංසද ගණක සර්වරය වෙත ලිවීමේ දෝෂය",
-    "poolcounter-remote-error": "සංසද ගණක සර්වරයේ දෝෂය: $1"
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"poolcounter-desc": "සංසද ගණක විනාශකාරී පුද්ගලයා සඳහා වූ මාධ්‍ය විකි සේවාදායකයා",
+	"poolcounter-connection-error": "සංසද ගණක සර්වරය වෙත සම්බන්ධවීමේ දෝෂය: $1",
+	"poolcounter-read-error": "සංසද ගණක සර්වරය වෙතින් කියවීමේ දෝෂය",
+	"poolcounter-write-error": "සංසද ගණක සර්වරය වෙත ලිවීමේ දෝෂය",
+	"poolcounter-remote-error": "සංසද ගණක සර්වරයේ දෝෂය: $1"
 }

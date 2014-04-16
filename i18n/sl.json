@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dbc334"
-        ]
-    },
-    "poolcounter-desc": "Odjemalec MediaWiki za prikriti proces založnega pulta",
-    "poolcounter-connection-error": "Napaka pri povezovanju s strežnikom založnega pulta: $1",
-    "poolcounter-read-error": "Napaka pri branju iz strežnika založnega pulta",
-    "poolcounter-write-error": "Napaka pri pisanju v strežnik založnega pulta",
-    "poolcounter-remote-error": "Napaka strežnika založnega pulta: $1"
+	"@metadata": {
+		"authors": [
+			"Dbc334"
+		]
+	},
+	"poolcounter-desc": "Odjemalec MediaWiki za prikriti proces založnega pulta",
+	"poolcounter-connection-error": "Napaka pri povezovanju s strežnikom založnega pulta: $1",
+	"poolcounter-read-error": "Napaka pri branju iz strežnika založnega pulta",
+	"poolcounter-write-error": "Napaka pri pisanju v strežnik založnega pulta",
+	"poolcounter-remote-error": "Napaka strežnika založnega pulta: $1"
 }

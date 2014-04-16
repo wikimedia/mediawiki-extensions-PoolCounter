@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Nedergard",
-            "Nike"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki-asiakasohjelma varantolaskuritaustapalvelun käyttöön",
-    "poolcounter-connection-error": "Yhteyden muodostaminen varantolaskuripalvelimeen epäonnistui: $1",
-    "poolcounter-read-error": "Varantolaskuripalvelimen lukuvirhe",
-    "poolcounter-write-error": "Varantolaskuripalvelimen kirjoitusvirhe",
-    "poolcounter-remote-error": "Varantolaskuripalvelimen virhe: $1"
+	"@metadata": {
+		"authors": [
+			"Nedergard",
+			"Nike"
+		]
+	},
+	"poolcounter-desc": "MediaWiki-asiakasohjelma varantolaskuritaustapalvelun käyttöön",
+	"poolcounter-connection-error": "Yhteyden muodostaminen varantolaskuripalvelimeen epäonnistui: $1",
+	"poolcounter-read-error": "Varantolaskuripalvelimen lukuvirhe",
+	"poolcounter-write-error": "Varantolaskuripalvelimen kirjoitusvirhe",
+	"poolcounter-remote-error": "Varantolaskuripalvelimen virhe: $1"
 }

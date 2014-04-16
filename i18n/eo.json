@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Yekrats"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki-kliento por la demono de grupokontilo",
-    "poolcounter-connection-error": "Eraro konektante al grupokontila servilo: $1",
-    "poolcounter-read-error": "Eraro legante de la grupokontila servilo",
-    "poolcounter-write-error": "Eraro skribante al la grupokontila servilo",
-    "poolcounter-remote-error": "Eraro de la grupokontila servilo: $1"
+	"@metadata": {
+		"authors": [
+			"Yekrats"
+		]
+	},
+	"poolcounter-desc": "MediaWiki-kliento por la demono de grupokontilo",
+	"poolcounter-connection-error": "Eraro konektante al grupokontila servilo: $1",
+	"poolcounter-read-error": "Eraro legante de la grupokontila servilo",
+	"poolcounter-write-error": "Eraro skribante al la grupokontila servilo",
+	"poolcounter-remote-error": "Eraro de la grupokontila servilo: $1"
 }

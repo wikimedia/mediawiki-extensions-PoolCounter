@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Crazymadlover",
-            "Translationista"
-        ]
-    },
-    "poolcounter-desc": "Cliente MediaWiki para demonio del contador de encuestas poolcounter.py",
-    "poolcounter-connection-error": "Error conectando al servidor contador de encuestas: $1",
-    "poolcounter-read-error": "Error leyendo del servidor contador de encuestas",
-    "poolcounter-write-error": "Error escribiendo al servidor contador de encuestas",
-    "poolcounter-remote-error": "Error del servidor contador de encuestas: $1"
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Translationista"
+		]
+	},
+	"poolcounter-desc": "Cliente MediaWiki para demonio del contador de encuestas poolcounter.py",
+	"poolcounter-connection-error": "Error conectando al servidor contador de encuestas: $1",
+	"poolcounter-read-error": "Error leyendo del servidor contador de encuestas",
+	"poolcounter-write-error": "Error escribiendo al servidor contador de encuestas",
+	"poolcounter-remote-error": "Error del servidor contador de encuestas: $1"
 }

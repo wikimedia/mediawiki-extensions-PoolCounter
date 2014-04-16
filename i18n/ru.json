@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Александр Сигачёв"
-        ]
-    },
-    "poolcounter-desc": "Клиент MediaWiki для демона счётчика пула poolcounter.py",
-    "poolcounter-connection-error": "Ошибка при подключении к серверу-счётчику пула: $1",
-    "poolcounter-read-error": "Ошибка чтения с сервера-счётчика пула",
-    "poolcounter-write-error": "Ошибка записи при обращении к серверу-счётчику пула",
-    "poolcounter-remote-error": "Ошибка сервера-счётчика пула: $1"
+	"@metadata": {
+		"authors": [
+			"Александр Сигачёв"
+		]
+	},
+	"poolcounter-desc": "Клиент MediaWiki для демона счётчика пула poolcounter.py",
+	"poolcounter-connection-error": "Ошибка при подключении к серверу-счётчику пула: $1",
+	"poolcounter-read-error": "Ошибка чтения с сервера-счётчика пула",
+	"poolcounter-write-error": "Ошибка записи при обращении к серверу-счётчику пула",
+	"poolcounter-remote-error": "Ошибка сервера-счётчика пула: $1"
 }

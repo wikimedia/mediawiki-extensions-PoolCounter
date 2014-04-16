@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "F. Cosoleto"
-        ]
-    },
-    "poolcounter-desc": "Client di MediaWiki per il demone contatore dei pool",
-    "poolcounter-connection-error": "Errore di connessione al server contatore dei pool: $1",
-    "poolcounter-read-error": "Errore di lettura dal server contatore dei pool",
-    "poolcounter-write-error": "Errore di scrittura al server contatore dei pool",
-    "poolcounter-remote-error": "Errore del server contatore dei pool: $1"
+	"@metadata": {
+		"authors": [
+			"F. Cosoleto"
+		]
+	},
+	"poolcounter-desc": "Client di MediaWiki per il demone contatore dei pool",
+	"poolcounter-connection-error": "Errore di connessione al server contatore dei pool: $1",
+	"poolcounter-read-error": "Errore di lettura dal server contatore dei pool",
+	"poolcounter-write-error": "Errore di scrittura al server contatore dei pool",
+	"poolcounter-remote-error": "Errore del server contatore dei pool: $1"
 }

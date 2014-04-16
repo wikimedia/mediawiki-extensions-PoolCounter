@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Siebrand"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki-client voor de poolcounter daemon",
-    "poolcounter-connection-error": "Fout bij het verbinden met de poolcounter server: $1",
-    "poolcounter-read-error": "Fout bij het lezen van de poolcounter server",
-    "poolcounter-write-error": "Fout bij het schrijven naar de poolcounter server",
-    "poolcounter-remote-error": "Poolcounter serverfout: $1"
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"poolcounter-desc": "MediaWiki-client voor de poolcounter daemon",
+	"poolcounter-connection-error": "Fout bij het verbinden met de poolcounter server: $1",
+	"poolcounter-read-error": "Fout bij het lezen van de poolcounter server",
+	"poolcounter-write-error": "Fout bij het schrijven naar de poolcounter server",
+	"poolcounter-remote-error": "Poolcounter serverfout: $1"
 }

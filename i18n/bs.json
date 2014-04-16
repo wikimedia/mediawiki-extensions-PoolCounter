@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "CERminator"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki klijent daemon za pool brojač poolcounter.py",
-    "poolcounter-connection-error": "Greška pri povezivanju na server pool brojača: $1",
-    "poolcounter-read-error": "Greška pri čitanju sa servera pool brojača",
-    "poolcounter-write-error": "Greška pri pisanju na server pool brojača",
-    "poolcounter-remote-error": "Greška na serveru pool brojača: $1"
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"poolcounter-desc": "MediaWiki klijent daemon za pool brojač poolcounter.py",
+	"poolcounter-connection-error": "Greška pri povezivanju na server pool brojača: $1",
+	"poolcounter-read-error": "Greška pri čitanju sa servera pool brojača",
+	"poolcounter-write-error": "Greška pri pisanju na server pool brojača",
+	"poolcounter-remote-error": "Greška na serveru pool brojača: $1"
 }

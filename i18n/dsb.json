@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "poolcounter-desc": "Klient MediaWiki za demon pool counter",
-    "poolcounter-connection-error": "Zmólka pśi zwězowanju ze serwerom pool counter: $1",
-    "poolcounter-read-error": "Zmólka pśi cytanju ze serwera pool counter",
-    "poolcounter-write-error": "Zmólka pśi pisanju na serwer pool counter",
-    "poolcounter-remote-error": "Zmólka serwera pool counter: $1"
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"poolcounter-desc": "Klient MediaWiki za demon pool counter",
+	"poolcounter-connection-error": "Zmólka pśi zwězowanju ze serwerom pool counter: $1",
+	"poolcounter-read-error": "Zmólka pśi cytanju ze serwera pool counter",
+	"poolcounter-write-error": "Zmólka pśi pisanju na serwer pool counter",
+	"poolcounter-remote-error": "Zmólka serwera pool counter: $1"
 }

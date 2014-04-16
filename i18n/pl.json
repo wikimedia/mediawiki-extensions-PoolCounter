@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Sp5uhe"
-        ]
-    },
-    "poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster poolcounter.py",
-    "poolcounter-connection-error": "Błąd podczas łączenia z serwerem nadzorującym klaster – $1",
-    "poolcounter-read-error": "Błąd odczytu z serwera nadzorującego klaster",
-    "poolcounter-write-error": "Błąd podczas zapisywania do serwera nadzorującego klaster",
-    "poolcounter-remote-error": "Błąd serwera nadzorującego klaster – $1"
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster poolcounter.py",
+	"poolcounter-connection-error": "Błąd podczas łączenia z serwerem nadzorującym klaster – $1",
+	"poolcounter-read-error": "Błąd odczytu z serwera nadzorującego klaster",
+	"poolcounter-write-error": "Błąd podczas zapisywania do serwera nadzorującego klaster",
+	"poolcounter-remote-error": "Błąd serwera nadzorującego klaster – $1"
 }

@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bennylin",
-            "IvanLanin"
-        ]
-    },
-    "poolcounter-desc": "Klien MediaWiki untuk daemon poolcounter.py",
-    "poolcounter-connection-error": "Kesalahan pada saat berusaha menghubungi server pool counter: $1",
-    "poolcounter-read-error": "Kesalahan pada saat berusaha membaca server pool counter",
-    "poolcounter-write-error": "Kesalahan pada saat berusaha menulis peladen pool counter",
-    "poolcounter-remote-error": "Kesalahan server pool server: $1"
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"IvanLanin"
+		]
+	},
+	"poolcounter-desc": "Klien MediaWiki untuk daemon poolcounter.py",
+	"poolcounter-connection-error": "Kesalahan pada saat berusaha menghubungi server pool counter: $1",
+	"poolcounter-read-error": "Kesalahan pada saat berusaha membaca server pool counter",
+	"poolcounter-write-error": "Kesalahan pada saat berusaha menulis peladen pool counter",
+	"poolcounter-remote-error": "Kesalahan server pool server: $1"
 }

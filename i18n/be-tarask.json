@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "EugeneZelenko"
-        ]
-    },
-    "poolcounter-desc": "Кліент MediaWiki для лічыльніка poolcounter.py",
-    "poolcounter-connection-error": "Памылка далучэньня для сэрвэра лічыльніка: $1",
-    "poolcounter-read-error": "Памылка чытаньня з сэрвэра лічыльніка",
-    "poolcounter-write-error": "Памылка запісу на сэрвэр лічыльніка",
-    "poolcounter-remote-error": "Памылка сэрвэра лічыльніка: $1"
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko"
+		]
+	},
+	"poolcounter-desc": "Кліент MediaWiki для лічыльніка poolcounter.py",
+	"poolcounter-connection-error": "Памылка далучэньня для сэрвэра лічыльніка: $1",
+	"poolcounter-read-error": "Памылка чытаньня з сэрвэра лічыльніка",
+	"poolcounter-write-error": "Памылка запісу на сэрвэр лічыльніка",
+	"poolcounter-remote-error": "Памылка сэрвэра лічыльніка: $1"
 }

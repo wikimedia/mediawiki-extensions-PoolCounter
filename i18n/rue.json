@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "poolcounter-desc": "MediaWiki кліент про службу засобне раховадло",
-    "poolcounter-connection-error": "Хыба при споїню на засобный рахуючій сервер: $1",
-    "poolcounter-read-error": "Хыба чітаня з засобного рахуючого сервера",
-    "poolcounter-write-error": "Хыба записованя до засобного рахуючого сервера",
-    "poolcounter-remote-error": "Хыба засобного сервера рахованя: $1"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"poolcounter-desc": "MediaWiki кліент про службу засобне раховадло",
+	"poolcounter-connection-error": "Хыба при споїню на засобный рахуючій сервер: $1",
+	"poolcounter-read-error": "Хыба чітаня з засобного рахуючого сервера",
+	"poolcounter-write-error": "Хыба записованя до засобного рахуючого сервера",
+	"poolcounter-remote-error": "Хыба засобного сервера рахованя: $1"
 }

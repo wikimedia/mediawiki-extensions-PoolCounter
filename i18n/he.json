@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Amire80",
-            "Guycn2"
-        ]
-    },
-    "poolcounter-desc": "לקוח מדיה־ויקי לשרת דלפק מאגר",
-    "poolcounter-connection-error": "שגיאת התחברות לשרת דלפק מאגר: $1",
-    "poolcounter-read-error": "שגיאת קריאה משרת דלפק מאגר",
-    "poolcounter-write-error": "שגיאת כתיבה לשרת דלפק מאגר",
-    "poolcounter-remote-error": "שגיאת שרת דלפק מאגר: $1"
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2"
+		]
+	},
+	"poolcounter-desc": "לקוח מדיה־ויקי לשרת דלפק מאגר",
+	"poolcounter-connection-error": "שגיאת התחברות לשרת דלפק מאגר: $1",
+	"poolcounter-read-error": "שגיאת קריאה משרת דלפק מאגר",
+	"poolcounter-write-error": "שגיאת כתיבה לשרת דלפק מאגר",
+	"poolcounter-remote-error": "שגיאת שרת דלפק מאגר: $1"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rancher"
-        ]
-    },
-    "poolcounter-desc": "Медијавики клијент за демона фондовског шалтера poolcounter.py",
-    "poolcounter-connection-error": "Грешка при повезивању са сервером фондовског шалтера: $1",
-    "poolcounter-read-error": "Грешка при читању са сервера фондовског шалтера",
-    "poolcounter-write-error": "Грешка при писању на сервер фондовског шалтера",
-    "poolcounter-remote-error": "Грешка у серверу фондовског шалтера: $1"
+	"@metadata": {
+		"authors": [
+			"Rancher"
+		]
+	},
+	"poolcounter-desc": "Медијавики клијент за демона фондовског шалтера poolcounter.py",
+	"poolcounter-connection-error": "Грешка при повезивању са сервером фондовског шалтера: $1",
+	"poolcounter-read-error": "Грешка при читању са сервера фондовског шалтера",
+	"poolcounter-write-error": "Грешка при писању на сервер фондовског шалтера",
+	"poolcounter-remote-error": "Грешка у серверу фондовског шалтера: $1"
 }

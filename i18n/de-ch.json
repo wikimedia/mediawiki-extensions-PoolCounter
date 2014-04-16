@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Geitost"
-        ]
-    },
-    "poolcounter-desc": "stellt einen Klienten für MediaWiki für den Hintergrundprozess „poolcounter.py“ eines Computerclusters bereit"
+	"@metadata": {
+		"authors": [
+			"Geitost"
+		]
+	},
+	"poolcounter-desc": "stellt einen Klienten für MediaWiki für den Hintergrundprozess „poolcounter.py“ eines Computerclusters bereit"
 }
