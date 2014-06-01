@@ -4,9 +4,9 @@
 			"McDutchie"
 		]
 	},
-	"poolcounter-desc": "Cliente MediaWiki pro le daemon contator de ressources commun poolcounter.py",
-	"poolcounter-connection-error": "Error durante le connexion al contator de ressources commun: $1",
-	"poolcounter-read-error": "Error durante le lectura del contator de ressources commun",
-	"poolcounter-write-error": "Error durante le scriptura al contator de ressources commun",
-	"poolcounter-remote-error": "Error del contator de ressources commun: $1"
+	"poolcounter-desc": "Cliente MediaWiki pro le servicio de banco de ressources commun",
+	"poolcounter-connection-error": "Error durante le connexion al banco de ressources commun: $1",
+	"poolcounter-read-error": "Error durante le lectura ab le servitor de banco de ressources commun",
+	"poolcounter-write-error": "Error durante le scriptura al servitor de banco de ressources commun.",
+	"poolcounter-remote-error": "Error ab le servitor de banco de ressources commun: $1"
 }
