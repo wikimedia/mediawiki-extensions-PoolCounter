@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
-			"Translationista"
+			"Translationista",
+			"Fitoschido"
 		]
 	},
-	"poolcounter-desc": "Cliente MediaWiki para demonio del contador de encuestas poolcounter.py",
+	"poolcounter-desc": "Cliente de MediaWiki para el servicio de gestión de procesos agrupados",
 	"poolcounter-connection-error": "Error conectando al servidor contador de encuestas: $1",
 	"poolcounter-read-error": "Error leyendo del servidor contador de encuestas",
 	"poolcounter-write-error": "Error escribiendo al servidor contador de encuestas",
