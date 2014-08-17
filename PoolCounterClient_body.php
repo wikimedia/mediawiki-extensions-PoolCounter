@@ -1,9 +1,9 @@
 <?php
 
 class PoolCounter_ConnectionManager {
-	var $hostNames;
-	var $conns = array();
-	var $refCounts = array();
+	public $hostNames;
+	public $conns = array();
+	public $refCounts = array();
 
 	function __construct( $conf ) {
 		$this->hostNames = $conf['servers'];
