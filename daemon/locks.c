@@ -64,7 +64,7 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		unsigned maxqueue = atou( strtok(NULL, " ") );
 		unsigned timeout = atou( strtok(NULL, " ") );
 		
-		if ( !key || !workers || !maxqueue || !timeout ) {
+		if ( !key || !workers || !maxqueue ) {
 			return "ERROR BAD_SYNTAX\n";
 		}
 		
@@ -96,34 +96,37 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		}
 		
 		l->parent = pCounter;
-		pCounter->count++;
 		
 		if ( pCounter->processing < workers ) {
 			l->state = PROCESSING;
 			gettimeofday( &l->timeval, NULL );
+			pCounter->count++;
 			pCounter->processing++;
 			incr_stats( processing_workers );
 			DOUBLE_LLIST_ADD( &pCounter->working, &l->siblings );
 			incr_stats( total_acquired );
 			return "LOCKED\n";
-		} else {
-			struct timeval wait_time;
-			if ( for_anyone ) {
-				l->state = WAIT_ANY;
-				DOUBLE_LLIST_ADD( &pCounter->for_anyone, &l->siblings );
-			} else {
-				l->state = WAITING;
-				DOUBLE_LLIST_ADD( &pCounter->for_them, &l->siblings );
-			}
-			incr_stats( waiting_workers );
-			gettimeofday( &l->timeval, NULL );
-			
-			wait_time.tv_sec = timeout;
-			wait_time.tv_usec = 0;
-
-			event_add( &cli_data->ev, &wait_time );
-			return NULL;
 		}
+		if ( !timeout ) {
+			return "TIMEOUT\n";
+		}
+		pCounter->count++;
+		struct timeval wait_time;
+		if ( for_anyone ) {
+			l->state = WAIT_ANY;
+			DOUBLE_LLIST_ADD( &pCounter->for_anyone, &l->siblings );
+		} else {
+			l->state = WAITING;
+			DOUBLE_LLIST_ADD( &pCounter->for_them, &l->siblings );
+		}
+		incr_stats( waiting_workers );
+		gettimeofday( &l->timeval, NULL );
+
+		wait_time.tv_sec = timeout;
+		wait_time.tv_usec = 0;
+
+		event_add( &cli_data->ev, &wait_time );
+		return NULL;
 	} else if ( !strncmp(line, "RELEASE", 7) ) {
 		if ( l->state == UNLOCKED ) {
 			incr_stats( release_mismatch );

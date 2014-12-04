@@ -21,3 +21,7 @@ clean:
 install:
 	install -d $(DESTDIR)/usr/bin/
 	install poolcounterd $(DESTDIR)/usr/bin/
+
+test: poolcounterd
+	./poolcounterd & echo $$! > .pid
+	cd tests; bundle exec cucumber; SUC=$$?; cd ..; kill `cat .pid` && rm .pid ; exit $$SUC
