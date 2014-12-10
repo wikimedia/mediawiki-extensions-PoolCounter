@@ -1,3 +1,10 @@
+poolcounter (1.0.3) lucid; urgency=low
+
+  * Allow timeout of 0.
+  * Allow single connection to take up to 4 locks.
+
+ -- Nik Everett <manybubbles@wikimedia.org>  Wed, 10 Dec 2014 15:01:37 -0500
+
 poolcounter (1.0.2) lucid; urgency=low
 
   * Updated to r84880. FD leak fixed, stats added.

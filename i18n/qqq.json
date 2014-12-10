@@ -12,5 +12,6 @@
 	"poolcounter-connection-error": "Used at least in the MediaWiki message {{msg-mw|view-pool-error}}.\n\nUsed as fatal error message.\n\nParameters:\n* $1 - error message which is returned by the server",
 	"poolcounter-read-error": "Used as error message.\n\nSee also:\n* {{msg-mw|Poolcounter-write-error}}",
 	"poolcounter-write-error": "Used as error message.\n\nSee also:\n* {{msg-mw|Poolcounter-read-error}}",
-	"poolcounter-remote-error": "Used as error message. Parameters:\n* $1 - error message which the server returned, or not-localized string \"(no message given)\"."
+	"poolcounter-remote-error": "Used as error message. Parameters:\n* $1 - error message which the server returned, or not-localized string \"(no message given)\".",
+	"poolcounter-usage-error": "Used as error message. Parameters:\n* $1 - non-localized string describing usage mistake."
 }

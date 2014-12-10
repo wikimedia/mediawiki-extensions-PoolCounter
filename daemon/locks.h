@@ -31,21 +31,36 @@ struct PoolCounter {
 	struct double_linked_list for_anyone;
 };
 
+enum lock_state {
+	UNLOCKED,    // Not yet locked or already unlocked
+	WAITING,     // Waiting on ACQ4ME
+	WAIT_ANY,    // Waiting on ACQ4ANY
+	PROCESSING,  // Currently locked
+};
+
 struct locks {
+	/*
+	 * Siblings in whatever linked list this lives.  Either working, for_them
+	 * or for_anyone.
+	 */
 	struct double_linked_list siblings;
 	struct PoolCounter* parent;
-	enum lock_state { UNLOCKED, WAITING, WAIT_ANY, PROCESSING } state;
-	struct timeval timeval; /* Stores the instante where it started waiting/processing */
+	enum lock_state state;
+	/*
+	 * Instant where is started waiting/processing.
+	 */
+	struct timeval timeval;
+	/**
+	 * Pointer back to client_data needed when pulling the lock from one of the
+	 * linked lists.
+	 */
+	void* client_data;
 };
 
 struct client_data;
-void init_lock(struct locks* l);
 void finish_lock(struct locks* l);
 const char* process_line(struct client_data* cli_data, char* line, int line_len);
-void process_timeout(struct locks* l);
 void remove_client_lock(struct locks* l, int wakeup_anyones);
-void send_client(struct locks* l, const char* msg);
-
 
 void hashtable_init();
 struct hashtable* hashtable_create(int hashpower);

@@ -132,7 +132,7 @@ void on_client(int fd, short type, void* arg) /* prototype */
 	struct client_data* cli_data = arg;
 	
 	if ( type == EV_TIMEOUT ) {
-		process_timeout( &cli_data->client_locks );
+		process_timeout( cli_data );
 		event_add( &cli_data->ev, NULL );
 		return;
 	}
@@ -141,7 +141,7 @@ void on_client(int fd, short type, void* arg) /* prototype */
 	
 	if ( n < 0 ) {
 		/* Client disconnected */
-		event_del( &cli_data->ev);
+		event_del( &cli_data->ev );
 		free_client_data( cli_data );
 		close( fd );
 		open_sockets--;
@@ -150,7 +150,8 @@ void on_client(int fd, short type, void* arg) /* prototype */
 		}
 	} else {
 		while ( line ) {
-			send_client( &cli_data->client_locks, process_line(cli_data, line, n) );
+			const char* result = process_line( cli_data, line, n );
+			send_client( cli_data, result );
 			n = recover_client_buffer(cli_data, n, &line);
 		}
 	}

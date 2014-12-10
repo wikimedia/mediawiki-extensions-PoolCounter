@@ -3,4 +3,7 @@
 *.kate-swp
 .*.swp
 daemon/*.o
+daemon/*.pid
 daemon/poolcounterd
+daemon/prototypes.h
+daemon/core

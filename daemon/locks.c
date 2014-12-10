@@ -7,13 +7,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-void init_lock(struct locks* l) {
-	l->state = UNLOCKED;
-}
+#include <assert.h>
 
 void finish_lock(struct locks* l) {
 	if (l->state != UNLOCKED) {
+		if (l->state != PROCESSING) {
+			decr_stats( waiting_workers );
+		}
 		remove_client_lock(l, 0);
 	}
 }
@@ -45,18 +45,31 @@ unsigned atou(char const* astext)  {
 }
 
 const char* process_line(struct client_data* cli_data, char* line, int line_len) {
-	struct locks* l = &cli_data->client_locks;
 	if (line_len > 0 && line[line_len-1] == '\r') {
 		line_len--;
 		line[line_len] = '\0';
 	}
 	
 	if ( !strncmp( line, "ACQ4ME ", 7 ) || !strncmp( line, "ACQ4ANY ", 8 ) ) {
-		if ( l->state != UNLOCKED ) {
+		if ( cli_data->next_lock >= MAX_LOCKS_PER_CLIENT ) {
 			incr_stats( lock_mismatch );
 			return "LOCK_HELD\n";
 		}
-		
+		if ( cli_data->next_lock > 0 ) {
+			struct locks* last_lock = cli_data->client_locks + cli_data->next_lock - 1;
+			if ( last_lock->state != PROCESSING ) {
+				/*
+				 * Handling multiple timeouts would require some extensive
+				 * rejiggering and we don't expect users to try anyway.  So we
+				 * don't let them.  Also, it'd be a bit crazy to actually get
+				 * a lock while waiting on another - it'd lead to unpredictable
+				 * locking order which is the first step in deadlocking.
+				 */
+				incr_stats( lock_while_waiting );
+				return "ERROR WAIT_FOR_RESPONSE\n";
+			}
+		}
+
 		int for_anyone = line[6] != ' ';
 		
 		char* key = strtok( line + 7 + for_anyone, " " );
@@ -94,11 +107,17 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 			incr_stats( full_queues );
 			return "QUEUE_FULL\n";
 		}
-		
-		l->parent = pCounter;
-		
+
 		if ( pCounter->processing < workers ) {
-			l->state = PROCESSING;
+			struct locks* l = init_next_lock( cli_data, pCounter, PROCESSING );
+			if ( !l ) {
+				/*
+				 * We check for this condition way way up above so we should
+				 * never see this.
+				 */
+				fprintf( stderr, "Out of locks\n" );
+				exit( EXIT_FAILURE );
+			}
 			gettimeofday( &l->timeval, NULL );
 			pCounter->count++;
 			pCounter->processing++;
@@ -110,13 +129,12 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		if ( !timeout ) {
 			return "TIMEOUT\n";
 		}
+		struct locks* l = init_next_lock( cli_data, pCounter, for_anyone ? WAIT_ANY : WAITING );
 		pCounter->count++;
 		struct timeval wait_time;
 		if ( for_anyone ) {
-			l->state = WAIT_ANY;
 			DOUBLE_LLIST_ADD( &pCounter->for_anyone, &l->siblings );
 		} else {
-			l->state = WAITING;
 			DOUBLE_LLIST_ADD( &pCounter->for_them, &l->siblings );
 		}
 		incr_stats( waiting_workers );
@@ -125,31 +143,31 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		wait_time.tv_sec = timeout;
 		wait_time.tv_usec = 0;
 
+		/*
+		 * Note that this timeout will override any previously set timeouts.
+		 * You _can't_ clear the a timeout so we have to handle that too but
+		 * at least we don't have to handle timeouts too early.
+		 */
 		event_add( &cli_data->ev, &wait_time );
 		return NULL;
 	} else if ( !strncmp(line, "RELEASE", 7) ) {
+		if ( cli_data->next_lock <= 0 ) {
+			incr_stats( release_mismatch );
+			return "NOT_LOCKED\n";
+		}
+		cli_data->next_lock--;
+		struct locks* l = cli_data->client_locks + cli_data->next_lock;
 		if ( l->state == UNLOCKED ) {
 			incr_stats( release_mismatch );
 			return "NOT_LOCKED\n";
-		} else {
-			remove_client_lock( l, 1 );
-			incr_stats( total_releases );
-			return "RELEASED\n";
 		}
+		remove_client_lock( l, 1 );
+		incr_stats( total_releases );
+		return "RELEASED\n";
 	} else if ( !strncmp( line, "STATS ", 6 ) ) {
 		return provide_stats( line + 6 );
 	} else {
 		return "ERROR BAD_COMMAND\n";
-	}
-}
-
-void process_timeout(struct locks* l) {
-	if ( ( l->state == WAIT_ANY ) || ( l->state == WAITING ) ) {
-		struct timeval now = { 0 };
-		time_stats( l, wasted_timeout_time );
-		send_client( l, "TIMEOUT\n" );
-		decr_stats( waiting_workers );
-		remove_client_lock( l, 0 );
 	}
 }
 
@@ -160,9 +178,13 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 	
 	if ( wakeup_anyones ) {
 		while ( l->parent->for_anyone.next != &l->parent->for_anyone ) {
-			time_stats( (struct locks*)l->parent->for_anyone.next, waiting_time_for_good );
-			send_client( (void*)l->parent->for_anyone.next, "DONE\n" );
-			remove_client_lock( (void*)l->parent->for_anyone.next, 0 );
+			struct locks* to_notify = (struct locks*)l->parent->for_anyone.next;
+			struct client_data* cli_data = to_notify->client_data;
+			time_stats( to_notify, waiting_time_for_good );
+			send_client( cli_data, "DONE\n" );
+			cli_data->next_lock--;
+			assert( cli_data->next_lock + cli_data->client_locks == to_notify );
+			remove_client_lock( to_notify, 0 );
 			decr_stats( waiting_workers );
 			time_stats( l, gained_time );
 		}
@@ -189,10 +211,12 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 		}
 		
 		if ( new_owner ) {
+			struct client_data* cli_data = new_owner->client_data;
+			assert( cli_data->next_lock - 1 + cli_data->client_locks == new_owner );
 			time_stats( new_owner, waiting_time );
 			DOUBLE_LLIST_DEL( &new_owner->siblings );
 			DOUBLE_LLIST_ADD( &l->parent->working, &new_owner->siblings );
-			send_client( new_owner, "LOCKED\n" );
+			send_client( cli_data, "LOCKED\n" );
 			new_owner->state = PROCESSING;
 			incr_stats( total_acquired );
 			decr_stats( waiting_workers );
