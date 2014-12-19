@@ -13,7 +13,7 @@ typedef int64_t count_t;
 
 struct stats {
 	time_t start;
-	
+
 	struct timeval processing_time; /* Total processing time */
 	struct timeval gained_time; /* Processing time saved by waiting (pairs with waiting_time_for_good)  */
 	struct timeval waiting_time; /* Total time waiting until getting the lock (waiting_time_for_me + waiting_time_for_anyone) */

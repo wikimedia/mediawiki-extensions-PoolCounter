@@ -22,10 +22,10 @@ struct hashtable_entry {
 
 struct PoolCounter {
 	struct hashtable_entry htentry;
-	
+
 	uint32_t count;
 	int processing;
-	
+
 	struct double_linked_list working;
 	struct double_linked_list for_them;
 	struct double_linked_list for_anyone;

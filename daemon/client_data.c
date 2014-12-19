@@ -93,14 +93,14 @@ int read_client_line(int fd, struct client_data* cli_data, char** line) {
 			return i;
 		}
 	}
-	
+
 	/* Wait for the rest of the line */
 	event_add( &cli_data->ev, NULL );
 	return 0;
 }
 
 /* Recover the space from the buffer which has been read, return another line if available */
-int recover_client_buffer(struct client_data* cli_data, int len, char** line) {	
+int recover_client_buffer(struct client_data* cli_data, int len, char** line) {
 	int i;
 	*line = 0;
 	if ( len >= cli_data->used_buffer ) {
@@ -108,7 +108,7 @@ int recover_client_buffer(struct client_data* cli_data, int len, char** line) {
 		cli_data->used_buffer = 0;
 		return 0;
 	}
-	
+
 	/* Nonetheless handle the other case */
 	memmove(cli_data->buffer, cli_data->buffer + len, cli_data->used_buffer - len);
 	cli_data->used_buffer -= len;
@@ -120,12 +120,12 @@ int recover_client_buffer(struct client_data* cli_data, int len, char** line) {
 			return i;
 		}
 	}
-	
+
 	return 0;
 }
 
 /* Sends the message msg to the other side, or nothing if msg is NULL
- * Since the message are short, we optimistically consider that they 
+ * Since the message are short, we optimistically consider that they
  * will always fit and never block (note O_NONBLOCK is set).
  */
 void send_client(struct client_data* cli_data, const char* msg) {

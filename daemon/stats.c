@@ -23,10 +23,10 @@ const char* provide_stats(const char* type)
 	int hours = minutes / 60;
 	minutes %= 60;
 	unsigned int days = hours / 24;
-	
+
 	int n;
 	n = sprintf( stats_buffer, "uptime: %u days, %dh %dm %ds\n", days, hours, minutes, seconds );
-	
+
 	if ( !strcasecmp( type, "FULL" ) ) {
 		n += strtimeval( stats_buffer + n, 100, "total processing time", &stats.processing_time, 0 );
 		n += strtimeval( stats_buffer + n, 100, "average processing time", &stats.processing_time, stats.processed_count );
@@ -36,7 +36,7 @@ const char* provide_stats(const char* type)
 		n += strtimeval( stats_buffer + n, 100, "waiting time for anyone", &stats.waiting_time_for_anyone, 0 );
 		n += strtimeval( stats_buffer + n, 100, "waiting time for good", &stats.waiting_time_for_good, 0 );
 		n += strtimeval( stats_buffer + n, 100, "wasted timeout time", &stats.wasted_timeout_time, 0 );
-		
+
 		#define COMMAND(item) n += sprintf( stats_buffer + n, #item ": %" PRcount "\n", stats.item );
 		#include "stats.list"
 		#undef COMMAND
@@ -45,7 +45,7 @@ const char* provide_stats(const char* type)
 		#define COMMAND(item) if ( !strcasecmp( type, #item ) ) sprintf( stats_buffer, #item ": %" PRcount "\n", stats.item ); else
 		#include "stats.list"
 		#undef COMMAND
-		
+
 		strcpy( stats_buffer, "ERROR WRONG_STAT" );
 	}
 	return stats_buffer;
@@ -60,28 +60,28 @@ static size_t strtimeval(char* dst, size_t max, const char* title, const struct 
 	int n;
 	n = snprintf( dst, max, "%s: ", title );
 	if ( max < n ) return 0;
-		
+
 	float seconds = tv->tv_sec + tv->tv_usec * 1.0e-6f;
 	if ( divisor ) {
-		/* We could use 1 as default value and skipt this branch. But 
-		 * counters can be 0, and I don't want to deal with dividing by 
+		/* We could use 1 as default value and skipt this branch. But
+		 * counters can be 0, and I don't want to deal with dividing by
 		 * zero. They are floats, but statistics shouldn't be NaN.
 		 */
 		seconds = seconds / divisor;
 	}
-	
+
 	if ( seconds >= 60 ) {
 		int minutes = seconds / 60;
 		seconds = fmodf( seconds, 60 );
-		
+
 		if ( minutes >= 60 ) {
 			int hours = minutes / 60;
 			minutes %= 60;
-			
+
 			if ( hours >= 24 ) {
 				unsigned int days = hours / 24;
 				hours %= 24;
-				
+
 				n += snprintf( dst + n, max - n, "%u days ", days );
 				if ( max < n ) return 0;
 			}
@@ -93,6 +93,6 @@ static size_t strtimeval(char* dst, size_t max, const char* title, const struct 
 	}
 	n += snprintf( dst + n, max - n, "%fs\n", seconds );
 	if ( max < n ) return 0;
-	
+
 	return n;
 }

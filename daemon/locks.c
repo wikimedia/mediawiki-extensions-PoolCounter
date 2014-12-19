@@ -49,7 +49,7 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		line_len--;
 		line[line_len] = '\0';
 	}
-	
+
 	if ( !strncmp( line, "ACQ4ME ", 7 ) || !strncmp( line, "ACQ4ANY ", 8 ) ) {
 		if ( cli_data->next_lock >= MAX_LOCKS_PER_CLIENT ) {
 			incr_stats( lock_mismatch );
@@ -71,16 +71,16 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 		}
 
 		int for_anyone = line[6] != ' ';
-		
+
 		char* key = strtok( line + 7 + for_anyone, " " );
 		unsigned workers = atou( strtok(NULL, " ") );
 		unsigned maxqueue = atou( strtok(NULL, " ") );
 		unsigned timeout = atou( strtok(NULL, " ") );
-		
+
 		if ( !key || !workers || !maxqueue ) {
 			return "ERROR BAD_SYNTAX\n";
 		}
-		
+
 		uint32_t hash_value = hash( key, strlen( key ), 0 );
 		struct PoolCounter* pCounter;
 		pCounter = hashtable_find( primary_hashtable, hash_value, key );
@@ -94,15 +94,15 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 			pCounter->htentry.key_hash = hash_value;
 			pCounter->count = 0;
 			pCounter->processing = 0;
-			
+
 			DOUBLE_LLIST_INIT( pCounter->working );
 			DOUBLE_LLIST_INIT( pCounter->for_them );
 			DOUBLE_LLIST_INIT( pCounter->for_anyone );
-			
+
 			hashtable_insert( primary_hashtable, (struct hashtable_entry *) pCounter );
 			incr_stats( hashtable_entries );
 		}
-		
+
 		if ( pCounter->count >= maxqueue ) {
 			incr_stats( full_queues );
 			return "QUEUE_FULL\n";
@@ -173,9 +173,9 @@ const char* process_line(struct client_data* cli_data, char* line, int line_len)
 
 void remove_client_lock(struct locks* l, int wakeup_anyones) {
 	struct timeval now = { 0 };
-	
+
 	DOUBLE_LLIST_DEL(&l->siblings);
-	
+
 	if ( wakeup_anyones ) {
 		while ( l->parent->for_anyone.next != &l->parent->for_anyone ) {
 			struct locks* to_notify = (struct locks*)l->parent->for_anyone.next;
@@ -189,14 +189,14 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 			time_stats( l, gained_time );
 		}
 	}
-	
+
 	if ( l->state == PROCESSING ) {
 		/* One slot freed, wake up another worker */
 
 		time_stats( l, processing_time );
 		incr_stats( processed_count );
-		
-		/* Give priority to those which need to do it themselves, since 
+
+		/* Give priority to those which need to do it themselves, since
 		 * the anyones will benefit from it, too.
 		 * TODO: Prefer the first anyone if it's much older.
 		 */
@@ -209,7 +209,7 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 			new_owner = (struct locks*) l->parent->for_anyone.next;
 			time_stats( new_owner, waiting_time_for_anyone );
 		}
-		
+
 		if ( new_owner ) {
 			struct client_data* cli_data = new_owner->client_data;
 			assert( cli_data->next_lock - 1 + cli_data->client_locks == new_owner );
@@ -226,7 +226,7 @@ void remove_client_lock(struct locks* l, int wakeup_anyones) {
 			decr_stats( processing_workers );
 		}
 	}
-	
+
 	l->state = UNLOCKED;
 	l->parent->count--;
 	if ( !l->parent->count ) {
@@ -248,21 +248,21 @@ struct hashtable {
 void hashtable_init() {
 	primary_hashtable = hashtable_create(16);
 	if (! primary_hashtable) {
-        fprintf( stderr, "Failed to init hashtable.\n" );
-        exit( EXIT_FAILURE );
-    }
+		fprintf( stderr, "Failed to init hashtable.\n" );
+		exit( EXIT_FAILURE );
+	}
 }
 
 struct hashtable* hashtable_create(int hashpower) {
-    struct hashtable* new_hashtable;
-    new_hashtable = calloc( hashsize( hashpower ) + ( sizeof( struct hashtable ) - 1 ) / 
+	struct hashtable* new_hashtable;
+	new_hashtable = calloc( hashsize( hashpower ) + ( sizeof( struct hashtable ) - 1 ) /
 		sizeof( new_hashtable->hashentries[0] ), sizeof( new_hashtable->hashentries[0] ) );
 
-    if ( !new_hashtable )
+	if ( !new_hashtable )
 		return NULL;
-    
-    new_hashtable->hashpower = hashpower;
-    if ( new_hashtable->old_hashtable != NULL ) {
+
+	new_hashtable->hashpower = hashpower;
+	if ( new_hashtable->old_hashtable != NULL ) {
 		int i; /* Zeroes are not NULL here... */
 		new_hashtable->old_hashtable = NULL;
 		for ( i=0; i < hashsize( hashpower ); i++ ) {
@@ -277,10 +277,10 @@ struct hashtable* hashtable_create(int hashpower) {
  * NULL if not found.
  */
 void* hashtable_find(struct hashtable* ht, uint32_t hash_value, const char* key) {
-    struct hashtable_entry *begin, *cur;
+	struct hashtable_entry *begin, *cur;
 
-    begin = (struct hashtable_entry*) &ht->hashentries[hash_value & hashmask(ht->hashpower)];
-    if (!begin->hashtable_siblings.next) return NULL; /* Empty bucket */
+	begin = (struct hashtable_entry*) &ht->hashentries[hash_value & hashmask(ht->hashpower)];
+	if (!begin->hashtable_siblings.next) return NULL; /* Empty bucket */
 
 	for (cur = (struct hashtable_entry*) begin->hashtable_siblings.next; cur != begin;
 		cur = (struct hashtable_entry*)cur->hashtable_siblings.next) {
@@ -289,7 +289,7 @@ void* hashtable_find(struct hashtable* ht, uint32_t hash_value, const char* key)
 			return cur;
 		}
 	}
-	
+
 	if ( ht->old_hashtable ) {
 		if ( !ht->old_hashtable->items ) {
 			/* Empty hash table */
@@ -297,7 +297,6 @@ void* hashtable_find(struct hashtable* ht, uint32_t hash_value, const char* key)
 			ht->old_hashtable = NULL;
 			return NULL; 
 		}
-		
 		return hashtable_find( ht->old_hashtable, hash_value, key );
 	}
 	return NULL;
@@ -308,7 +307,7 @@ void* hashtable_find(struct hashtable* ht, uint32_t hash_value, const char* key)
  */
 void hashtable_insert(struct hashtable* ht, struct hashtable_entry* htentry) {
 	struct double_linked_list* begin;
-	
+
 	if (! ht->old_hashtable && ht->items >= (hashsize( ht->hashpower ) * 3) / 2) {
 		/* Same growing condition as in memcached */
 		struct hashtable* new_ht;
@@ -319,7 +318,7 @@ void hashtable_insert(struct hashtable* ht, struct hashtable_entry* htentry) {
 			ht = new_ht;
 		}
 	}
-	
+
 	begin = &ht->hashentries[ htentry->key_hash & hashmask( ht->hashpower ) ];
 	if ( !begin->next ) { DOUBLE_LLIST_INIT( *begin ); }
 	DOUBLE_LLIST_ADD( begin, &htentry->hashtable_siblings );
