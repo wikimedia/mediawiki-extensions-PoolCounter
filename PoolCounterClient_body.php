@@ -76,17 +76,6 @@ class PoolCounter_Client extends PoolCounter {
 	 */
 	private $conn;
 	/**
-	 * @var boolean could this request wait if there aren't execution slots
-	 * available?
-	 */
-	private $mightWait;
-	/**
-	 * @var boolean has this process acquired and not yet released a request
-	 * that might wait
-	 */
-	private static $acquiredMightWait = false;
-
-	/**
 	 * @var PoolCounter_ConnectionManager
 	 */
 	static private $manager;
@@ -97,7 +86,6 @@ class PoolCounter_Client extends PoolCounter {
 			global $wgPoolCountClientConf;
 			self::$manager = new PoolCounter_ConnectionManager( $wgPoolCountClientConf );
 		}
-		$this->mightWait = !preg_match( '/^nowait:/', $this->key );
 	}
 
 	/**
@@ -144,10 +132,10 @@ class PoolCounter_Client extends PoolCounter {
 		$responseType = $parts[0];
 		switch ( $responseType ) {
 			case 'LOCKED':
-				self::$acquiredMightWait |= $this->mightWait;
+				$this->onAcquire();
 				break;
 			case 'RELEASED':
-				self::$acquiredMightWait &= !$this->mightWait;
+				$this->onRelease();
 				break;
 			case 'DONE':
 			case 'NOT_LOCKED':
@@ -169,7 +157,7 @@ class PoolCounter_Client extends PoolCounter {
 	 */
 	function acquireForMe() {
 		wfProfileIn( __METHOD__ );
-		$status = $this->precheck();
+		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
@@ -183,36 +171,13 @@ class PoolCounter_Client extends PoolCounter {
 	 */
 	function acquireForAnyone() {
 		wfProfileIn( __METHOD__ );
-		$status = $this->precheck();
+		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
 		$status = $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
 		wfProfileOut( __METHOD__ );
 		return $status;
-	}
-
-	/**
-	 * Checks that the lock request is sane.
-	 * @return Status - good for sane requests fatal for insane
-	 */
-	private function precheck() {
-		if ( $this->mightWait ) {
-			if ( self::$acquiredMightWait ) {
-				/*
-				 * The poolcounter itself is quite happy to allow you to wait
-				 * on another lock while you have a lock you waited on already
-				 * but we think that it is unlikely to be a good idea.  So we
-				 * made it an error.  If you are _really_ _really_ sure it is a
-				 * good idea then feel free to implement an unsafe flag or
-				 * something.
-				 */
-				return Status::newFatal( 'poolcounter-usage-error', 'You may only aquire a single non-nowait lock.' );
-			}
-		} elseif ( $this->timeout !== 0 ) {
-			return Status::newFatal( 'poolcounter-usage-error', 'Locks starting in nowait: must have 0 timeout.' );
-		}
-		return Status::newGood();
 	}
 
 	/**
