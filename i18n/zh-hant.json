@@ -5,9 +5,9 @@
 			"Cwlin0416"
 		]
 	},
-	"poolcounter-desc": "頁面的客戶端守護進程池計數器",
-	"poolcounter-connection-error": "連接至連接池計數器伺服器發生錯誤 $1",
-	"poolcounter-read-error": "從伺服器池計數器中錯誤讀取",
-	"poolcounter-write-error": "錯誤寫入至伺服器池計數器",
-	"poolcounter-remote-error": "伺服器池計數器錯誤：$1"
+	"poolcounter-desc": "程序池計數器的 MediaWiki 客戶端",
+	"poolcounter-connection-error": "連接至程序池計數伺服器發生錯誤：$1",
+	"poolcounter-read-error": "從程序池計數伺服器讀取資料錯誤。",
+	"poolcounter-write-error": "寫入資料至程序池計數伺服器錯誤。",
+	"poolcounter-remote-error": "程序池計數伺服器錯誤：$1"
 }
