@@ -7,8 +7,8 @@ Standards-Version: 3.8.3
 
 Package: poolcounter
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
 Description: Network resource manager by Platonides for Wikimedia.
   Manages a network-wide maximum process count in a computing cluster,
-  such as a web server cluster. A client is available for MediaWiki, 
+  such as a web server cluster. A client is available for MediaWiki,
   which limits resources dedicated to parsing a given article.
