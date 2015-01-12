@@ -26,6 +26,7 @@ install:
 	install -d $(DESTDIR)/usr/bin/
 	install poolcounterd $(DESTDIR)/usr/bin/
 
+# Depends on bundler and `bundle update`.  And probably ruby-dev or rvm.
 test: clean debug
 	./poolcounterd & echo $$! > .pid
 	cd tests; bundle exec cucumber; SUC=$$?; cd ..; kill `cat .pid` && rm .pid ; exit $$SUC

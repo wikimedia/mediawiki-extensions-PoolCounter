@@ -8,5 +8,6 @@
 
 override_dh_auto_configure:
 
+# make test depends on bundler and its ilk so skip during packaging.
 override_dh_auto_test:
 
