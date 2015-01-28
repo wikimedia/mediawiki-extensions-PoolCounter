@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Waihorace",
-			"Cwlin0416"
+			"Cwlin0416",
+			"Liuxinyu970226"
 		]
 	},
-	"poolcounter-desc": "程序池計數器的 MediaWiki 客戶端",
+	"poolcounter-desc": "用於程序池計數器守護行程的 MediaWiki 客戶端",
 	"poolcounter-connection-error": "連接至程序池計數伺服器發生錯誤：$1",
 	"poolcounter-read-error": "從程序池計數伺服器讀取資料錯誤。",
 	"poolcounter-write-error": "寫入資料至程序池計數伺服器錯誤。",
