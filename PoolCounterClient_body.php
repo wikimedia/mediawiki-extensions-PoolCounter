@@ -156,42 +156,35 @@ class PoolCounter_Client extends PoolCounter {
 	 * @return Status
 	 */
 	function acquireForMe() {
-		wfProfileIn( __METHOD__ );
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
-		$status = $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
-		wfProfileOut( __METHOD__ );
-		return $status;
+		return $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
 	}
 
 	/**
 	 * @return Status
 	 */
 	function acquireForAnyone() {
-		wfProfileIn( __METHOD__ );
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
-		$status = $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
-		wfProfileOut( __METHOD__ );
-		return $status;
+		return $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
 	}
 
 	/**
 	 * @return Status
 	 */
 	function release() {
-		wfProfileIn( __METHOD__ );
 		$status = $this->sendCommand( 'RELEASE', $this->key );
 
 		if ( $this->conn ) {
 			self::$manager->close( $this->conn );
 			$this->conn = null;
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $status;
 	}
 }
