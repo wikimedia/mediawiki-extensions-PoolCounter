@@ -33,11 +33,9 @@ class PoolCounter_ConnectionManager {
 			if ( count( $parts ) < 2 ) {
 				$parts[] = 7531;
 			}
-			wfProfileIn( __METHOD__.'-connect' );
 			wfSuppressWarnings();
-			$conn = fsockopen( $parts[0], $parts[1], $errno, $errstr, $this->timeout );
+			$conn = $this->open( $parts[0], $parts[1], $errno, $errstr );
 			wfRestoreWarnings();
-			wfProfileOut( __METHOD__.'-connect' );
 			if ( $conn ) {
 				break;
 			}
@@ -49,6 +47,13 @@ class PoolCounter_ConnectionManager {
 		$this->conns[$hostName] = $conn;
 		$this->refCounts[$hostName] = 1;
 		return Status::newGood( $conn );
+	}
+
+	/**
+	 * Open a socket. Just a wrapper for fsockopen()
+	 */
+	private function open( $host, $port, &$errno, &$errstr ) {
+		return fsockopen( $host, $port, $errno, $errstr, $this->timeout );
 	}
 
 	/**
