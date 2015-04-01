@@ -14,7 +14,7 @@ Then(/^(.+) gets (.+)$/) do |name, text|
   if text == 'no response'
     # Raise an error if you get a response.  Raise an error if you don't timeout.
     expect(-> { expect(@clients[name].receive).to eq(nil) }).to raise_error(Timeout::Error)
-  elsif text.start_with?('/') and text.end_with?('/')
+  elsif text.start_with?('/') && text.end_with?('/')
     text = text[1..-2]
     expect(@clients[name].receive).to match(text)
   else
