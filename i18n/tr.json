@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek"
+		]
+	},
+	"poolcounter-desc": "Havuz sayaç için MediaWiki client daemon",
+	"poolcounter-connection-error": "Hata bağlanması için havuz counter server: $1",
+	"poolcounter-read-error": "Havuzdan okuma hatası sayacı server.",
+	"poolcounter-write-error": "Hata havuzu yazılı counter server.",
+	"poolcounter-remote-error": "Havuz sayacı sunucu hatası: $1"
+}
