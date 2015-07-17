@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Albertas"
+		]
+	},
+	"poolcounter-desc": "MediaWiki klientas, skirtas telkinio skaičiavimo tarnybai",
+	"poolcounter-connection-error": "Klaida prisijungiant prie telkinio skaičiavimo serverio: $1",
+	"poolcounter-read-error": "Klaida skaitant iš telkinio skaičiavimo serverio.",
+	"poolcounter-write-error": "Klaida įrašant į telkinio skaičiavimo serverį.",
+	"poolcounter-remote-error": "Telkinio skaičiavimo serverio klaida: $1"
+}
