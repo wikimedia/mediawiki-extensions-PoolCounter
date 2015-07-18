@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Cliente para MediaWiki do servidor de contador de recursos comúns poolcounter.py",

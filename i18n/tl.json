@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"AnakngAraw"
+			"AnakngAraw",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Kliyente ng MediaWiki para sa pambilang ng lawa ng  poolcounter.py ng daemon",

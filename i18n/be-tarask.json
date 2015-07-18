@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"EugeneZelenko"
+			"EugeneZelenko",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Кліент MediaWiki для лічыльніка poolcounter.py",

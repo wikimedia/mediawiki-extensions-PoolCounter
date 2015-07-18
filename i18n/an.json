@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Juanpabl"
+			"Juanpabl",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Client MediaWiki ta demonio d'o contador d'enqüestas poolcounter.py",

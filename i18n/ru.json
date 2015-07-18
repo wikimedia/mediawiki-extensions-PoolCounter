@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Клиент MediaWiki для демона счётчика пула poolcounter.py",

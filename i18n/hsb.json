@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Michawiki"
+			"Michawiki",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Klient MediaWiki demona skupinskeho ličaka poolcounter.py",

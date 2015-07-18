@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bennylin",
-			"IvanLanin"
+			"IvanLanin",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Klien MediaWiki untuk daemon poolcounter.py",

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fryed-peach",
-			"Shirayuki"
+			"Shirayuki",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "プール カウンター デーモン poolcounter.py の MediaWiki クライアント",

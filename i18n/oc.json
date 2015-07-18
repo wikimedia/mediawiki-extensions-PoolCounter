@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Client per MediaWiki del demon de comptador de gropament poolcounter.py",

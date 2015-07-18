@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"CERminator"
+			"CERminator",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "MediaWiki klijent daemon za pool brojač poolcounter.py",

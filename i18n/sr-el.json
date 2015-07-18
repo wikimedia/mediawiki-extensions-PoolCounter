@@ -1,5 +1,9 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"아라"
+		]
+	},
 	"poolcounter-desc": "Medijaviki klijent za demona fondovskog šaltera poolcounter.py",
 	"poolcounter-connection-error": "Greška pri povezivanju sa serverom fondovskog šaltera: $1",
 	"poolcounter-read-error": "Greška pri čitanju sa servera fondovskog šaltera",

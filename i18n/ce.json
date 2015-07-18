@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Умар"
+			"Умар",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Клиент MediaWiki poolcounter.py пулан доменан лорург"

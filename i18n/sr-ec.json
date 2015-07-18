@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rancher"
+			"Rancher",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Медијавики клијент за демона фондовског шалтера poolcounter.py",
