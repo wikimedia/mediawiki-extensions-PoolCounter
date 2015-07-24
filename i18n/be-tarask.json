@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"EugeneZelenko",
-			"아라"
+			"아라",
+			"Red Winged Duck"
 		]
 	},
-	"poolcounter-desc": "Кліент MediaWiki для лічыльніка poolcounter.py",
+	"poolcounter-desc": "Кліент MediaWiki для дэману лічыльніка пулу",
 	"poolcounter-connection-error": "Памылка далучэньня для сэрвэра лічыльніка: $1",
 	"poolcounter-read-error": "Памылка чытаньня з сэрвэра лічыльніка",
 	"poolcounter-write-error": "Памылка запісу на сэрвэр лічыльніка",
