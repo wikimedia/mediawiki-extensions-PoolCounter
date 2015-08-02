@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"CERminator",
-			"아라"
+			"아라",
+			"Srdjan m"
 		]
 	},
-	"poolcounter-desc": "MediaWiki klijent daemon za pool brojač poolcounter.py",
+	"poolcounter-desc": "MediaWiki klijent daemon za pool brojač",
 	"poolcounter-connection-error": "Greška pri povezivanju na server pool brojača: $1",
 	"poolcounter-read-error": "Greška pri čitanju sa servera pool brojača",
 	"poolcounter-write-error": "Greška pri pisanju na server pool brojača",
