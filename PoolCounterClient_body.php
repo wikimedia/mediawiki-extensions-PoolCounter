@@ -8,6 +8,8 @@ class PoolCounter_ConnectionManager {
 	function __construct( $conf ) {
 		$this->hostNames = $conf['servers'];
 		$this->timeout = isset( $conf['timeout'] ) ? $conf['timeout'] : 0.1;
+		$this->connect_timeout = isset( $conf['connect_timeout'] ) ?
+			$conf['connect_timeout'] : 0;
 		if ( !count( $this->hostNames ) ) {
 			throw new MWException( __METHOD__ . ': no servers configured' );
 		}
@@ -53,7 +55,27 @@ class PoolCounter_ConnectionManager {
 	 * Open a socket. Just a wrapper for fsockopen()
 	 */
 	private function open( $host, $port, &$errno, &$errstr ) {
-		return fsockopen( $host, $port, $errno, $errstr, $this->timeout );
+		// If connect_timeout is set, we try to open the socket twice.
+		// You usually want to set the connection timeout to a very
+		// small value so that in case of failure of a server the
+		// connection to poolcounter is not a SPOF.
+		if ( $this->connect_timeout > 0 ) {
+			$tries = 2;
+			$timeout = $this->connect_timeout;
+		} else {
+			$tries = 1;
+			$timeout = $this->timeout;
+		}
+
+		while ( true ) {
+			$fp = fsockopen( $host, $port, $errno, $errstr, $timeout );
+			if ( $fp !== false || --$tries < 1 ) {
+				break;
+			}
+			usleep( 1000 );
+		}
+
+		return $fp;
 	}
 
 	/**
