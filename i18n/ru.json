@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Александр Сигачёв",
-			"아라"
+			"아라",
+			"Okras"
 		]
 	},
-	"poolcounter-desc": "Клиент MediaWiki для демона счётчика пула poolcounter.py",
+	"poolcounter-desc": "Клиент MediaWiki для демона счётчика пула",
 	"poolcounter-connection-error": "Ошибка при подключении к серверу-счётчику пула: $1",
 	"poolcounter-read-error": "Ошибка чтения с сервера-счётчика пула",
 	"poolcounter-write-error": "Ошибка записи при обращении к серверу-счётчику пула",
