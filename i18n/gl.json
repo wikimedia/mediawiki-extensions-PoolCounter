@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Toliño",
-			"아라"
+			"아라",
+			"Banjo"
 		]
 	},
-	"poolcounter-desc": "Cliente para MediaWiki do servidor de contador de recursos comúns poolcounter.py",
+	"poolcounter-desc": "Cliente para MediaWiki do servizo de contador de recursos",
 	"poolcounter-connection-error": "Erro na conexión co servidor de contador de recursos comúns: $1",
 	"poolcounter-read-error": "Erro na lectura do servidor de contador de recursos comúns",
 	"poolcounter-write-error": "Erro na escritura do servidor de contador de recursos comúns",
