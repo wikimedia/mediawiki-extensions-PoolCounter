@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Sp5uhe",
-			"아라"
+			"아라",
+			"Chrumps"
 		]
 	},
-	"poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster poolcounter.py",
+	"poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster",
 	"poolcounter-connection-error": "Błąd podczas łączenia z serwerem nadzorującym klaster – $1",
 	"poolcounter-read-error": "Błąd odczytu z serwera nadzorującego klaster",
 	"poolcounter-write-error": "Błąd podczas zapisywania do serwera nadzorującego klaster",
