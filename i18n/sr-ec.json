@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Rancher",
-			"아라"
+			"아라",
+			"Сербијана"
 		]
 	},
-	"poolcounter-desc": "Медијавики клијент за демона фондовског шалтера poolcounter.py",
+	"poolcounter-desc": "Медијавики клијент за бројач демона",
 	"poolcounter-connection-error": "Грешка при повезивању са сервером фондовског шалтера: $1",
 	"poolcounter-read-error": "Грешка при читању са сервера фондовског шалтера",
 	"poolcounter-write-error": "Грешка при писању на сервер фондовског шалтера",
