@@ -1,0 +1,25 @@
+{
+	"name": "Pool Counter Client",
+	"author": "Tim Starling",
+	"url": "https://www.mediawiki.org/wiki/Extension:PoolCounter",
+	"descriptionmsg": "poolcounter-desc",
+	"type": "other",
+	"MessagesDirs": {
+		"PoolCounterClient": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"PoolCounter_Client": "PoolCounterClient_body.php",
+		"PoolCounter_ConnectionManager": "PoolCounterClient_body.php"
+	},
+	"config": {
+		"PoolCountClientConf": {
+			"servers": [
+				"127.0.0.1"
+			],
+			"timeout": 0.1
+		}
+	},
+	"manifest_version": 1
+}
