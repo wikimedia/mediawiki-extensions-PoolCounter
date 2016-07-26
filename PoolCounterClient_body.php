@@ -2,9 +2,13 @@
 
 class PoolCounter_ConnectionManager {
 	public $hostNames;
-	public $conns = array();
-	public $refCounts = array();
+	public $conns = [];
+	public $refCounts = [];
 
+	/**
+	 * @param array $conf
+	 * @throws MWException
+	 */
 	function __construct( $conf ) {
 		$this->hostNames = $conf['servers'];
 		$this->timeout = isset( $conf['timeout'] ) ? $conf['timeout'] : 0.1;
@@ -20,12 +24,13 @@ class PoolCounter_ConnectionManager {
 	 * @return Status
 	 */
 	function get( $key ) {
-		$hashes = array();
+		$hashes = [];
 		foreach ( $this->hostNames as $hostName ) {
 			$hashes[$hostName] = md5( $hostName . $key );
 		}
 		asort( $hashes );
 		$errno = $errstr = '';
+		$conn = null;
 		foreach ( $hashes as $hostName => $hash ) {
 			if ( isset( $this->conns[$hostName] ) ) {
 				$this->refCounts[$hostName]++;
@@ -35,9 +40,9 @@ class PoolCounter_ConnectionManager {
 			if ( count( $parts ) < 2 ) {
 				$parts[] = 7531;
 			}
-			wfSuppressWarnings();
+			MediaWiki\suppressWarnings();
 			$conn = $this->open( $parts[0], $parts[1], $errno, $errstr );
-			wfRestoreWarnings();
+			MediaWiki\restoreWarnings();
 			if ( $conn ) {
 				break;
 			}
@@ -53,6 +58,11 @@ class PoolCounter_ConnectionManager {
 
 	/**
 	 * Open a socket. Just a wrapper for fsockopen()
+	 * @param string $host
+	 * @param int $port
+	 * @param $errno
+	 * @param $errstr
+	 * @return null|resource
 	 */
 	private function open( $host, $port, &$errno, &$errstr ) {
 		// If connect_timeout is set, we try to open the socket twice.
@@ -67,6 +77,7 @@ class PoolCounter_ConnectionManager {
 			$timeout = $this->timeout;
 		}
 
+		$fp = null;
 		while ( true ) {
 			$fp = fsockopen( $host, $port, $errno, $errstr, $timeout );
 			if ( $fp !== false || --$tries < 1 ) {
@@ -102,11 +113,18 @@ class PoolCounter_Client extends PoolCounter {
 	 * releases all locks acquired.
 	 */
 	private $conn;
+
 	/**
 	 * @var PoolCounter_ConnectionManager
 	 */
 	static private $manager;
 
+	/**
+	 * PoolCounter_Client constructor.
+	 * @param array $conf
+	 * @param string $type
+	 * @param string $key
+	 */
 	function __construct( $conf, $type, $key ) {
 		parent::__construct( $conf, $type, $key );
 		if ( !self::$manager ) {
