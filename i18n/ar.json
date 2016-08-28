@@ -5,7 +5,7 @@
 			"아라"
 		]
 	},
-	"poolcounter-desc": "عميل ميدياويكي لمشرف مجموعة daemon poolcounter.py",
+	"poolcounter-desc": "عميل ميدياويكي لpool counter daemon",
 	"poolcounter-connection-error": "خطأ توصيل إلى خادم مشرف المجموعة: $1",
 	"poolcounter-read-error": "خطأ قراءة من خادم مشرف المجموعة",
 	"poolcounter-write-error": "خطأ كتابة إلى خادم مشرف المجموعة",
