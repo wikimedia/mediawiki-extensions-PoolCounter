@@ -5,7 +5,7 @@
 			"아라"
 		]
 	},
-	"poolcounter-desc": "Client per MediaWiki del demon de comptador de gropament poolcounter.py",
+	"poolcounter-desc": "Client per MediaWiki del demòni de reservacion dels processus",
 	"poolcounter-connection-error": "Error al moment de la connexion al comptador de gropament : $1",
 	"poolcounter-read-error": "Error al moment de la lectura del servidor de comptador de gropament",
 	"poolcounter-write-error": "Error al moment de l'escritura sul servidor del comptador de gropament",
