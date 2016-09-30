@@ -1,35 +1,27 @@
-This work was packaged for Debian by:
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
-    Tim Starling <tstarling@wikimedia.org> on Tue, 15 Mar 2011 14:30:52 +1100
+Files: *
+Copyright: Copyright © 2011 Platonides <platonides@users.mediawiki.org>
+License: GPL-3+
 
-It was downloaded from:
+Files: debian/*
+Copyright: Copyright © 2011 Tim Starling <tstarling@wikimedia.org>
+License: GPL-3+
 
-    http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/PoolCounter/daemon
-
-Upstream Author(s):
-
-    Platonides
-
-License:
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-On Debian systems, the complete text of the GNU General
-Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
-
-The Debian packaging is:
-
-    Copyright (C) 2011 Tim Starling <tstarling@wikimedia.org>
-
-and is licensed under the GPL version 3, see above.
+License: GPL-3+
+ This package is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by The Free Software
+ Foundation; either version 3 of the License, or (at your option) any later
+ version.
+ .
+ This package is distributed in the hope that it will be useful,
+ But WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ Along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-3'.

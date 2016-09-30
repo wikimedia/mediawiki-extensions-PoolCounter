@@ -1,3 +1,14 @@
+poolcounter (1.0.4) jessie; urgency=medium
+
+  * Refresh Debian packaging:
+    + Add systemd service file
+    + Run tests on package build
+    + Convert debian/copyright to machine-readable
+  * Fix tests to force ipv4
+  * Stop using bundler for tests
+
+ -- Filippo Giunchedi <fgiunchedi@wikimedia.org>  Fri, 30 Sep 2016 08:12:45 +0000
+
 poolcounter (1.0.3) lucid; urgency=low
 
   * Allow timeout of 0.

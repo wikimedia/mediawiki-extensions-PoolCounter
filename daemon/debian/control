@@ -2,7 +2,9 @@ Source: poolcounter
 Section: web
 Priority: extra
 Maintainer: Tim Starling <tstarling@wikimedia.org>
-Build-Depends: debhelper (>= 7), libevent-dev, build-essential
+Build-Depends: debhelper (>= 9), dh-systemd (>= 1.5),
+  cucumber, ruby-rspec,
+  libevent-dev
 Standards-Version: 3.8.3
 
 Package: poolcounter
