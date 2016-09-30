@@ -3,7 +3,7 @@ require 'timeout'
 
 # Simple wrapper around socket communication with the pool counter.
 class Client
-  def initialize(hostname = 'localhost', port = 7531)
+  def initialize(hostname = '127.0.0.1', port = 7531)
     @hostname = hostname
     @port = port
     @socket = nil
