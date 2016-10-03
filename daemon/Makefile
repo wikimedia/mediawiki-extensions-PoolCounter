@@ -20,7 +20,7 @@ prototypes.h: main.c
 	sed -n 's/\/\* prototype \*\//;/p' $^ > $@
 
 clean:
-	rm -f *.o prototypes.h
+	rm -f poolcounterd *.o prototypes.h
 
 install:
 	install -d $(DESTDIR)/usr/bin/
