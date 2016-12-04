@@ -17,7 +17,7 @@ class Client
 
   def receive
     raise 'Not connected' unless @socket
-    timeout(5) do
+    Timeout.timeout(5) do
       @socket.gets.chop
     end
   end
