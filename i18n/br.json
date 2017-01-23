@@ -5,7 +5,7 @@
 			"아라"
 		]
 	},
-	"poolcounter-desc": "Kliant evit MediaWiki eus diaoul kanastell strollad poolcounter.py",
+	"poolcounter-desc": "Arval MediaWiki diaoul mirout an argerzhadurioù",
 	"poolcounter-connection-error": "Fazi kevreañ ouzh servijer kanastell ar strollad : $1",
 	"poolcounter-read-error": "Fazi lenn a-berzh servijer kanastell ar strollad",
 	"poolcounter-write-error": "Fazi e-ser skrivañ war servijer kanastell ar strollad",
