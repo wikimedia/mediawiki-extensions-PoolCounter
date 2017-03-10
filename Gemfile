@@ -1,6 +1,3 @@
-#ruby=ruby-2.1.5
-#ruby-gemset=PoolCounter
-
 source 'https://rubygems.org'
 
 gem 'cucumber'
