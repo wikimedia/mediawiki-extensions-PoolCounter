@@ -8,3 +8,4 @@ daemon/poolcounterd
 daemon/prototypes.h
 daemon/core
 node_modules/
+/vendor
