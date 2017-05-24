@@ -98,7 +98,8 @@ class PoolCounter_Client extends PoolCounter {
 		if ( !$status->isGood() ) {
 			return $status;
 		}
-		return $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		return $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue,
+			$this->timeout );
 	}
 
 	/**
@@ -109,7 +110,8 @@ class PoolCounter_Client extends PoolCounter {
 		if ( !$status->isGood() ) {
 			return $status;
 		}
-		return $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue, $this->timeout );
+		return $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue,
+			$this->timeout );
 	}
 
 	/**
