@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardo.mps"
+			"Eduardo.mps",
+			"Felipe L. Ewald"
 		]
 	},
 	"poolcounter-desc": "Cliente mediawiki para o pool counter daemon",
 	"poolcounter-connection-error": "Erro ao conectar ao servidor do pool counter: $1",
-	"poolcounter-read-error": "Erro ao ler do servidor do pool counter",
-	"poolcounter-write-error": "Erro ao escrever no servidor do pool counter",
+	"poolcounter-read-error": "Erro ao ler do servidor do pool counter.",
+	"poolcounter-write-error": "Erro ao escrever no servidor do pool counter.",
 	"poolcounter-remote-error": "Erro no servidor do pool counter: $1"
 }
