@@ -23,6 +23,7 @@ const char* provide_stats(const char* type)
 	int hours = minutes / 60;
 	minutes %= 60;
 	unsigned int days = hours / 24;
+	hours %= 60;
 
 	int n;
 	n = sprintf( stats_buffer, "uptime: %u days, %dh %dm %ds\n", days, hours, minutes, seconds );
