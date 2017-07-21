@@ -8,6 +8,11 @@ class PoolCounter_Client extends PoolCounter {
 	private $conn;
 
 	/**
+	 * @var string The server host name
+	 */
+	private $hostName;
+
+	/**
 	 * @var PoolCounter_ConnectionManager
 	 */
 	static private $manager;
@@ -35,7 +40,8 @@ class PoolCounter_Client extends PoolCounter {
 			if ( !$status->isOK() ) {
 				return $status;
 			}
-			$this->conn = $status->value;
+			$this->conn = $status->value['conn'];
+			$this->hostName = $status->value['hostName'];
 
 			// Set the read timeout to be 1.5 times the pool timeout.
 			// This allows the server to time out gracefully before we give up on it.
@@ -58,11 +64,11 @@ class PoolCounter_Client extends PoolCounter {
 		$conn = $status->value;
 		wfDebug( "Sending pool counter command: $cmd\n" );
 		if ( fwrite( $conn, "$cmd\n" ) === false ) {
-			return Status::newFatal( 'poolcounter-write-error' );
+			return Status::newFatal( 'poolcounter-write-error', $this->hostName );
 		}
 		$response = fgets( $conn );
 		if ( $response === false ) {
-			return Status::newFatal( 'poolcounter-read-error' );
+			return Status::newFatal( 'poolcounter-read-error', $this->hostName );
 		}
 		$response = rtrim( $response, "\r\n" );
 		wfDebug( "Got pool counter response: $response\n" );
@@ -85,7 +91,7 @@ class PoolCounter_Client extends PoolCounter {
 			default:
 				$parts = explode( ' ', $parts[1], 2 );
 				$errorMsg = isset( $parts[1] ) ? $parts[1] : '(no message given)';
-				return Status::newFatal( 'poolcounter-remote-error', $errorMsg );
+				return Status::newFatal( 'poolcounter-remote-error', $errorMsg, $this->hostName );
 		}
 		return Status::newGood( constant( "PoolCounter::$responseType" ) );
 	}
