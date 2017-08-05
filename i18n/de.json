@@ -7,8 +7,8 @@
 		]
 	},
 	"poolcounter-desc": "Ermöglicht einen ''Client'' für den ''„PoolCounter“'' eines Computerclusters",
-	"poolcounter-connection-error": "Fehler beim Verbinden zum Server $1, auf dem sich das Zählwerk des Computerclusters befindet",
-	"poolcounter-read-error": "Fehler beim Lesen vom Server, auf dem sich das Zählwerk des Computerclusters befindet",
-	"poolcounter-write-error": "Fehler beim Schreiben auf dem Server, auf dem sich das Zählwerk des Computerclusters befindet",
-	"poolcounter-remote-error": "Fehler beim Server $1, auf dem sich das Zählwerk des Computerclusters befindet"
+	"poolcounter-connection-error": "Fehler beim Verbinden zum Poolcounterserver $2: $1",
+	"poolcounter-read-error": "Fehler beim Lesen vom Poolcounterserver $1.",
+	"poolcounter-write-error": "Fehler beim Schreiben auf den Poolcounterserver $1.",
+	"poolcounter-remote-error": "Poolcounterfehler von Server $2: $1"
 }
