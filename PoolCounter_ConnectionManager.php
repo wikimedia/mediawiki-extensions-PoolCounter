@@ -29,12 +29,13 @@ class PoolCounter_ConnectionManager {
 			$hashes[$hostName] = md5( $hostName . $key );
 		}
 		asort( $hashes );
-		$errno = $errstr = '';
+		$errno = $errstr = $hostName = '';
 		$conn = null;
 		foreach ( $hashes as $hostName => $hash ) {
 			if ( isset( $this->conns[$hostName] ) ) {
 				$this->refCounts[$hostName]++;
-				return Status::newGood( $this->conns[$hostName] );
+				return Status::newGood(
+					[ 'conn' => $this->conns[$hostName], 'hostName' => $hostName ] );
 			}
 			$parts = explode( ':', $hostName, 2 );
 			if ( count( $parts ) < 2 ) {
@@ -48,12 +49,12 @@ class PoolCounter_ConnectionManager {
 			}
 		}
 		if ( !$conn ) {
-			return Status::newFatal( 'poolcounter-connection-error', $errstr );
+			return Status::newFatal( 'poolcounter-connection-error', $errstr, $hostName );
 		}
 		wfDebug( "Connected to pool counter server: $hostName\n" );
 		$this->conns[$hostName] = $conn;
 		$this->refCounts[$hostName] = 1;
-		return Status::newGood( $conn );
+		return Status::newGood( [ 'conn' => $conn, 'hostName' => $hostName ] );
 	}
 
 	/**
