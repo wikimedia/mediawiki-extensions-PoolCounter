@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirajan pant"
+		]
+	},
+	"poolcounter-connection-error": "पूल गणक सर्भर $2:$1सँग जडानमा त्रुटी",
+	"poolcounter-read-error": "पूल गणक सर्भर $1 बाट पढ्न त्रुटी।",
+	"poolcounter-remote-error": "सर्भर $2: $1बाट पूल गणक त्रुटी"
+}
