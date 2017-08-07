@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Kwj2772",
-			"아라"
+			"아라",
+			"Ykhwong"
 		]
 	},
 	"poolcounter-desc": "풀 카운터 데몬을 위한 미디어위키 클라이언트",
-	"poolcounter-connection-error": "풀 카운터 서버에 접속하는 중 오류: $1",
-	"poolcounter-read-error": "풀 카운터 서버 읽기 오류",
-	"poolcounter-write-error": "풀 카운터 서버 쓰기 오류",
-	"poolcounter-remote-error": "풀 카운터 서버 오류: $1"
+	"poolcounter-connection-error": "풀 카운터 서버 $2에 접속하는 중 오류가 발생했습니다: $1",
+	"poolcounter-read-error": "$1 풀 카운터 서버로부터 읽는 중 오류가 발생했습니다.",
+	"poolcounter-write-error": "풀 카운터 서버 $1에 대해 쓰기 오류가 발생했습니다.",
+	"poolcounter-remote-error": "$2 서버로부터 풀 카운터 오류가 발생했습니다: $1"
 }

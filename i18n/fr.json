@@ -3,12 +3,13 @@
 		"authors": [
 			"IAlex",
 			"Urhixidur",
-			"Verdy p"
+			"Verdy p",
+			"Gomoko"
 		]
 	},
 	"poolcounter-desc": "Client MediaWiki du démon de réservation des processus",
-	"poolcounter-connection-error": "Erreur lors de la connexion au compteur de groupement : $1",
-	"poolcounter-read-error": "Erreur lors de la lecture du serveur du compteur de groupement",
-	"poolcounter-write-error": "Erreur lors de l'écriture sur le serveur du compteur de groupement",
-	"poolcounter-remote-error": "Erreur du serveur du compteur de groupement : $1"
+	"poolcounter-connection-error": "Erreur lors de la connexion au serveur de compteur de groupement $2 : $1",
+	"poolcounter-read-error": "Erreur lors de la lecture du serveur du compteur de groupement $1.",
+	"poolcounter-write-error": "Erreur lors de l’écriture sur le serveur du compteur de groupement $1.",
+	"poolcounter-remote-error": "Erreur du serveur du compteur de groupement $2 : $1"
 }

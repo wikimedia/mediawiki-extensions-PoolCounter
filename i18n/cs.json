@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mormegil"
+			"Mormegil",
+			"Dvorapa"
 		]
 	},
 	"poolcounter-desc": "Klient do MediaWiki k démonovi řídícímu přístup ke clusteru",
-	"poolcounter-connection-error": "Chyba připojování k serveru řídícímu přístup ke clusteru: $1",
-	"poolcounter-read-error": "Chyba čtení ze serveru řídícího přístup ke clusteru",
-	"poolcounter-write-error": "Chyba zápisu na server řídící přístup ke clusteru",
-	"poolcounter-remote-error": "Chyba serveru řídícího přístup ke clusteru: $1"
+	"poolcounter-connection-error": "Chyba připojování k serveru $2 řídícímu přístup ke clusteru: $1",
+	"poolcounter-read-error": "Chyba čtení ze serveru $1 řídícího přístup ke clusteru.",
+	"poolcounter-write-error": "Chyba zápisu na server $1 řídící přístup ke clusteru.",
+	"poolcounter-remote-error": "Chyba serveru $2 řídícího přístup ke clusteru: $1"
 }
