@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"아라"
+			"아라",
+			"ديفيد"
 		]
 	},
 	"poolcounter-desc": "عميل ميدياويكي لpool counter daemon",
-	"poolcounter-connection-error": "خطأ توصيل إلى خادم مشرف المجموعة: $1",
-	"poolcounter-read-error": "خطأ قراءة من خادم مشرف المجموعة",
-	"poolcounter-write-error": "خطأ كتابة إلى خادم مشرف المجموعة",
-	"poolcounter-remote-error": "خطأ خادم مشرف المجموعة: $1"
+	"poolcounter-connection-error": "خطأ توصيل إلى خادم مشرف المجموعة: $1 $2",
+	"poolcounter-read-error": "خطأ قراءة من خادم مشرف المجموعة $1",
+	"poolcounter-write-error": "خطأ كتابة إلى خادم مشرف المجموعة $1",
+	"poolcounter-remote-error": "خطأ خادم مشرف المجموعة: $1 $2"
 }
