@@ -11,8 +11,8 @@
 		]
 	},
 	"AutoloadClasses": {
-		"PoolCounter_Client": "PoolCounterClient_body.php",
-		"PoolCounter_ConnectionManager": "PoolCounter_ConnectionManager.php"
+		"PoolCounter_Client": "includes/PoolCounter_Client.php",
+		"PoolCounter_ConnectionManager": "includes/PoolCounter_ConnectionManager.php"
 	},
 	"config": {
 		"PoolCountClientConf": {
