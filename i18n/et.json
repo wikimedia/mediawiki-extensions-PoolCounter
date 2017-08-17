@@ -5,8 +5,8 @@
 		]
 	},
 	"poolcounter-desc": "MediaWiki klient protsessikogumi loendurdeemoni jaoks",
-	"poolcounter-connection-error": "Tõrge protsessikogumi loendurserveriga ühendumisel: $1",
-	"poolcounter-read-error": "Tõrge protsessikogumi loendurserverist lugemisel.",
-	"poolcounter-write-error": "Tõrge protsessikogumi loendurserverisse kirjutamisel.",
-	"poolcounter-remote-error": "Protsessikogumi loendurserveri tõrge: $1"
+	"poolcounter-connection-error": "Tõrge protsessikogumi loendurserveriga $2 ühendumisel: $1",
+	"poolcounter-read-error": "Tõrge protsessikogumi loendurserverist $1 lugemisel.",
+	"poolcounter-write-error": "Tõrge protsessikogumi loendurserverisse $1 kirjutamisel.",
+	"poolcounter-remote-error": "Protsessikogumi loendurserveri $2 tõrge: $1"
 }
