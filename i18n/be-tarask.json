@@ -8,7 +8,7 @@
 	},
 	"poolcounter-desc": "Кліент MediaWiki для дэману лічыльніка пулу",
 	"poolcounter-connection-error": "Памылка далучэньня для сэрвэра лічыльніка $2: $1",
-	"poolcounter-read-error": "Памылка чытаньня з сэрвэра лічыльніка",
-	"poolcounter-write-error": "Памылка запісу на сэрвэр лічыльніка",
-	"poolcounter-remote-error": "Памылка сэрвэра лічыльніка: $1"
+	"poolcounter-read-error": "Памылка чытаньня з сэрвэра лічыльніка $1.",
+	"poolcounter-write-error": "Памылка запісу на сэрвэр лічыльніка $1.",
+	"poolcounter-remote-error": "Памылка сэрвэра лічыльніка $2: $1"
 }
