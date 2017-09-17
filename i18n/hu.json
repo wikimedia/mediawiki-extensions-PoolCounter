@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Glanthor Reviol",
-			"아라"
+			"아라",
+			"Rodrigo"
 		]
 	},
 	"poolcounter-desc": "MediaWiki kliens a poolcounter.py démonhoz",
-	"poolcounter-connection-error": "Hiba a pool counter szerverhez való kapcsolódáskor: $1",
-	"poolcounter-read-error": "Hiba a pool counter szerverről való olvasáskor",
-	"poolcounter-write-error": "Hiba a pool counter szerverre való íráskor",
-	"poolcounter-remote-error": "Pool counter szerver hiba: $1"
+	"poolcounter-connection-error": "Hiba a $2 pool counter szerverhez való kapcsolódáskor: $1",
+	"poolcounter-read-error": "Hiba jelentkezett a pool counter szerverről való olvasáskor: $1",
+	"poolcounter-write-error": "Hiba jelentkezett a pool counter szerverre való íráskor: $1",
+	"poolcounter-remote-error": "Pool counter $2 szerver hiba: $1"
 }
