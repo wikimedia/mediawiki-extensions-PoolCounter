@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wayiran"
+			"Wayiran",
+			"Ladsgroup"
 		]
 	},
 	"poolcounter-desc": "کارخواه مدیاویکی برای دیو باجهٔ مخزن",
-	"poolcounter-connection-error": "خطا در اتصال به کارساز باجهٔ مخزن: $1",
-	"poolcounter-read-error": "خطا در خواندن از کارساز باجهٔ مخزن",
-	"poolcounter-write-error": "خطا در نوشتن در کارساز باجهٔ مخزن",
-	"poolcounter-remote-error": "خطای کارساز باجهٔ مخزن: $1"
+	"poolcounter-connection-error": "خطا در اتصال به کارساز $2 باجهٔ مخزن: $1",
+	"poolcounter-read-error": "خطا در خواندن از کارساز $1 باجهٔ مخزن",
+	"poolcounter-write-error": "خطا در نوشتن در کارساز $1 باجهٔ مخزن",
+	"poolcounter-remote-error": "خطای کارساز $2 باجهٔ مخزن: $1"
 }
