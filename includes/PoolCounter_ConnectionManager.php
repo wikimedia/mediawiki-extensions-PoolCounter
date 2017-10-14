@@ -20,7 +20,7 @@ class PoolCounter_ConnectionManager {
 	}
 
 	/**
-	 * @param $key
+	 * @param string $key
 	 * @return Status
 	 */
 	function get( $key ) {
@@ -61,8 +61,8 @@ class PoolCounter_ConnectionManager {
 	 * Open a socket. Just a wrapper for fsockopen()
 	 * @param string $host
 	 * @param int $port
-	 * @param $errno
-	 * @param $errstr
+	 * @param int $errno
+	 * @param string $errstr
 	 * @return null|resource
 	 */
 	private function open( $host, $port, &$errno, &$errstr ) {
@@ -91,7 +91,7 @@ class PoolCounter_ConnectionManager {
 	}
 
 	/**
-	 * @param $conn
+	 * @param resource $conn
 	 */
 	function close( $conn ) {
 		foreach ( $this->conns as $hostName => $otherConn ) {
