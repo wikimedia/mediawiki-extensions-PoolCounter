@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"BukhariSaeed"
 		]
 	},
-	"poolcounter-read-error": "پول کے انسداد کے سرور سے پڑھنے کی خرابی",
-	"poolcounter-write-error": "لکھنے کے پول انسداد سرور کی غلطی"
+	"poolcounter-read-error": "پول کے انسداد کے سرور $1 سے پڑھنے کی خرابی",
+	"poolcounter-write-error": "لکھنے کے پول انسداد سرور $1 کی غلطی۔"
 }
