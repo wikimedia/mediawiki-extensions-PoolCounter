@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'cucumber'
-gem 'parallel_tests'
+gem 'parallel_tests', '~> 2.19'
 gem 'rspec-expectations'
-gem 'rubocop', require: false
+gem 'rubocop', '~> 0.51.0', require: false
