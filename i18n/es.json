@@ -7,8 +7,8 @@
 		]
 	},
 	"poolcounter-desc": "Cliente de MediaWiki para el servicio de gestión de procesos agrupados",
-	"poolcounter-connection-error": "Error conectando al servidor contador de encuestas: $1",
-	"poolcounter-read-error": "Error leyendo del servidor contador de encuestas",
-	"poolcounter-write-error": "Error escribiendo al servidor contador de encuestas",
+	"poolcounter-connection-error": "Error al conectar con el servidor del contador de recursos comunes $2: $1",
+	"poolcounter-read-error": "Error al leer a partir del servidor del contador de recursos comunes $1.",
+	"poolcounter-write-error": "Error al escribir en el servidor del contador de recursos comunes $1.",
 	"poolcounter-remote-error": "Error del servidor contador de encuestas: $1"
 }
