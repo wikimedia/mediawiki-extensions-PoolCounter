@@ -5,8 +5,8 @@
 		]
 	},
 	"poolcounter-desc": "Klièn MediaWiki kanggo daèmon ''pool counter''",
-	"poolcounter-connection-error": "Kasalahan ngubungaké nèng sasana ''pool counter'': $1",
-	"poolcounter-read-error": "Kasalahan maca saka sasana ''pool counter''",
-	"poolcounter-write-error": "Ora bisa nulis nèng sasana ''counter pool''",
-	"poolcounter-remote-error": "Kasalahan sasana ''counter pool'': $1"
+	"poolcounter-connection-error": "Masalah nalika nyambung ing paladèn ''pool counter'' $2: $1",
+	"poolcounter-read-error": "Masalah nalika maca saka paladèn ''pool counter'' $1.",
+	"poolcounter-write-error": "Masalah nalika nulis ing paladèn ''pool counter'' $1.",
+	"poolcounter-remote-error": "Masalah ''pool counter'' saka paladèn $2: $1"
 }
