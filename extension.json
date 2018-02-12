@@ -4,6 +4,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:PoolCounter",
 	"descriptionmsg": "poolcounter-desc",
 	"license-name": "GPL-2.0+",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"type": "other",
 	"MessagesDirs": {
 		"PoolCounterClient": [

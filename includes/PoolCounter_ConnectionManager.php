@@ -41,9 +41,9 @@ class PoolCounter_ConnectionManager {
 			if ( count( $parts ) < 2 ) {
 				$parts[] = 7531;
 			}
-			MediaWiki\suppressWarnings();
+			Wikimedia\suppressWarnings();
 			$conn = $this->open( $parts[0], $parts[1], $errno, $errstr );
-			MediaWiki\restoreWarnings();
+			Wikimedia\restoreWarnings();
 			if ( $conn ) {
 				break;
 			}
