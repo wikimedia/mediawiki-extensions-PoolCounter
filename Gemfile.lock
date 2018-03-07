@@ -45,6 +45,3 @@ DEPENDENCIES
   parallel_tests (~> 2.19)
   rspec-expectations
   rubocop (~> 0.51.0)
-
-BUNDLED WITH
-   1.16.0
