@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'English'
 
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new(:rubocop) do |task|
@@ -10,5 +11,13 @@ end
 
 task default: [:test]
 
+desc 'Compile the daemon and run its tests'
+task :daemon_test do
+  Dir.chdir('daemon') do
+    system('make test')
+    raise 'Daemon compilation or test failed' if $CHILD_STATUS.exitstatus != 0
+  end
+end
+
 desc 'Run all build/tests commands (CI entry point)'
-task test: [:rubocop]
+task test: [:rubocop, :daemon_test]

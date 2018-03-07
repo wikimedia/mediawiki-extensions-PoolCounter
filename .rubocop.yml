@@ -27,6 +27,10 @@ Style/Alias:
 Style/SignalException:
   Enabled: false
 
+# Allow: task foo: [:bar, :baz]
+Style/SymbolArray:
+  Enabled: false
+
 Style/LeadingCommentSpace:
   Exclude:
     - Gemfile  # RVM doesn't recognise spaces after the #s
