@@ -14,7 +14,12 @@ task default: [:test]
 desc 'Compile the daemon and run its tests'
 task :daemon_test do
   Dir.chdir('daemon') do
-    system('make test')
+    if ENV.key?('JENKINS_URL')
+      # Force cucumber output coloring
+      system('AUTOTEST=1 make test')
+    else
+      system('make test')
+    end
     raise 'Daemon compilation or test failed' if $CHILD_STATUS.exitstatus != 0
   end
 end
