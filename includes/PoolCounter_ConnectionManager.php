@@ -1,9 +1,16 @@
 <?php
 
 class PoolCounter_ConnectionManager {
+	/** @var string[] */
 	public $hostNames;
+	/** @var array */
 	public $conns = [];
+	/** @var array */
 	public $refCounts = [];
+	/** @var float */
+	public $timeout;
+	/** @var int */
+	public $connect_timeout;
 
 	/**
 	 * @param array $conf
