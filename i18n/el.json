@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Omnipaedista",
-			"Geraki"
+			"Geraki",
+			"Nikosgranturismogt"
 		]
 	},
 	"poolcounter-desc": "Πελάτης MediaWiki για τον daemon του καταμετρητή ομαδοποίησης",
-	"poolcounter-connection-error": "Σφάλμα κατά την σύνδεση με τον καταμετρητή ομαδοποίησης: $1",
-	"poolcounter-read-error": "Σφάλμα κατά την ανάγνωση του εξυπηρετητή του καταμετρητή ομαδοποίησης",
-	"poolcounter-write-error": "Σφάλμα κατά την εγγραφή στον εξυπηρετητή του καταμετρητή ομαδοποίησης",
-	"poolcounter-remote-error": "Σφάλμα του εξυπηρετητή του καταμετρητή ομαδοποίησης: $1"
+	"poolcounter-connection-error": "Σφάλμα κατά την σύνδεση με τον καταμετρητή ομαδοποίησης $2: $1",
+	"poolcounter-read-error": "Σφάλμα κατά την ανάγνωση του εξυπηρετητή του καταμετρητή ομαδοποίησης $1.",
+	"poolcounter-write-error": "Σφάλμα κατά την εγγραφή στον εξυπηρετητή του καταμετρητή ομαδοποίησης $1.",
+	"poolcounter-remote-error": "Σφάλμα του εξυπηρετητή του καταμετρητή ομαδοποίησης $2: $1"
 }
