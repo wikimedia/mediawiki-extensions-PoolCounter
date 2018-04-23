@@ -5,8 +5,8 @@
 		]
 	},
 	"poolcounter-desc": "Kliente ti MediaWiki para iti panagbilang ti nairaman a daemon",
-	"poolcounter-connection-error": "Biddut ti pannakaikabit ti nairaman a panagbilang ti server: $1",
-	"poolcounter-read-error": "Biddut ti panagbasa manipud iti nairaman a panagbilang ti server.",
-	"poolcounter-write-error": "Biddut ti panagsurat idiay nairaman a panagbilang ti server.",
-	"poolcounter-remote-error": "Biddut ti nairaman a panagbilang ti server: $1"
+	"poolcounter-connection-error": "Biddut ti pannakaikabit ti nairaman a panagbilang ti server $2: $1",
+	"poolcounter-read-error": "Biddut ti panagbasa manipud iti nairaman a panagbilang ti server $1.",
+	"poolcounter-write-error": "Biddut ti panagsurat idiay nairaman a panagbilang ti server $1.",
+	"poolcounter-remote-error": "Biddut ti nairaman a panagbilang manipud iti server $2: $1"
 }
