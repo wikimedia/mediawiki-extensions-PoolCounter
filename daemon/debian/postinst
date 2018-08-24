@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-
-adduser --system --quiet --home / --group poolcounter
-
-#DEBHELPER#

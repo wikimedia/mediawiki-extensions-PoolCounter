@@ -18,18 +18,5 @@ $ npm test
 
 ### C Daemon
 
-Build using Make. Requires libevent to be installed.
-(`libevent-dev` package on Debian-based systems.)
-<pre>
-$ cd daemon/
-$ make install
-</pre>
-
-Test the C code in Ruby with Cucumber. Install using [Bundler](https://bundler.io/):
-<pre>
-$ gem install bundler
-$ bundle install
-
-$ cd daemon/
-$ make test
-</pre>
+The C daemon was moved into a separate repository: 
+[mediawiki/services/poolcounter](https://gerrit.wikimedia.org/g/mediawiki/services/poolcounter/).
