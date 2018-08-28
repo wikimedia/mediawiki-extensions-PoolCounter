@@ -4,12 +4,13 @@
 			"Rancher",
 			"아라",
 			"Сербијана",
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"Zoranzoki21"
 		]
 	},
 	"poolcounter-desc": "Медијавики клијент за бројач демона",
 	"poolcounter-connection-error": "Грешка при повезивању са сервером фондовског шалтера $2: $1",
 	"poolcounter-read-error": "Грешка при читању са сервера фондовског шалтера $1.",
 	"poolcounter-write-error": "Грешка при писању на сервер фондовског шалтера $1.",
-	"poolcounter-remote-error": "Грешка у серверу фондовског шалтера: $1"
+	"poolcounter-remote-error": "Грешка у серверу фондовског шалтера $2: $1"
 }
