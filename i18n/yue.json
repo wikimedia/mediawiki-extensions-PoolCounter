@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ktchankt"
+			"Ktchankt",
+			"Hello903hello"
 		]
 	},
 	"poolcounter-desc": "用響程式池計數器守護行程嘅 MediaWiki 客戶端",
-	"poolcounter-connection-error": "連接程式池計數器伺服器出錯：$1",
-	"poolcounter-read-error": "讀取程式池計數器伺服器出錯。",
-	"poolcounter-write-error": "寫入程式池計數器伺服器出錯。",
-	"poolcounter-remote-error": "程式池計數器伺服器出錯：$1"
+	"poolcounter-connection-error": "連接程式池計數器伺服器$2出錯：$1",
+	"poolcounter-read-error": "讀取程式池計數器伺服器$1出錯。",
+	"poolcounter-write-error": "寫入程式池計數器伺服器$1出錯。",
+	"poolcounter-remote-error": "程式池計數器伺服器$2出錯：$1"
 }
