@@ -23,7 +23,7 @@ class PoolCounter_Client extends PoolCounter {
 	 * @param string $type
 	 * @param string $key
 	 */
-	function __construct( $conf, $type, $key ) {
+	public function __construct( $conf, $type, $key ) {
 		parent::__construct( $conf, $type, $key );
 		if ( !self::$manager ) {
 			global $wgPoolCountClientConf;
@@ -34,7 +34,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @return Status
 	 */
-	function getConn() {
+	public function getConn() {
 		if ( !isset( $this->conn ) ) {
 			$status = self::$manager->get( $this->key );
 			if ( !$status->isOK() ) {
@@ -53,7 +53,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @return Status
 	 */
-	function sendCommand( /*, ...*/ ) {
+	public function sendCommand( /*, ...*/ ) {
 		$args = func_get_args();
 		$args = str_replace( ' ', '%20', $args );
 		$cmd = implode( ' ', $args );
@@ -99,7 +99,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @return Status
 	 */
-	function acquireForMe() {
+	public function acquireForMe() {
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
@@ -111,7 +111,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @return Status
 	 */
-	function acquireForAnyone() {
+	public function acquireForAnyone() {
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
@@ -123,7 +123,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @return Status
 	 */
-	function release() {
+	public function release() {
 		$status = $this->sendCommand( 'RELEASE', $this->key );
 
 		if ( $this->conn ) {

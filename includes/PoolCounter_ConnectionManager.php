@@ -16,7 +16,7 @@ class PoolCounter_ConnectionManager {
 	 * @param array $conf
 	 * @throws MWException
 	 */
-	function __construct( $conf ) {
+	public function __construct( $conf ) {
 		$this->hostNames = $conf['servers'];
 		$this->timeout = isset( $conf['timeout'] ) ? $conf['timeout'] : 0.1;
 		$this->connect_timeout = isset( $conf['connect_timeout'] ) ?
@@ -30,7 +30,7 @@ class PoolCounter_ConnectionManager {
 	 * @param string $key
 	 * @return Status
 	 */
-	function get( $key ) {
+	public function get( $key ) {
 		$hashes = [];
 		foreach ( $this->hostNames as $hostName ) {
 			$hashes[$hostName] = md5( $hostName . $key );
@@ -100,7 +100,7 @@ class PoolCounter_ConnectionManager {
 	/**
 	 * @param resource $conn
 	 */
-	function close( $conn ) {
+	public function close( $conn ) {
 		foreach ( $this->conns as $hostName => $otherConn ) {
 			if ( $conn === $otherConn ) {
 				if ( $this->refCounts[$hostName] ) {
