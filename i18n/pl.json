@@ -3,12 +3,13 @@
 		"authors": [
 			"Sp5uhe",
 			"아라",
-			"Chrumps"
+			"Chrumps",
+			"CiaPan"
 		]
 	},
 	"poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster",
-	"poolcounter-connection-error": "Błąd podczas łączenia z serwerem nadzorującym klaster – $1",
-	"poolcounter-read-error": "Błąd odczytu z serwera nadzorującego klaster",
-	"poolcounter-write-error": "Błąd podczas zapisywania do serwera nadzorującego klaster",
-	"poolcounter-remote-error": "Błąd serwera nadzorującego klaster – $1"
+	"poolcounter-connection-error": "Błąd podczas łączenia z serwerem $2, nadzorującym klaster: $1",
+	"poolcounter-read-error": "Błąd odczytu z serwera $1, nadzorującego klaster",
+	"poolcounter-write-error": "Błąd podczas zapisywania do serwera $1, nadzorującego klaster.",
+	"poolcounter-remote-error": "Błąd serwera $2, nadzorującego klaster: $1"
 }
