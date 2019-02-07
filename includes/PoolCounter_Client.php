@@ -15,7 +15,7 @@ class PoolCounter_Client extends PoolCounter {
 	/**
 	 * @var PoolCounter_ConnectionManager
 	 */
-	static private $manager;
+	private static $manager;
 
 	/**
 	 * PoolCounter_Client constructor.
