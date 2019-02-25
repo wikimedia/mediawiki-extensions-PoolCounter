@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Erdemaslancan"
+			"Erdemaslancan",
+			"Mirzali"
 		]
 	},
 	"poolcounter-desc": "Muşteriyan dê MediaWiki re amardeya arey",
-	"poolcounter-connection-error": "İrtibat de amargeya areya bırya: $1",
-	"poolcounter-read-error": "Arden dê hewız da amari de nusno xırab",
-	"poolcounter-write-error": "Wasterê hewız da amari de nusno xırab",
-	"poolcounter-remote-error": "Hewız da amariya waster bırya: $1"
+	"poolcounter-connection-error": "Xetaya gıreyê amarkerê hewza rabernayoği $2: $1",
+	"poolcounter-read-error": "Amarkerê hewza rabernayoği ra xetaya wendışi $1.",
+	"poolcounter-write-error": "Amarkerê hewza rabernayoği rê xetaya nuştışi $1.",
+	"poolcounter-remote-error": "Rabernayoği ra xetaya amarkerê hewze $2: $1"
 }
