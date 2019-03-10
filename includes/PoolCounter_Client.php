@@ -51,10 +51,10 @@ class PoolCounter_Client extends PoolCounter {
 	}
 
 	/**
+	 * @param string ...$args
 	 * @return Status
 	 */
-	public function sendCommand( /*, ...*/ ) {
-		$args = func_get_args();
+	public function sendCommand( ...$args ) {
 		$args = str_replace( ' ', '%20', $args );
 		$cmd = implode( ' ', $args );
 		$status = $this->getConn();
