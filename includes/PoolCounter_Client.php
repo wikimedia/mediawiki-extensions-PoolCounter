@@ -90,7 +90,7 @@ class PoolCounter_Client extends PoolCounter {
 			case 'ERROR':
 			default:
 				$parts = explode( ' ', $parts[1], 2 );
-				$errorMsg = isset( $parts[1] ) ? $parts[1] : '(no message given)';
+				$errorMsg = $parts[1] ?? '(no message given)';
 				return Status::newFatal( 'poolcounter-remote-error', $errorMsg, $this->hostName );
 		}
 		return Status::newGood( constant( "PoolCounter::$responseType" ) );
