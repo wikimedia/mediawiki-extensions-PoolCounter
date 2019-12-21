@@ -2,7 +2,7 @@
 
 class PoolCounter_Client extends PoolCounter {
 	/**
-	 * @var resource the socket connection to the poolcounter.  Closing this
+	 * @var ?resource the socket connection to the poolcounter.  Closing this
 	 * releases all locks acquired.
 	 */
 	private $conn;
@@ -45,13 +45,13 @@ class PoolCounter_Client extends PoolCounter {
 
 			// Set the read timeout to be 1.5 times the pool timeout.
 			// This allows the server to time out gracefully before we give up on it.
-			stream_set_timeout( $this->conn, 0, $this->timeout * 1e6 * 1.5 );
+			stream_set_timeout( $this->conn, 0, (int)( $this->timeout * 1e6 * 1.5 ) );
 		}
 		return Status::newGood( $this->conn );
 	}
 
 	/**
-	 * @param string ...$args
+	 * @param string|int|float ...$args
 	 * @return Status
 	 */
 	public function sendCommand( ...$args ) {
