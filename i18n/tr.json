@@ -5,7 +5,7 @@
 			"BaRaN6161 TURK"
 		]
 	},
-	"poolcounter-desc": "Havuz sayaç için MediaWiki client daemon",
+	"poolcounter-desc": "Havuz sayaç için MediaWiki istemci daemon",
 	"poolcounter-connection-error": "Havuz sayacı sunucusuna bağlanma hatası $2: $1",
 	"poolcounter-read-error": "$1 havuz sayacı sunucusundan okunurken hata oluştu.",
 	"poolcounter-write-error": "$1 havuz sayacı sunucusuna yazma hatası.",
