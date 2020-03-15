@@ -68,8 +68,8 @@ class PoolCounter_ConnectionManager {
 	 * Open a socket. Just a wrapper for fsockopen()
 	 * @param string $host
 	 * @param int $port
-	 * @param int $errno
-	 * @param string $errstr
+	 * @param int &$errno
+	 * @param string &$errstr
 	 * @return null|resource
 	 */
 	private function open( $host, $port, &$errno, &$errstr ) {
