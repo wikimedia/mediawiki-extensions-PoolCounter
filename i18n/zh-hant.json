@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Waihorace",
 			"Cwlin0416",
-			"Liuxinyu970226",
-			"Wwycheuk",
 			"Hello903hello",
-			"Kly"
+			"Kly",
+			"Liuxinyu970226",
+			"Waihorace",
+			"Wwycheuk"
 		]
 	},
 	"poolcounter-desc": "用於程序池計數器守護行程的 MediaWiki 客戶端",

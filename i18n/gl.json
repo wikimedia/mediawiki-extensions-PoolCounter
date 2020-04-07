@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño",
-			"아라",
 			"Banjo",
-			"Elisardojm"
+			"Elisardojm",
+			"Toliño",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Cliente para MediaWiki do servizo de contador de recursos",

@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sp5uhe",
-			"아라",
 			"Chrumps",
-			"CiaPan"
+			"CiaPan",
+			"Sp5uhe",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Klient MediaWiki dla demona nadzorującego klaster",

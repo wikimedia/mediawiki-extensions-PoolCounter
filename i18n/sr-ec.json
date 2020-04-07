@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rancher",
-			"아라",
-			"Сербијана",
 			"Acamicamacaraca",
-			"Zoranzoki21"
+			"Rancher",
+			"Zoranzoki21",
+			"Сербијана",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Медијавики клијент за бројач демона",

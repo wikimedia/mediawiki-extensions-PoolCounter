@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Omnipaedista",
 			"Geraki",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Omnipaedista"
 		]
 	},
 	"poolcounter-desc": "Πελάτης MediaWiki για τον daemon του καταμετρητή ομαδοποίησης",

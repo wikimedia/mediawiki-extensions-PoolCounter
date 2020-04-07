@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand",
-			"Mar(c)"
+			"Mar(c)",
+			"Siebrand"
 		]
 	},
 	"poolcounter-desc": "MediaWiki-client voor de poolcounter daemon",

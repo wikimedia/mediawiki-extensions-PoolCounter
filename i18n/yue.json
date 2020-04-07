@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ktchankt",
-			"Hello903hello"
+			"Hello903hello",
+			"Ktchankt"
 		]
 	},
 	"poolcounter-desc": "用響程式池計數器守護行程嘅 MediaWiki 客戶端",

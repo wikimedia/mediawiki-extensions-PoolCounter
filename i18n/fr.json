@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Gomoko",
 			"IAlex",
 			"Urhixidur",
-			"Verdy p",
-			"Gomoko"
+			"Verdy p"
 		]
 	},
 	"poolcounter-desc": "Client MediaWiki du démon de réservation des processus",

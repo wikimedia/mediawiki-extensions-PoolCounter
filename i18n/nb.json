@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jon Harald Søby",
 			"Nghtwlkr",
-			"Stigmj",
-			"Jon Harald Søby"
+			"Stigmj"
 		]
 	},
 	"poolcounter-desc": "MediaWiki-klient for pool counter tjeneren",

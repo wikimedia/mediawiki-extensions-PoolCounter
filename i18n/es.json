@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
-			"Translationista",
 			"Fitoschido",
-			"Jelou"
+			"Jelou",
+			"Translationista"
 		]
 	},
 	"poolcounter-desc": "Cliente de MediaWiki para el servicio de gestión de procesos agrupados",

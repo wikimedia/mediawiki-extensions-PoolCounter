@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardo Addad de Oliveira",
 			"Eduardo.mps",
-			"Felipe L. Ewald",
-			"Eduardo Addad de Oliveira"
+			"Felipe L. Ewald"
 		]
 	},
 	"poolcounter-desc": "Cliente mediawiki para o pool counter daemon",

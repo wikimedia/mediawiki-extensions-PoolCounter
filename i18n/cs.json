@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mormegil",
-			"Dvorapa"
+			"Dvorapa",
+			"Mormegil"
 		]
 	},
 	"poolcounter-desc": "Klient do MediaWiki k démonovi řídícímu přístup ke clusteru",

@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"EugeneZelenko",
-			"아라",
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Кліент MediaWiki для дэману лічыльніка пулу",

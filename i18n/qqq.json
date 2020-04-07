@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Mormegil",
 			"Nedergard",
 			"Purodha",
 			"Shirayuki",
 			"Siebrand",
-			"Umherirrender",
-			"Amire80"
+			"Umherirrender"
 		]
 	},
 	"poolcounter-desc": "{{desc|name=Pool Counter|url=https://www.mediawiki.org/wiki/Extension:PoolCounter}}\nA pool counter keeps track of the running processes on a cluster of processors, and may or may not grant a job access to the processing pool.\n\n'''Note''': the word \"counter\" relates to the [[:w:en:Counter_(furniture)|counter in a shop, bank, or hotel]], not to the verb \"to count\".",

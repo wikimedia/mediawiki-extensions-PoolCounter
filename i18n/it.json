@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"F. Cosoleto",
-			"Beta16"
+			"Beta16",
+			"F. Cosoleto"
 		]
 	},
 	"poolcounter-desc": "Client di MediaWiki per il demone contatore dei pool",
