@@ -19,11 +19,13 @@
 	},
 	"config": {
 		"PoolCountClientConf": {
-			"servers": [
-				"127.0.0.1"
-			],
-			"timeout": 0.1
+			"value": {
+				"servers": [
+					"127.0.0.1"
+				],
+				"timeout": 0.1
+			}
 		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
