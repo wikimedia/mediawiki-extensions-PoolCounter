@@ -99,27 +99,29 @@ class PoolCounter_Client extends PoolCounter {
 	}
 
 	/**
+	 * @param int|null $timeout
 	 * @return Status
 	 */
-	public function acquireForMe() {
+	public function acquireForMe( $timeout = null ) {
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
 		return $this->sendCommand( 'ACQ4ME', $this->key, $this->workers, $this->maxqueue,
-			$this->timeout );
+			$timeout ?? $this->timeout );
 	}
 
 	/**
+	 * @param int|null $timeout
 	 * @return Status
 	 */
-	public function acquireForAnyone() {
+	public function acquireForAnyone( $timeout = null ) {
 		$status = $this->precheckAcquire();
 		if ( !$status->isGood() ) {
 			return $status;
 		}
 		return $this->sendCommand( 'ACQ4ANY', $this->key, $this->workers, $this->maxqueue,
-			$this->timeout );
+			$timeout ?? $this->timeout );
 	}
 
 	/**
