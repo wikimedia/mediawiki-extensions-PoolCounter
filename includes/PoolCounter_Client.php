@@ -128,7 +128,7 @@ class PoolCounter_Client extends PoolCounter {
 	 * @return Status
 	 */
 	public function release() {
-		$status = $this->sendCommand( 'RELEASE', $this->key );
+		$status = $this->sendCommand( 'RELEASE' );
 
 		if ( $this->conn ) {
 			self::$manager->close( $this->conn );
