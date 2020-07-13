@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okras"
+			"Okras",
+			"Александр Сигачёв",
+			"아라"
 		]
 	},
 	"poolcounter-desc": "Клиент MediaWiki для демона счётчика пула",
