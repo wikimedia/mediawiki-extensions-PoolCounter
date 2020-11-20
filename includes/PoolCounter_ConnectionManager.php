@@ -37,6 +37,7 @@ class PoolCounter_ConnectionManager {
 		asort( $hashes );
 		$errno = 0;
 		$errstr = '';
+		$hostName = '';
 		$conn = null;
 		foreach ( $hashes as $hostName => $hash ) {
 			if ( isset( $this->conns[$hostName] ) ) {
