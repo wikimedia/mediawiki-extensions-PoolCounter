@@ -1,6 +1,11 @@
 <?php
 
-class PoolCounter_Client extends PoolCounter {
+namespace MediaWiki\Extension\PoolCounter;
+
+use PoolCounter;
+use Status;
+
+class Client extends PoolCounter {
 	/**
 	 * @var ?resource the socket connection to the poolcounter.  Closing this
 	 * releases all locks acquired.
@@ -13,7 +18,7 @@ class PoolCounter_Client extends PoolCounter {
 	private $hostName;
 
 	/**
-	 * @var PoolCounter_ConnectionManager
+	 * @var ConnectionManager
 	 */
 	private static $manager;
 
@@ -27,7 +32,7 @@ class PoolCounter_Client extends PoolCounter {
 		parent::__construct( $conf, $type, $key );
 		if ( !self::$manager ) {
 			global $wgPoolCountClientConf;
-			self::$manager = new PoolCounter_ConnectionManager( $wgPoolCountClientConf );
+			self::$manager = new ConnectionManager( $wgPoolCountClientConf );
 		}
 	}
 
@@ -138,3 +143,5 @@ class PoolCounter_Client extends PoolCounter {
 		return $status;
 	}
 }
+
+class_alias( Client::class, 'PoolCounter_Client' );

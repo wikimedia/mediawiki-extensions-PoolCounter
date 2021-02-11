@@ -1,6 +1,12 @@
 <?php
 
-class PoolCounter_ConnectionManager {
+namespace MediaWiki\Extension\PoolCounter;
+
+use MWException;
+use Status;
+use Wikimedia\AtEase\AtEase;
+
+class ConnectionManager {
 	/** @var string[] */
 	public $hostNames;
 	/** @var array */
@@ -49,9 +55,9 @@ class PoolCounter_ConnectionManager {
 			if ( count( $parts ) < 2 ) {
 				$parts[] = 7531;
 			}
-			Wikimedia\suppressWarnings();
+			AtEase::suppressWarnings();
 			$conn = $this->open( $parts[0], $parts[1], $errno, $errstr );
-			Wikimedia\restoreWarnings();
+			AtEase::restoreWarnings();
 			if ( $conn ) {
 				break;
 			}
@@ -115,3 +121,5 @@ class PoolCounter_ConnectionManager {
 		}
 	}
 }
+
+class_alias( ConnectionManager::class, 'PoolCounter_ConnectionManager' );

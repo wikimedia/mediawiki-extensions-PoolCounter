@@ -13,9 +13,14 @@
 			"i18n"
 		]
 	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\PoolCounter\\": "includes/"
+	},
 	"AutoloadClasses": {
-		"PoolCounter_Client": "includes/PoolCounter_Client.php",
-		"PoolCounter_ConnectionManager": "includes/PoolCounter_ConnectionManager.php"
+		"MediaWiki\\Extension\\PoolCounter\\Client": "includes/Client.php",
+		"MediaWiki\\Extension\\PoolCounter\\ConnectionManager": "includes/ConnectionManager.php",
+		"PoolCounter_Client": "includes/Client.php",
+		"PoolCounter_ConnectionManager": "includes/ConnectionManager.php"
 	},
 	"config": {
 		"PoolCountClientConf": {
