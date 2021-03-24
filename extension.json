@@ -16,12 +16,6 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\PoolCounter\\": "includes/"
 	},
-	"AutoloadClasses": {
-		"MediaWiki\\Extension\\PoolCounter\\Client": "includes/Client.php",
-		"MediaWiki\\Extension\\PoolCounter\\ConnectionManager": "includes/ConnectionManager.php",
-		"PoolCounter_Client": "includes/Client.php",
-		"PoolCounter_ConnectionManager": "includes/ConnectionManager.php"
-	},
 	"config": {
 		"PoolCountClientConf": {
 			"value": {

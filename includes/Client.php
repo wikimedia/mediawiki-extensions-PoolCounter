@@ -143,5 +143,3 @@ class Client extends PoolCounter {
 		return $status;
 	}
 }
-
-class_alias( Client::class, 'PoolCounter_Client' );

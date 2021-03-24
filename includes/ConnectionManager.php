@@ -121,5 +121,3 @@ class ConnectionManager {
 		}
 	}
 }
-
-class_alias( ConnectionManager::class, 'PoolCounter_ConnectionManager' );
