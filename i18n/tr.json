@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Arystanbek",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"MuratTheTurkish"
 		]
 	},
-	"poolcounter-desc": "Havuz sayaç için MediaWiki istemci daemon",
+	"poolcounter-desc": "Havuz sayacı arka plan programı için MediaWiki istemcisi",
 	"poolcounter-connection-error": "Havuz sayacı sunucusuna bağlanma hatası $2: $1",
 	"poolcounter-read-error": "$1 havuz sayacı sunucusundan okunurken hata oluştu.",
 	"poolcounter-write-error": "$1 havuz sayacı sunucusuna yazma hatası.",
