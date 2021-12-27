@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana"
+		]
+	},
+	"poolcounter-desc": "Klien MediaWiki untuk daemon ''pool counter''",
+	"poolcounter-connection-error": "Kesalahan saat berusaha menghubungi server pool counter $2: $1",
+	"poolcounter-read-error": "Kesalahan saat berusaha membaca server pool counter $1.",
+	"poolcounter-write-error": "Kesalahan saat berusaha menulis ke peladen pool counter $1.",
+	"poolcounter-remote-error": "Kesalahan penghitung pool dari server $2: $1"
+}
