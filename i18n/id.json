@@ -3,12 +3,13 @@
 		"authors": [
 			"Bennylin",
 			"IvanLanin",
-			"아라"
+			"아라",
+			"Daud I.F. Argana"
 		]
 	},
-	"poolcounter-desc": "Klien MediaWiki untuk daemon poolcounter.py",
-	"poolcounter-connection-error": "Kesalahan pada saat berusaha menghubungi server pool counter: $1",
-	"poolcounter-read-error": "Kesalahan pada saat berusaha membaca server pool counter",
-	"poolcounter-write-error": "Kesalahan pada saat berusaha menulis peladen pool counter",
-	"poolcounter-remote-error": "Kesalahan server pool server: $1"
+	"poolcounter-desc": "Klien MediaWiki untuk daemon ''pool counter''",
+	"poolcounter-connection-error": "Kesalahan saat berusaha menghubungi server pool counter $2: $1",
+	"poolcounter-read-error": "Kesalahan saat berusaha membaca server pool counter $1.",
+	"poolcounter-write-error": "Kesalahan saat berusaha menulis ke peladen pool counter $1.",
+	"poolcounter-remote-error": "Kesalahan penghitung pool dari server $2: $1"
 }
