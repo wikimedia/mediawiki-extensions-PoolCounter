@@ -4,7 +4,7 @@
 			"Robby"
 		]
 	},
-	"poolcounter-desc": "Mediawiki-Client fir de Pool-Counter-Daemon",
+	"poolcounter-desc": "MediaWiki-Client fir de Pool-Counter-Daemon",
 	"poolcounter-connection-error": "Feeler beim Verbanne mam Pool-Counter-Server $2: $1",
 	"poolcounter-read-error": "Feeler beim Liese vum Pool-Counter-Server: $1",
 	"poolcounter-write-error": "Feeler beim Schreiwen op de Pool-Counter-Server $1.",
