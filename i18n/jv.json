@@ -6,7 +6,7 @@
 			"Sumbukompor"
 		]
 	},
-	"poolcounter-desc": "Klièn MédiaWiki kanggo daèmon ''pool counter''",
+	"poolcounter-desc": "Klièn MediaWiki kanggo daèmon ''pool counter''",
 	"poolcounter-connection-error": "Masalah nalika nyambung ing paladèn ''pool counter'' $2: $1",
 	"poolcounter-read-error": "Masalah nalika maca saka paladèn ''pool counter'' $1.",
 	"poolcounter-write-error": "Masalah nalika nulis ing paladèn ''pool counter'' $1.",
