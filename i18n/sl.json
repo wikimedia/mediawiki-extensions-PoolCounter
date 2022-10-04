@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"poolcounter-desc": "Odjemalec MediaWiki za prikriti proces založnega pulta",
+	"poolcounter-desc": "Odjemalec MediaWiki za prikriti proces sledenja delovnega nabora",
 	"poolcounter-connection-error": "Napaka pri povezovanju s strežnikom založnega pulta $2: $1",
 	"poolcounter-read-error": "Napaka pri branju s strežnika založnega pulta $1.",
 	"poolcounter-write-error": "Napaka pri pisanju na strežnik založnega pulta $1.",
