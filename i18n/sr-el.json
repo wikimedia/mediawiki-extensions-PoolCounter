@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"poolcounter-desc": "Medijaviki klijent za brojač demona",
+	"poolcounter-connection-error": "Greška pri povezivanju sa serverom fondovskog šaltera $2: $1",
+	"poolcounter-read-error": "Greška pri čitanju sa servera fondovskog šaltera $1.",
+	"poolcounter-write-error": "Greška pri pisanju na server fondovskog šaltera $1.",
+	"poolcounter-remote-error": "Greška u serveru fondovskog šaltera $2: $1"
+}
